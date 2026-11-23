@@ -1,0 +1,782 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ==========================================
+         MONSE MEDIA | CONTACT PAGE
+         Author: Monse Montes
+         Filename: contact.html
+         ========================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Get in touch with Monse Media for photography, videography, graphic design, and web design inquiries.">
+
+    <title>Contact Monse | Monse Media</title>
+
+    <!-- MY WEBSITE FAVICON -->
+
+    <link rel="icon"
+          type="image/gif"
+          href="images/monse-logo.jpg.gif?v=2">
+
+    <!-- MY GOOGLE FONTS -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Poppins:wght@300;400;500;600&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- MY WEBSITE STYLESHEETS -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="contact.css">
+
+</head>
+
+
+<body class="contact-page">
+
+    <!-- ==========================================
+         01 | WEBSITE HEADER
+         ========================================== -->
+
+    <header class="site-header">
+
+        <!-- MONSE MEDIA LOGO -->
+
+        <a href="homepage.html"
+           class="header-logo"
+           aria-label="Monse Media homepage">
+
+            <img
+                src="images/monse-logo.jpg.gif"
+                alt="Monse Media Logo"
+                class="header-logo-image">
+
+        </a>
+
+        <!-- ==========================================
+             MAIN WEBSITE NAVIGATION
+             ========================================== -->
+
+        <nav class="main-navigation"
+             aria-label="Main navigation">
+
+            <ul>
+
+                <!-- HOME -->
+                <li>
+                    <a href="homepage.html">
+                        HOME
+                    </a>
+                </li>
+
+                <!-- ABOUT -->
+                <li>
+                    <a href="about.html">
+                        ABOUT
+                    </a>
+                </li>
+
+                <!-- PORTFOLIO -->
+                <li>
+                    <a href="portfolio.html">
+                        PORTFOLIO
+                    </a>
+                </li>
+
+                <!-- SERVICES -->
+                <li>
+                    <a href="services.html">
+                        SERVICES
+                    </a>
+                </li>
+
+                <!-- CONTACT -->
+                <li>
+                    <a href="contact.html">
+                        CONTACT
+                    </a>
+                </li>
+
+                <!-- CLIENT PORTAL -->
+                <li>
+                    <a href="client.html">
+                        CLIENT PORTAL
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <!-- BOOK A SESSION BUTTON -->
+
+        <a href="contact.html"
+           class="header-booking">
+
+            BOOK A SESSION ↗
+
+        </a>
+
+    </header>
+
+
+    <!-- ==========================================
+         02 | CONTACT HERO
+         ========================================== -->
+
+    <main>
+
+        <section class="contact-hero">
+
+            <div class="contact-hero-content">
+
+                <p class="contact-eyebrow">
+                    GET IN TOUCH
+                </p>
+
+                <h1>
+                    LET'S<br>
+                    CREATE<br>
+                    TOGETHER.
+                </h1>
+
+                <p class="contact-hero-description">
+                    Have a project in mind, a question to ask,
+                    or just want to say hi? I'd love to hear
+                    from you. Tell me about your vision and
+                    let's bring your ideas to life.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             03 | CONTACT FORM
+
+             Connected to:
+             - MONSE MEDIA DATABASE
+             - FORMSPREE
+
+             booking.js handles both submissions.
+             ========================================== -->
+
+        <section class="contact-main" id="contact">
+
+            <div class="contact-form-column">
+
+                <p class="contact-section-number">
+                    01
+                </p>
+
+                <h2>SEND A MESSAGE</h2>
+
+                <p class="contact-subheading">
+                    TELL ME ABOUT YOUR PROJECT
+                </p>
+
+                <!-- CLIENT INQUIRY FORM -->
+
+                <form
+                    class="contact-form"
+                    id="inquiry-form"
+                    action="https://formspree.io/f/xkjjppya"
+                    method="POST">
+
+                    <!-- EMAIL SUBJECT -->
+
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="New Monse Media Project Inquiry">
+
+                    <!-- CLIENT NAME -->
+
+                    <label for="contact-name">
+                        YOUR NAME *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="contact-name"
+                        name="name"
+                        placeholder="Your full name"
+                        autocomplete="name"
+                        required>
+
+                    <!-- CLIENT EMAIL -->
+
+                    <label for="contact-email">
+                        YOUR EMAIL *
+                    </label>
+
+                    <input
+                        type="email"
+                        id="contact-email"
+                        name="email"
+                        placeholder="Your email address"
+                        autocomplete="email"
+                        required>
+
+                    <!-- PROJECT TYPE -->
+
+                    <label for="contact-service">
+                        PROJECT TYPE *
+                    </label>
+
+                    <select
+                        id="contact-service"
+                        name="service"
+                        required>
+
+                        <option
+                            value=""
+                            disabled
+                            selected>
+                            Select a service
+                        </option>
+
+                        <option value="photography">
+                            Photography
+                        </option>
+
+                        <option value="videography">
+                            Videography
+                        </option>
+
+                        <option value="graphic-design">
+                            Graphic Design
+                        </option>
+
+                        <option value="web-design">
+                            Web Design
+                        </option>
+
+                        <option value="other">
+                            Something Else
+                        </option>
+
+                    </select>
+
+                    <!-- PROJECT MESSAGE -->
+
+                    <label for="contact-message">
+                        YOUR MESSAGE *
+                    </label>
+
+                    <textarea
+                        id="contact-message"
+                        name="message"
+                        rows="6"
+                        placeholder="Tell me about your vision, timeline, and what you're looking to create."
+                        required></textarea>
+
+                    <!-- SEND MESSAGE BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="contact-submit"
+                        id="contact-submit-button">
+
+                        SEND MESSAGE ↗
+
+                    </button>
+
+                    <!-- BOOKING CONFIRMATION -->
+
+                    <p
+                        id="contact-form-status"
+                        class="contact-form-status"
+                        role="status"
+                        aria-live="polite">
+                    </p>
+
+                </form>
+
+            </div>
+
+
+            <!-- ==========================================
+                 04 | OTHER WAYS TO CONNECT
+                 ========================================== -->
+
+            <aside class="contact-info-column">
+
+                <p class="contact-section-number">
+                    02
+                </p>
+
+                <h2>
+                    OTHER WAYS<br>
+                    TO CONNECT
+                </h2>
+
+                <p class="contact-subheading">
+                    PREFER A DIFFERENT APPROACH?
+                </p>
+
+                <p class="contact-info-intro">
+                    Whether it's a collaboration, a creative
+                    idea, or a business inquiry, I'm always
+                    interested in hearing about meaningful
+                    projects.
+                </p>
+
+                <!-- EMAIL -->
+
+                <div class="contact-info-item">
+
+                    <span class="contact-info-label">
+                        EMAIL
+                    </span>
+
+                    <p>
+                        mindymonserrath@gmail.com
+                    </p>
+
+                </div>
+
+                <!-- SOCIAL MEDIA -->
+
+                <div class="contact-info-item">
+
+                    <span class="contact-info-label">
+                        SOCIAL MEDIA
+                    </span>
+
+                    <p>
+                        Connect with Monse Media
+                    </p>
+
+                </div>
+
+                <!-- LOCATION -->
+
+                <div class="contact-info-item">
+
+                    <span class="contact-info-label">
+                        LOCATION
+                    </span>
+
+                    <p>
+                        Based in Texas
+                    </p>
+
+                    <small>
+                        Available for local and travel projects.
+                    </small>
+
+                </div>
+
+                <!-- BUSINESS INQUIRIES -->
+
+                <div class="contact-business-note">
+
+                    <span class="contact-info-label">
+                        BUSINESS INQUIRIES
+                    </span>
+
+                    <p>
+                        For collaborations, custom projects,
+                        or creative opportunities, please include
+                        as much information as possible.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+
+        <!-- ==========================================
+             05 | FINAL FLORAL SECTION
+             ========================================== -->
+
+        <section class="contact-final">
+
+            <div
+                class="contact-final-image"
+                role="img"
+                aria-label="Dark burgundy floral photography">
+            </div>
+
+            <div class="contact-final-content">
+
+                <p class="contact-eyebrow">
+                    READY TO BRING YOUR VISION TO LIFE?
+                </p>
+
+                <h2>
+                    GOOD IDEAS<br>
+                    DESERVE GREAT<br>
+                    EXECUTION.
+                </h2>
+
+                <p>
+                    Whether you're a brand, a business,
+                    or a fellow creative, I'm here to turn
+                    your vision into something meaningful,
+                    beautiful, and unforgettable.
+                </p>
+
+                <a
+                    href="#contact"
+                    class="contact-final-button">
+
+                    LET'S CREATE ↗
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         06 | FIREWORKS CANVAS
+
+         The canvas is transparent.
+         It does not block page interaction.
+         ========================================== -->
+
+    <canvas
+        id="fireworksCanvas"
+        aria-hidden="true">
+    </canvas>
+
+
+    <!-- ==========================================
+         07 | FIREWORKS JAVASCRIPT
+
+         booking.js calls launchFireworks()
+         after both submissions succeed.
+         ========================================== -->
+
+    <script>
+
+        // ======================================
+        // FIND FIREWORKS CANVAS
+        // ======================================
+
+        const fireworksCanvas =
+            document.getElementById("fireworksCanvas");
+
+        const fireworksContext =
+            fireworksCanvas.getContext("2d");
+
+        let fireworksParticles = [];
+
+        let fireworksAnimating = false;
+
+
+        // ======================================
+        // RESIZE FIREWORKS TO SCREEN
+        // ======================================
+
+        function resizeFireworksCanvas() {
+
+            fireworksCanvas.width =
+                window.innerWidth;
+
+            fireworksCanvas.height =
+                window.innerHeight;
+
+        }
+
+        window.addEventListener(
+            "resize",
+            resizeFireworksCanvas
+        );
+
+        resizeFireworksCanvas();
+
+
+        // ======================================
+        // FIREWORK PARTICLES
+        // ======================================
+
+        class FireworkParticle {
+
+            constructor(x, y, color) {
+
+                this.x = x;
+                this.y = y;
+
+                this.color = color;
+
+                const angle =
+                    Math.random() * Math.PI * 2;
+
+                const speed =
+                    Math.random() * 6 + 2;
+
+                this.vx =
+                    Math.cos(angle) * speed;
+
+                this.vy =
+                    Math.sin(angle) * speed;
+
+                this.alpha = 1;
+
+                this.gravity = 0.055;
+
+                this.friction = 0.98;
+
+                this.size =
+                    Math.random() * 2.5 + 1;
+
+            }
+
+            // PARTICLE MOVEMENT
+
+            update() {
+
+                this.vx *= this.friction;
+
+                this.vy *= this.friction;
+
+                this.vy += this.gravity;
+
+                this.x += this.vx;
+
+                this.y += this.vy;
+
+                this.alpha -= 0.012;
+
+            }
+
+            // DRAW EACH PARTICLE
+
+            draw() {
+
+                fireworksContext.save();
+
+                fireworksContext.globalAlpha =
+                    Math.max(0, this.alpha);
+
+                fireworksContext.fillStyle =
+                    this.color;
+
+                fireworksContext.shadowBlur = 15;
+
+                fireworksContext.shadowColor =
+                    this.color;
+
+                fireworksContext.beginPath();
+
+                fireworksContext.arc(
+                    this.x,
+                    this.y,
+                    this.size,
+                    0,
+                    Math.PI * 2
+                );
+
+                fireworksContext.fill();
+
+                fireworksContext.restore();
+
+            }
+
+        }
+
+
+        // ======================================
+        // CREATE FIREWORK EXPLOSION
+        // ======================================
+
+        function explodeFirework(x, y) {
+
+            const colors = [
+
+                "#e4201b",
+                "#ff3636",
+                "#ffd700",
+                "#ffffff",
+                "#ff9b58"
+
+            ];
+
+            for (let i = 0; i < 110; i++) {
+
+                const color =
+                    colors[
+                        Math.floor(
+                            Math.random() * colors.length
+                        )
+                    ];
+
+                fireworksParticles.push(
+                    new FireworkParticle(
+                        x,
+                        y,
+                        color
+                    )
+                );
+
+            }
+
+            if (!fireworksAnimating) {
+
+                fireworksAnimating = true;
+
+                animateFireworks();
+
+            }
+
+        }
+
+
+        // ======================================
+        // ANIMATE FIREWORKS
+        // ======================================
+
+        function animateFireworks() {
+
+            fireworksContext.clearRect(
+                0,
+                0,
+                fireworksCanvas.width,
+                fireworksCanvas.height
+            );
+
+            fireworksParticles =
+                fireworksParticles.filter(
+                    particle => particle.alpha > 0
+                );
+
+            fireworksParticles.forEach(
+                particle => {
+
+                    particle.update();
+
+                    particle.draw();
+
+                }
+            );
+
+            if (fireworksParticles.length > 0) {
+
+                requestAnimationFrame(
+                    animateFireworks
+                );
+
+            } else {
+
+                fireworksAnimating = false;
+
+            }
+
+        }
+
+
+        // ======================================
+        // FIREWORK SHOW
+
+        // Fireworks burst across the page
+        // after successful submission.
+        // ======================================
+
+        function launchFireworks() {
+
+            if (
+                window.matchMedia(
+                    "(prefers-reduced-motion: reduce)"
+                ).matches
+            ) {
+                return;
+            }
+
+            const positions = [
+
+                [0.25, 0.35],
+                [0.75, 0.30],
+                [0.50, 0.45],
+                [0.15, 0.60],
+                [0.85, 0.55],
+                [0.40, 0.25],
+                [0.65, 0.65]
+
+            ];
+
+            positions.forEach(
+                (position, index) => {
+
+                    setTimeout(() => {
+
+                        explodeFirework(
+
+                            fireworksCanvas.width *
+                            position[0],
+
+                            fireworksCanvas.height *
+                            position[1]
+
+                        );
+
+                    }, index * 230);
+
+                }
+            );
+
+        }
+
+        // ======================================
+        // NO FORM SUBMISSION HANDLER HERE
+
+        // booking.js now handles submissions
+        // to both Monse Media and Formspree.
+
+        // This avoids duplicate submissions.
+        // ======================================
+
+    </script>
+
+
+    <!-- ==========================================
+         08 | PRIVATE STUDIO ACCESS
+         ========================================== -->
+
+    <a
+        href="admin.html"
+        class="studio-access">
+
+        STUDIO ACCESS ↗
+
+    </a>
+
+
+    <!-- ==========================================
+         09 | BOOKING SYSTEM
+
+         Sends the same inquiry to:
+         - Monse Media database
+         - Formspree
+
+         Displays the private portal link
+         and launches fireworks on success.
+         ========================================== -->
+
+    <script src="booking.js" defer></script>
+
+</body>
+</html>
