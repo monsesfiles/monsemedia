@@ -1,0 +1,1222 @@
+/* ==========================================================
+   MONSE MEDIA | COMPLETE ADMIN DASHBOARD
+   ========================================================== */
+
+
+/* 01 | BRAND COLORS */
+
+.admin-page {
+    --admin-bg: #080607;
+    --admin-panel: #140b0e;
+    --admin-card: #1d0d12;
+    --admin-burgundy: #581725;
+    --admin-burgundy-light: #852b3e;
+    --admin-border: #40232b;
+    --admin-cream: #f4ede5;
+    --admin-muted: #bba5a9;
+    --admin-gold: #c8a77e;
+    --admin-green: #a8d6bd;
+    --admin-danger: #ff8888;
+
+    margin: 0;
+    background: var(--admin-bg);
+    color: var(--admin-cream);
+    font-family: "Poppins", sans-serif;
+    color-scheme: dark;
+    overflow-x: hidden;
+}
+
+.admin-page .admin-main,
+.admin-page .admin-main * {
+    box-sizing: border-box;
+}
+
+.admin-page [hidden],
+.admin-page .hidden {
+    display: none !important;
+}
+
+
+/* ==========================================================
+   02 | MAIN DASHBOARD
+   ========================================================== */
+
+.admin-page .admin-main {
+    width: min(94%, 1500px);
+    max-width: 1500px;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 65px 0 100px;
+}
+
+.admin-page .admin-hero {
+    position: relative;
+    padding: 55px 40px;
+    margin-bottom: 40px;
+
+    background: linear-gradient(
+        120deg,
+        #310d18,
+        #19090e 55%,
+        #10090b
+    );
+
+    border: 1px solid var(--admin-border);
+    border-left: 4px solid var(--admin-burgundy-light);
+}
+
+.admin-page .admin-hero h1 {
+    margin: 14px 0 20px;
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(34px, 5vw, 76px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -1px;
+
+    color: var(--admin-cream);
+}
+
+.admin-page .admin-hero h1 span {
+    color: var(--admin-gold);
+}
+
+.admin-page .admin-hero .admin-muted {
+    max-width: 680px;
+}
+
+
+/* ==========================================================
+   03 | TYPOGRAPHY
+   ========================================================== */
+
+.admin-page .admin-main h2 {
+    margin: 0 0 16px;
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(23px, 3vw, 34px);
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.3;
+
+    color: var(--admin-cream);
+}
+
+.admin-page .admin-main h3 {
+    margin: 22px 0 16px;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: var(--admin-cream);
+}
+
+.admin-page .admin-eyebrow {
+    display: block;
+
+    margin: 0 0 13px;
+
+    color: var(--admin-gold);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1.8;
+}
+
+.admin-page .admin-muted {
+    margin: 8px 0 18px;
+
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.9;
+
+    color: var(--admin-muted);
+}
+
+.admin-page .admin-small {
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.admin-page .admin-field-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--admin-gold);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   04 | OWNER LOGIN
+   ========================================================== */
+
+.admin-page .admin-login {
+    width: 100%;
+    max-width: 520px;
+
+    margin: 60px auto;
+    padding: 42px;
+}
+
+.admin-page #loginForm {
+    margin-top: 26px;
+}
+
+.admin-page #loginButton {
+    width: 100%;
+    margin-top: 24px;
+}
+
+
+/* ==========================================================
+   05 | DASHBOARD TOOLBAR
+   ========================================================== */
+
+.admin-page .admin-toolbar {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 24px;
+    margin: 0 0 28px;
+}
+
+.admin-page .admin-toolbar h2 {
+    margin-bottom: 0;
+}
+
+.admin-page .admin-toolbar-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+/* ==========================================================
+   06 | TWO COLUMN DASHBOARD
+   ========================================================== */
+
+.admin-page .admin-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(250px, 320px)
+        minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 24px;
+}
+
+.admin-page .admin-details-column {
+    min-width: 0;
+}
+
+.admin-page #projectPanel {
+    display: grid;
+    gap: 24px;
+}
+
+
+/* ==========================================================
+   07 | DASHBOARD PANELS
+   ========================================================== */
+
+.admin-page .admin-panel {
+    min-width: 0;
+
+    padding: 30px;
+
+    background: var(--admin-panel);
+
+    border: 1px solid var(--admin-border);
+    border-radius: 3px;
+}
+
+.admin-page .admin-panel p {
+    overflow-wrap: anywhere;
+}
+
+.admin-page .admin-divider {
+    height: 1px;
+
+    margin: 30px 0;
+
+    background: var(--admin-border);
+
+    border: 0;
+}
+
+.admin-page .admin-title-row {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.admin-page .admin-title-row h2 {
+    margin: 0;
+}
+
+
+/* ==========================================================
+   08 | INQUIRY SIDEBAR
+   ========================================================== */
+
+.admin-page .admin-sidebar {
+    position: sticky;
+    top: 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    max-height: calc(100vh - 48px);
+
+    padding: 24px;
+    overflow: hidden;
+}
+
+.admin-page .admin-project-count {
+    margin: 8px 0 18px;
+
+    color: var(--admin-gold);
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.admin-page .admin-project-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+    min-width: 0;
+    min-height: 0;
+
+    overflow-y: auto;
+}
+
+.admin-page .admin-sidebar .admin-project-list {
+    padding: 3px;
+}
+
+.admin-page .admin-project-list button {
+    appearance: none;
+
+    display: block;
+
+    width: 100%;
+    min-height: 75px;
+    padding: 18px;
+
+    text-align: left;
+
+    background: var(--admin-card);
+    color: var(--admin-cream);
+
+    border: 1px solid var(--admin-border);
+    border-radius: 2px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    line-height: 1.8;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease;
+}
+
+.admin-page .admin-project-list button:hover {
+    background: var(--admin-burgundy);
+    border-color: var(--admin-burgundy-light);
+}
+
+.admin-page .admin-project-list button strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.admin-page .admin-project-list button span,
+.admin-page .admin-project-list button small {
+    display: block;
+
+    color: var(--admin-muted);
+
+    font-size: 10px;
+    letter-spacing: .5px;
+}
+
+.admin-page .admin-project-list button.active,
+.admin-page .admin-project-list button.selected,
+.admin-page .admin-project-list button.is-active,
+.admin-page .admin-project-list button[aria-selected="true"],
+.admin-page .admin-project-list button[aria-current="true"],
+.admin-page .admin-project-list button[aria-pressed="true"] {
+    background: #37131e;
+
+    border-color: var(--admin-gold);
+    border-left: 3px solid var(--admin-gold);
+}
+
+
+/* ==========================================================
+   09 | CLIENT INFORMATION
+   ========================================================== */
+
+.admin-page .admin-info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+    margin: 20px 0;
+}
+
+.admin-page .admin-info-grid > div {
+    min-width: 0;
+    padding: 19px;
+
+    background: var(--admin-card);
+
+    border: 1px solid var(--admin-border);
+}
+
+.admin-page .admin-info-grid p {
+    margin: 0;
+
+    color: var(--admin-cream);
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    overflow-wrap: anywhere;
+}
+
+.admin-page .admin-info-grid a {
+    color: var(--admin-cream);
+
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.admin-page .admin-info-grid a:hover {
+    color: var(--admin-gold);
+}
+
+.admin-page .admin-description {
+    margin: 10px 0;
+
+    color: var(--admin-cream);
+
+    font-size: 13px;
+    line-height: 1.9;
+
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================================
+   10 | PROJECT STATUS
+   ========================================================== */
+
+.admin-page .admin-status {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 14px;
+
+    background: #281019;
+    color: var(--admin-gold);
+
+    border: 1px solid var(--admin-border);
+    border-radius: 2px;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.admin-page .admin-status[data-status="delivered"],
+.admin-page .admin-status[data-status="completed"],
+.admin-page .admin-status[data-status="signed"],
+.admin-page .admin-status[data-status="approved"] {
+    background: #13251e;
+    border-color: #345b46;
+    color: var(--admin-green);
+}
+
+.admin-page .admin-status[data-status="declined"],
+.admin-page .admin-status[data-status="cancelled"] {
+    background: #321015;
+    border-color: #74323d;
+    color: var(--admin-danger);
+}
+
+
+/* ==========================================================
+   11 | FORM ELEMENTS
+   ========================================================== */
+
+.admin-page .admin-main form {
+    width: 100%;
+    min-width: 0;
+
+    margin-top: 20px;
+}
+
+.admin-page .admin-main fieldset {
+    min-inline-size: 0;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+}
+
+.admin-page .admin-main form label {
+    display: block;
+
+    margin: 20px 0 9px;
+
+    color: var(--admin-gold);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.7;
+    letter-spacing: 1.7px;
+}
+
+.admin-page .admin-main input:not([type="checkbox"]):not([type="radio"]),
+.admin-page .admin-main textarea,
+.admin-page .admin-main select {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 48px;
+
+    padding: 14px 16px;
+
+    background: #0d080a;
+    color: var(--admin-cream);
+
+    border: 1px solid var(--admin-border);
+    border-radius: 2px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+
+    outline: none;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.admin-page .admin-main textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.admin-page .admin-main input::placeholder,
+.admin-page .admin-main textarea::placeholder {
+    color: #89777b;
+    opacity: 1;
+}
+
+.admin-page .admin-main input:focus,
+.admin-page .admin-main textarea:focus,
+.admin-page .admin-main select:focus {
+    border-color: var(--admin-gold);
+
+    box-shadow:
+        0 0 0 2px rgba(200, 167, 126, .12);
+}
+
+
+/* ==========================================================
+   12 | BUTTONS
+   ========================================================== */
+
+.admin-page .admin-button,
+.admin-page .admin-button-outline {
+    appearance: none;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 46px;
+
+    padding: 14px 23px;
+
+    border-radius: 2px;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    line-height: 1.6;
+
+    text-align: center;
+    text-decoration: none;
+
+    white-space: normal;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease;
+}
+
+.admin-page .admin-button {
+    background: var(--admin-burgundy);
+    color: var(--admin-cream);
+
+    border: 1px solid var(--admin-burgundy-light);
+}
+
+.admin-page .admin-button:hover:not(:disabled) {
+    background: var(--admin-burgundy-light);
+    border-color: var(--admin-gold);
+}
+
+.admin-page .admin-button-outline {
+    background: transparent;
+    color: var(--admin-cream);
+
+    border: 1px solid var(--admin-border);
+}
+
+.admin-page .admin-button-outline:hover:not(:disabled) {
+    background: var(--admin-card);
+    border-color: var(--admin-gold);
+    color: var(--admin-gold);
+}
+
+.admin-page .admin-main button:focus-visible,
+.admin-page .admin-main a:focus-visible {
+    outline: 2px solid var(--admin-gold);
+    outline-offset: 3px;
+}
+
+.admin-page .admin-main form > .admin-button {
+    margin-top: 24px;
+}
+
+.admin-page .admin-danger {
+    border-color: #73313d;
+    color: var(--admin-danger);
+}
+
+.admin-page .admin-danger:hover:not(:disabled) {
+    background: #43121c;
+    border-color: var(--admin-danger);
+    color: var(--admin-cream);
+}
+
+.admin-page .admin-main button:disabled,
+.admin-page .admin-main fieldset:disabled button {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+.admin-page .admin-main input:disabled,
+.admin-page .admin-main textarea:disabled,
+.admin-page .admin-main fieldset:disabled input {
+    opacity: .55;
+    cursor: not-allowed;
+}
+
+.admin-page .admin-decision-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+    margin: 18px 0;
+}
+
+.admin-page .admin-contract-link {
+    margin-top: 16px;
+}
+
+.admin-page .admin-text-link {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    color: var(--admin-gold);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.6;
+
+    text-decoration: none;
+}
+
+.admin-page .admin-text-link:hover {
+    color: var(--admin-cream);
+}
+
+
+/* ==========================================================
+   13 | SESSION SCHEDULING
+   ========================================================== */
+
+.admin-page #appointmentFields {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px 16px;
+}
+
+.admin-page #appointmentFields > * {
+    min-width: 0;
+    grid-column: 1 / -1;
+}
+
+.admin-page #appointmentFields > label {
+    margin: 10px 0 0;
+}
+
+.admin-page #saveAppointment,
+.admin-page #cancelAppointment {
+    margin-top: 6px;
+}
+
+.admin-page #appointmentFields:disabled {
+    cursor: not-allowed;
+}
+
+.admin-page input[type="date"],
+.admin-page input[type="time"] {
+    color-scheme: dark;
+}
+
+.admin-page input[type="date"]::-webkit-calendar-picker-indicator,
+.admin-page input[type="time"]::-webkit-calendar-picker-indicator {
+    opacity: .85;
+    cursor: pointer;
+}
+
+
+/* ==========================================================
+   14 | EMAIL REMINDER MANAGEMENT
+   ========================================================== */
+
+.admin-page #appointmentSection .admin-info-grid {
+    gap: 12px;
+}
+
+.admin-page #appointmentSection .admin-info-grid > div {
+    padding: 16px;
+    background: #18090d;
+}
+
+.admin-page #detailReminderEmail,
+.admin-page #emailConsentStatus,
+.admin-page #emailWeekStatus,
+.admin-page #emailDayStatus,
+.admin-page #emailMorningStatus {
+    color: var(--admin-muted);
+    overflow-wrap: anywhere;
+}
+
+.admin-page #emailServiceStatus {
+    padding: 14px 16px;
+
+    background: #10090b;
+
+    border-left: 2px solid var(--admin-gold);
+}
+
+.admin-page #emailServiceStatus:empty {
+    display: none;
+}
+
+.admin-page #appointmentSection [data-status="scheduled"],
+.admin-page #appointmentSection [data-status="pending"],
+.admin-page #appointmentSection [data-status="processing"] {
+    color: var(--admin-gold);
+}
+
+.admin-page #appointmentSection [data-status="sent"],
+.admin-page #appointmentSection [data-status="opted-in"] {
+    color: var(--admin-green);
+}
+
+.admin-page #appointmentSection [data-status="failed"],
+.admin-page #appointmentSection [data-status="cancelled"],
+.admin-page #appointmentSection [data-status="unknown"] {
+    color: var(--admin-danger);
+}
+
+.admin-page #appointmentSection [data-status="skipped"],
+.admin-page #appointmentSection [data-status="opted-out"] {
+    color: var(--admin-muted);
+}
+
+
+/* ==========================================================
+   15 | CONTRACT AND GALLERY STATUS
+   ========================================================== */
+
+.admin-page .admin-delivery-status {
+    display: grid;
+
+    grid-template-columns: 130px minmax(0, 1fr);
+
+    gap: 16px;
+
+    padding: 20px;
+    margin-top: 20px;
+
+    background: var(--admin-card);
+
+    border: 1px solid var(--admin-border);
+}
+
+.admin-page .admin-delivery-status p,
+.admin-page .admin-delivery-status span {
+    margin: 0;
+    font-size: 12px;
+}
+
+.admin-page #signatureStatus,
+.admin-page #galleryStatus {
+    color: var(--admin-cream);
+}
+
+
+/* ==========================================================
+   16 | CLIENT FILE MANAGEMENT
+   ========================================================== */
+
+.admin-page .admin-file-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    min-width: 0;
+
+    margin: 18px 0;
+}
+
+.admin-page .admin-file-list > div,
+.admin-page .admin-file-list > article,
+.admin-page .admin-file-list > li {
+    min-width: 0;
+
+    padding: 18px;
+
+    background: var(--admin-card);
+
+    border: 1px solid var(--admin-border);
+
+    font-size: 12px;
+    line-height: 1.8;
+
+    overflow-wrap: anywhere;
+}
+
+.admin-page .admin-file-list a {
+    color: var(--admin-gold);
+}
+
+.admin-page .admin-file-list img,
+.admin-page .admin-file-list video {
+    display: block;
+
+    max-width: 100%;
+    max-height: 260px;
+
+    margin: 10px 0;
+
+    object-fit: contain;
+}
+
+.admin-page .admin-file-list button {
+    padding: 10px 16px;
+
+    background: var(--admin-burgundy);
+    color: var(--admin-cream);
+
+    border: 1px solid var(--admin-border);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+.admin-page .admin-main input[type="file"] {
+    padding: 20px;
+
+    background: #10090b;
+
+    border: 1px dashed #70404c;
+}
+
+.admin-page input[type="file"]::file-selector-button {
+    margin-right: 14px;
+    padding: 12px 18px;
+
+    background: var(--admin-burgundy);
+    color: var(--admin-cream);
+
+    border: 1px solid var(--admin-border);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+}
+
+.admin-page input[type="file"]::file-selector-button:hover {
+    background: var(--admin-burgundy-light);
+}
+
+.admin-page #publishButton {
+    width: 100%;
+    margin-top: 15px;
+}
+
+
+/* ==========================================================
+   17 | RETURNING CLIENT HISTORY
+   ========================================================== */
+
+.admin-page #clientHistoryList {
+    max-height: 480px;
+
+    margin-top: 20px;
+
+    overflow-y: auto;
+}
+
+.admin-page #clientHistoryList > div,
+.admin-page #clientHistoryList > article {
+    padding: 18px;
+
+    background: var(--admin-card);
+
+    border: 1px solid var(--admin-border);
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.admin-page #clientHistoryStatus {
+    margin-top: 16px;
+}
+
+
+/* ==========================================================
+   18 | SYSTEM FEEDBACK
+   ========================================================== */
+
+.admin-page .admin-feedback {
+    margin: 16px 0;
+    padding: 13px 16px;
+
+    background: #1d1014;
+
+    border-left: 2px solid var(--admin-gold);
+
+    color: var(--admin-cream);
+
+    font-size: 12px;
+    line-height: 1.8;
+
+    overflow-wrap: anywhere;
+}
+
+.admin-page .admin-feedback:empty {
+    display: none;
+
+    min-height: 0;
+
+    margin: 0;
+    padding: 0;
+}
+
+.admin-page .admin-feedback.error,
+.admin-page .admin-feedback.is-error,
+.admin-page .admin-feedback[data-status="error"] {
+    background: #2c1016;
+
+    color: var(--admin-danger);
+
+    border-left-color: var(--admin-danger);
+}
+
+.admin-page .admin-feedback.success,
+.admin-page .admin-feedback.is-success,
+.admin-page .admin-feedback[data-status="success"] {
+    background: #12221b;
+
+    color: var(--admin-green);
+
+    border-left-color: var(--admin-green);
+}
+
+
+/* ==========================================================
+   19 | CUSTOM SCROLLBARS
+   ========================================================== */
+
+.admin-page .admin-project-list {
+    scrollbar-width: thin;
+    scrollbar-color: #63303d #140b0e;
+}
+
+.admin-page .admin-project-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.admin-page .admin-project-list::-webkit-scrollbar-track {
+    background: #140b0e;
+}
+
+.admin-page .admin-project-list::-webkit-scrollbar-thumb {
+    background: #63303d;
+    border-radius: 5px;
+}
+
+
+/* ==========================================================
+   20 | PRIVATE STUDIO FOOTER
+   ========================================================== */
+
+.admin-page .admin-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    padding: 35px 5%;
+
+    background: #0d080a;
+
+    border-top: 1px solid var(--admin-border);
+}
+
+.admin-page .admin-footer p,
+.admin-page .admin-footer a {
+    margin: 0;
+
+    color: var(--admin-muted);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.8;
+
+    text-decoration: none;
+}
+
+.admin-page .admin-footer a:hover {
+    color: var(--admin-gold);
+}
+
+
+/* ==========================================================
+   21 | TABLET RESPONSIVENESS
+   ========================================================== */
+
+@media (max-width: 1000px) {
+
+    .admin-page .admin-layout {
+        grid-template-columns:
+            minmax(220px, 260px)
+            minmax(0, 1fr);
+
+        gap: 18px;
+    }
+
+    .admin-page .admin-panel {
+        padding: 24px;
+    }
+
+    .admin-page .admin-sidebar {
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .admin-page .admin-main {
+        width: 92%;
+        padding: 35px 0 65px;
+    }
+
+    .admin-page .admin-hero {
+        padding: 35px 26px;
+    }
+
+    .admin-page .admin-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .admin-page .admin-sidebar {
+        position: static;
+        max-height: none;
+    }
+
+    .admin-page .admin-sidebar .admin-project-list {
+        max-height: 320px;
+    }
+
+    .admin-page .admin-toolbar {
+        align-items: flex-start;
+    }
+}
+
+
+/* ==========================================================
+   22 | MOBILE RESPONSIVENESS
+   ========================================================== */
+
+@media (max-width: 480px) {
+
+    .admin-page .admin-main {
+        width: 94%;
+        padding-top: 20px;
+    }
+
+    .admin-page .admin-hero {
+        padding: 28px 20px;
+        margin-bottom: 28px;
+    }
+
+    .admin-page .admin-hero h1 {
+        font-size: 34px;
+    }
+
+    .admin-page .admin-eyebrow {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .admin-page .admin-panel {
+        padding: 20px;
+    }
+
+    .admin-page .admin-login {
+        padding: 24px;
+        margin: 28px auto;
+    }
+
+    .admin-page .admin-info-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .admin-page #appointmentFields {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .admin-page .admin-toolbar-buttons,
+    .admin-page .admin-decision-row {
+        width: 100%;
+    }
+
+    .admin-page .admin-toolbar-buttons > button {
+        flex: 1;
+    }
+
+    .admin-page .admin-decision-row > button,
+    .admin-page .admin-main form > .admin-button,
+    .admin-page .admin-contract-link {
+        width: 100%;
+    }
+
+    .admin-page .admin-delivery-status {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 9px;
+    }
+
+    .admin-page .admin-main input:not([type="checkbox"]):not([type="radio"]),
+    .admin-page .admin-main textarea,
+    .admin-page .admin-main select {
+        font-size: 16px;
+    }
+
+    .admin-page .admin-footer {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 28px 5%;
+    }
+
+    .admin-page input[type="file"]::file-selector-button {
+        display: block;
+        margin: 0 0 12px;
+    }
+}
+
+
+/* ==========================================================
+   23 | REDUCED MOTION ACCESSIBILITY
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .admin-page .admin-main *,
+    .admin-page .admin-main *::before,
+    .admin-page .admin-main *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+/* ==========================================================
+   END | MONSE MEDIA ADMIN DASHBOARD
+   ========================================================== */
