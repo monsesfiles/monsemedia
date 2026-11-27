@@ -1,0 +1,1336 @@
+/* ==========================================================
+   MONSE MEDIA | PORTFOLIO
+   Author: Monse Montes
+   Filename: portfolio.css
+
+   My cinematic portfolio: 30 photo spaces, no giant cards.
+   The flowers stay. The clutter does not.
+   ========================================================== */
+
+
+/* ==========================================
+   01 | BRAND COLORS
+   ========================================== */
+
+:root {
+    --portfolio-black: #100607;
+    --portfolio-wine: #3c0008;
+    --portfolio-burgundy: #852a32;
+    --portfolio-ivory: #f0eae2;
+    --portfolio-muted: #c5aeaa;
+    --portfolio-rose: #d79ca6;
+}
+
+
+/* ==========================================
+   02 | GENERAL PAGE SETTINGS
+   ========================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.portfolio-page,
+.portfolio-page *,
+.portfolio-page *::before,
+.portfolio-page *::after {
+    box-sizing: border-box;
+}
+
+body.portfolio-page {
+    margin: 0;
+    min-height: 100vh;
+
+    background: var(--portfolio-black);
+    color: var(--portfolio-ivory);
+
+    font-family: "Raleway", sans-serif;
+}
+
+.portfolio-page img {
+    max-width: 100%;
+}
+
+.portfolio-page [hidden] {
+    display: none !important;
+}
+
+
+/* ==========================================
+   03 | MY ONE AND ONLY NAVIGATION
+
+   Two menus were not twice as nice.
+   ========================================== */
+
+.portfolio-page .portfolio-header {
+    position: relative;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    width: 100%;
+    padding: 22px 5%;
+
+    background: #000000;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .12);
+}
+
+
+/* MONSE MEDIA LOGO */
+
+.portfolio-header .portfolio-logo {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 2px;
+    flex-shrink: 0;
+
+    color: var(--portfolio-ivory);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+
+/* MONSE = GUNTER */
+
+.portfolio-header .portfolio-logo-monse {
+    font: 400 36px/1 "gunter", "Gunter", sans-serif;
+    letter-spacing: 0;
+}
+
+
+/* MEDIA = RALEWAY */
+
+.portfolio-header .portfolio-logo-media {
+    font: 500 13px/1.4 "Raleway", sans-serif;
+    letter-spacing: 9px;
+}
+
+
+/* MAIN NAVIGATION */
+
+.portfolio-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    flex: 1;
+    min-width: 0;
+
+    gap: clamp(14px, 2.5vw, 40px);
+}
+
+.portfolio-header .portfolio-nav a {
+    color: var(--portfolio-ivory);
+    text-decoration: none;
+
+    font: 600 10px "Raleway", sans-serif;
+
+    letter-spacing: 2px;
+    white-space: nowrap;
+
+    padding: 8px 0;
+
+    border-bottom: 1px solid transparent;
+
+    transition:
+        color .25s ease,
+        border-color .25s ease;
+}
+
+
+/* NAVIGATION HOVER */
+
+.portfolio-header .portfolio-nav a:hover {
+    color: var(--portfolio-rose);
+}
+
+
+/* ACTIVE PORTFOLIO PAGE */
+
+.portfolio-header .portfolio-nav a[aria-current="page"] {
+    color: var(--portfolio-rose);
+    border-bottom-color: var(--portfolio-rose);
+}
+
+
+/* ==========================================
+   04 | HEADER BOOKING BUTTON
+
+   Square corners. Not a vitamin capsule.
+   ========================================== */
+
+.portfolio-header .portfolio-booking {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    padding: 15px 25px;
+
+    border: 1px solid var(--portfolio-ivory);
+    border-radius: 0;
+
+    background: transparent;
+
+    color: var(--portfolio-ivory);
+    text-decoration: none;
+
+    font: 600 10px "Raleway", sans-serif;
+
+    letter-spacing: 2px;
+    white-space: nowrap;
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease,
+        color .3s ease;
+}
+
+.portfolio-header .portfolio-booking:hover {
+    background: var(--portfolio-burgundy);
+    border-color: var(--portfolio-burgundy);
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   05 | MY PHOTOSHOP FLOWER BANNER
+
+   Image: images/portfolio-banner.jpg
+   ========================================== */
+
+.portfolio-hero {
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    min-height: 530px;
+
+    padding: 70px 5%;
+
+    overflow: hidden;
+
+    background-color: #29060d;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(12, 0, 5, .72),
+            rgba(12, 0, 5, .28) 58%,
+            rgba(12, 0, 5, .12)
+        ),
+        url("images/portfolio-banner.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* HERO CONTENT ABOVE BACKGROUND */
+
+.portfolio-hero-eyebrow,
+.portfolio-hero h1,
+.portfolio-hero-categories,
+.portfolio-hero-description,
+.portfolio-explore {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+}
+
+
+/* SMALL INTRODUCTION */
+
+.portfolio-hero-eyebrow {
+    margin: 0 0 25px;
+
+    color: #f0d7d8;
+
+    font: 600 10px/2.1 "Raleway", sans-serif;
+
+    letter-spacing: 3px;
+}
+
+
+/* MAIN PORTFOLIO HEADING */
+
+.portfolio-hero h1 {
+    margin: 0;
+
+    color: var(--portfolio-ivory);
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(65px, 10vw, 155px);
+    font-weight: 400;
+
+    line-height: 1.05;
+    letter-spacing: -.045em;
+}
+
+
+/* CREATIVE DISCIPLINES */
+
+.portfolio-hero-categories {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 22px;
+
+    color: #f0d7d8;
+
+    font: 600 10px/1.8 "Raleway", sans-serif;
+
+    letter-spacing: 3px;
+}
+
+
+/* HERO DESCRIPTION */
+
+.portfolio-hero-description {
+    width: 100%;
+    max-width: 410px;
+
+    margin-top: 35px;
+
+    color: #f3e1df;
+
+    font: 400 13px/2 "Raleway", sans-serif;
+}
+
+
+/* EXPLORE THE WORK BUTTON */
+
+.portfolio-explore {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+
+    margin-top: 25px;
+    padding: 15px 25px;
+
+    border: 1px solid #e3b6ad;
+    border-radius: 40px;
+
+    color: var(--portfolio-ivory);
+    text-decoration: none;
+
+    font: 600 10px/1.5 "Raleway", sans-serif;
+
+    letter-spacing: 2px;
+    text-align: center;
+
+    transition:
+        background-color .3s ease,
+        transform .3s ease;
+}
+
+.portfolio-explore:hover {
+    background: var(--portfolio-burgundy);
+    transform: translateY(-4px);
+}
+
+
+/* ==========================================
+   06 | GALLERY CATEGORY FILTERS
+
+   Connected to JavaScript in portfolio.html.
+   ========================================== */
+
+.portfolio-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(15px, 4vw, 60px);
+
+    padding: 30px 5%;
+
+    background: var(--portfolio-black);
+
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+
+
+/* INDIVIDUAL FILTER BUTTONS */
+
+.portfolio-filter {
+    appearance: none;
+    -webkit-appearance: none;
+
+    padding: 10px 0;
+
+    border: 0;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+
+    background: transparent;
+
+    color: #d5bfc0;
+
+    font: 600 10px/1.5 "Raleway", sans-serif;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        color .3s ease,
+        border-color .3s ease;
+}
+
+
+/* FILTER HOVER AND ACTIVE STATE */
+
+.portfolio-filter:hover,
+.portfolio-filter.active,
+.portfolio-filter[aria-pressed="true"] {
+    color: #ffffff;
+}
+
+.portfolio-filter.active,
+.portfolio-filter[aria-pressed="true"] {
+    border-bottom-color: #a83243;
+}
+
+
+/* KEYBOARD ACCESSIBILITY */
+
+.portfolio-filter:focus-visible {
+    outline: 2px solid var(--portfolio-rose);
+    outline-offset: 5px;
+}
+
+.portfolio-logo:focus-visible,
+.portfolio-nav a:focus-visible,
+.portfolio-booking:focus-visible,
+.portfolio-explore:focus-visible,
+.portfolio-outro a:focus-visible {
+    outline: 2px solid var(--portfolio-rose);
+    outline-offset: 5px;
+}
+
+
+/* ==========================================================
+   07 | MY 30-PHOTO GALLERY
+
+   Five photos per row on large desktops.
+   Thirty numbered spaces.
+   Six full rows when all categories are displayed.
+   ========================================================== */
+
+.portfolio-gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 10px;
+    padding: 10px;
+
+    scroll-margin-top: 15px;
+
+    background: var(--portfolio-black);
+}
+
+
+/* ==========================================
+   08 | INDIVIDUAL GALLERY CARDS
+   ========================================== */
+
+.portfolio-card {
+    position: relative;
+    isolation: isolate;
+
+    min-width: 0;
+
+    aspect-ratio: 4 / 5;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    background: #2a1719;
+}
+
+
+/* HIDE FILTERED PROJECTS */
+
+.portfolio-page .portfolio-card[hidden] {
+    display: none !important;
+}
+
+
+/* ENTIRE GALLERY CARD IS CLICKABLE */
+
+.portfolio-card > a {
+    position: absolute;
+    inset: 0;
+
+    display: block;
+
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ==========================================
+   09 | NUMBERED IMAGE PLACEHOLDERS
+
+   Empty gallery spaces should look intentional.
+   ========================================== */
+
+.portfolio-card > a::before {
+    content: attr(data-slot);
+
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: linear-gradient(
+        145deg,
+        #3c111b,
+        #15080c
+    );
+
+    color: rgba(240, 234, 226, .70);
+
+    font: 500 12px/1.5 "Raleway", sans-serif;
+
+    letter-spacing: 3px;
+    text-align: center;
+
+    pointer-events: none;
+}
+
+
+/* KEYBOARD FOCUS INSIDE THE PHOTO FRAME */
+
+.portfolio-page .portfolio-card > a:focus-visible {
+    outline: 3px solid var(--portfolio-rose);
+    outline-offset: -3px;
+}
+
+
+/* ==========================================
+   10 | GALLERY PHOTOGRAPHS
+
+   Images fill their frames without stretching.
+   ========================================== */
+
+.portfolio-card img {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition:
+        transform .6s ease,
+        filter .6s ease;
+}
+
+
+/* REMOVE BROKEN IMAGE ICONS */
+
+.portfolio-card img.is-missing {
+    display: none;
+}
+
+
+/* DISABLED IMAGE LINKS */
+
+.portfolio-card > a[aria-disabled="true"] {
+    cursor: default;
+}
+
+
+/* IMAGE HOVER EFFECT */
+
+.portfolio-card:hover img,
+.portfolio-card:focus-within img {
+    transform: scale(1.06);
+    filter: brightness(.8);
+}
+
+
+/* ==========================================
+   11 | PHOTO GRADIENT OVERLAY
+   ========================================== */
+
+.portfolio-card > a::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background: linear-gradient(
+        to top,
+        rgba(11, 2, 5, .82),
+        transparent 55%
+    );
+
+    opacity: 0;
+
+    transition: opacity .3s ease;
+
+    pointer-events: none;
+}
+
+
+/* SHOW GRADIENT WHEN HOVERED */
+
+.portfolio-card:hover > a::after,
+.portfolio-card:focus-within > a::after {
+    opacity: 1;
+}
+
+
+/* ==========================================
+   12 | PHOTO NUMBERS AND CAPTIONS
+
+   Small captions instead of giant project cards.
+   ========================================== */
+
+.portfolio-card-content {
+    position: absolute;
+
+    left: 7%;
+    right: 7%;
+    bottom: 7%;
+
+    z-index: 2;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 8px;
+
+    opacity: 0;
+
+    transform: translateY(9px);
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+
+    pointer-events: none;
+}
+
+
+/* SHOW CAPTIONS WHEN HOVERED OR FOCUSED */
+
+.portfolio-card:hover .portfolio-card-content,
+.portfolio-card:focus-within .portfolio-card-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* PHOTO NUMBER */
+
+.portfolio-card-number {
+    flex-shrink: 0;
+
+    color: var(--portfolio-ivory);
+
+    font: 400 19px/1.2 "Playfair Display", Georgia, serif;
+}
+
+
+/* VIEW PHOTO / VIEW PDF LABEL */
+
+.portfolio-card-label {
+    min-width: 0;
+
+    color: var(--portfolio-ivory);
+
+    font: 600 9px/1.5 "Raleway", sans-serif;
+
+    letter-spacing: 1.4px;
+    text-align: right;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   13 | MISSING IMAGE STATES
+
+   Connected to the corrected portfolio.html.
+   ========================================== */
+
+.portfolio-card > a.has-missing-image .portfolio-card-content {
+    opacity: 1;
+    transform: none;
+}
+
+.portfolio-card > a.has-missing-image::after {
+    opacity: 1;
+}
+
+.portfolio-card > a[aria-disabled="true"] .portfolio-card-label {
+    color: var(--portfolio-muted);
+}
+
+
+/* ==========================================
+   14 | MY FINAL INVITATION
+
+   A call to create, not another gallery card.
+   ========================================== */
+
+.portfolio-outro {
+    padding: 110px 7%;
+
+    text-align: center;
+
+    background: var(--portfolio-wine);
+}
+
+
+/* SMALL OUTRO INTRODUCTION */
+
+.portfolio-outro > p {
+    margin: 0;
+
+    color: #dcaab1;
+
+    font: 600 10px/1.8 "Raleway", sans-serif;
+
+    letter-spacing: 4px;
+}
+
+
+/* FINAL MAIN HEADING */
+
+.portfolio-outro h2 {
+    max-width: 950px;
+
+    margin: 20px auto 35px;
+
+    color: var(--portfolio-ivory);
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(40px, 6vw, 88px);
+    font-weight: 400;
+
+    line-height: 1.15;
+
+    overflow-wrap: break-word;
+}
+
+
+/* LET'S CREATE BUTTON */
+
+.portfolio-outro a {
+    display: inline-block;
+
+    max-width: 100%;
+
+    padding: 17px 30px;
+
+    border: 1px solid var(--portfolio-ivory);
+    border-radius: 0;
+
+    color: var(--portfolio-ivory);
+    text-decoration: none;
+
+    font: 600 11px/1.5 "Raleway", sans-serif;
+
+    letter-spacing: 2px;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease;
+}
+
+
+/* FINAL BUTTON HOVER */
+
+.portfolio-outro a:hover {
+    background: var(--portfolio-ivory);
+    color: var(--portfolio-wine);
+}
+
+
+/* ==========================================
+   15 | VIDEO FOOTER SAFEGUARDS
+
+   Main footer styling remains in style.css.
+   ========================================== */
+
+.portfolio-page .site-footer {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-page .footer-video {
+    pointer-events: none;
+}
+
+.portfolio-page .footer-overlay {
+    pointer-events: none;
+}
+
+
+/* ACTIVE FOOTER NAVIGATION */
+
+.portfolio-page .footer-links a[aria-current="page"] {
+    color: var(--portfolio-rose);
+}
+
+
+/* ==========================================
+   16 | LARGE TABLETS AND SMALL DESKTOPS
+
+   Four photographs per row.
+   ========================================== */
+
+@media (max-width: 1300px) {
+
+    .portfolio-gallery {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ==========================================
+   17 | TABLET LAYOUT
+
+   Three photographs per row.
+   ========================================== */
+
+@media (max-width: 1000px) {
+
+    .portfolio-page .portfolio-header {
+        flex-wrap: wrap;
+    }
+
+    .portfolio-nav {
+        order: 3;
+
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .portfolio-hero {
+        min-height: 460px;
+    }
+
+    .portfolio-gallery {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ==========================================
+   18 | MOBILE LAYOUT
+
+   Two photographs per row.
+   ========================================== */
+
+@media (max-width: 700px) {
+
+    /* MOBILE HEADER */
+
+    .portfolio-page .portfolio-header {
+        gap: 15px;
+        padding: 20px 5%;
+    }
+
+
+    /* MOBILE LOGO */
+
+    .portfolio-header .portfolio-logo-monse {
+        font-size: 27px;
+    }
+
+    .portfolio-header .portfolio-logo-media {
+        font-size: 10px;
+        letter-spacing: 6px;
+    }
+
+
+    /* MOBILE BOOKING BUTTON */
+
+    .portfolio-header .portfolio-booking {
+        padding: 11px 14px;
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+
+    /* MOBILE NAVIGATION */
+
+    .portfolio-nav {
+        gap: 10px 15px;
+    }
+
+    .portfolio-header .portfolio-nav a {
+        font-size: 9px;
+        letter-spacing: 1px;
+
+        padding: 10px 0;
+    }
+
+
+    /* MOBILE FLORAL HERO */
+
+    .portfolio-hero {
+        min-height: 520px;
+
+        padding: 60px 6%;
+
+        background-position: 55% center;
+    }
+
+
+    /* MOBILE PORTFOLIO HEADING */
+
+    .portfolio-hero h1 {
+        font-size: clamp(38px, 11vw, 80px);
+    }
+
+
+    /* MOBILE CREATIVE CATEGORIES */
+
+    .portfolio-hero-categories {
+        gap: 10px;
+
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+
+    /* MOBILE HERO DESCRIPTION */
+
+    .portfolio-hero-description {
+        font-size: 12px;
+    }
+
+
+    /* MOBILE CATEGORY FILTERS */
+
+    .portfolio-filters {
+        gap: 12px 16px;
+
+        padding: 22px 5%;
+    }
+
+    .portfolio-filter {
+        min-height: 44px;
+
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+
+    /* TWO PHOTOS ACROSS */
+
+    .portfolio-gallery {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 6px;
+        padding: 6px;
+    }
+
+
+    /* KEEP PHOTO CAPTIONS VISIBLE */
+
+    .portfolio-card-content {
+        opacity: 1;
+        transform: none;
+    }
+
+    .portfolio-card > a::after {
+        opacity: 1;
+    }
+
+
+    /* SMALLER PHOTO LABELS */
+
+    .portfolio-card-label {
+        font-size: 8px;
+        letter-spacing: .8px;
+    }
+
+
+    /* MOBILE FINAL SECTION */
+
+    .portfolio-outro {
+        padding: 80px 6%;
+    }
+
+    .portfolio-outro h2 {
+        font-size: clamp(32px, 8vw, 50px);
+    }
+
+}
+
+
+/* ==========================================
+   19 | SMALL PHONE SCREENS
+   ========================================== */
+
+@media (max-width: 380px) {
+
+    .portfolio-header .portfolio-logo-monse {
+        font-size: 25px;
+    }
+
+    .portfolio-header .portfolio-logo-media {
+        font-size: 9px;
+        letter-spacing: 5px;
+    }
+
+    .portfolio-header .portfolio-booking {
+        padding: 10px 12px;
+        font-size: 8px;
+        letter-spacing: .8px;
+    }
+
+    .portfolio-nav {
+        gap: 8px 12px;
+    }
+
+    .portfolio-header .portfolio-nav a {
+        font-size: 8px;
+    }
+
+    .portfolio-hero h1 {
+        font-size: clamp(30px, 11vw, 42px);
+    }
+
+    .portfolio-hero-eyebrow {
+        letter-spacing: 2px;
+    }
+
+    .portfolio-hero-categories {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .portfolio-card-number {
+        font-size: 16px;
+    }
+
+    .portfolio-card-label {
+        font-size: 7px;
+        letter-spacing: .5px;
+    }
+
+    .portfolio-card > a::before {
+        padding: 12px;
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+}
+
+
+/* ==========================================
+   20 | TOUCHSCREEN DEVICES
+
+   Touchscreens do not always support hover.
+   Keep captions visible on phones and tablets.
+   ========================================== */
+
+@media (hover: none), (pointer: coarse) {
+
+    .portfolio-card-content {
+        opacity: 1;
+        transform: none;
+    }
+
+    .portfolio-card > a::after {
+        opacity: 1;
+    }
+
+    .portfolio-card:hover img {
+        transform: none;
+        filter: none;
+    }
+
+    .portfolio-explore:hover {
+        transform: none;
+    }
+
+}
+
+
+/* ==========================================
+   21 | REDUCED MOTION ACCESSIBILITY
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .portfolio-page,
+    .portfolio-page *,
+    .portfolio-page *::before,
+    .portfolio-page *::after {
+        transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
+    }
+
+    .portfolio-card:hover img,
+    .portfolio-card:focus-within img {
+        transform: none;
+    }
+
+    .portfolio-explore:hover {
+        transform: none;
+    }
+
+    .portfolio-card-content {
+        transform: none;
+    }
+
+}
+/* ==========================================================
+   MONSE MEDIA | CENTERED PORTFOLIO PHOTO VIEWER
+   ========================================================== */
+
+/* FULL-SCREEN LIGHTBOX CONTAINER */
+
+#portfolio-lightbox[open] {
+    position: fixed !important;
+
+    inset: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 100% !important;
+
+    height: 100vh !important;
+    height: 100dvh !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 25px !important;
+
+    border: none !important;
+    background: transparent !important;
+
+    overflow: hidden !important;
+}
+
+
+/* DARK BACKGROUND */
+
+#portfolio-lightbox::backdrop {
+    background: rgba(10, 3, 6, .88);
+    backdrop-filter: blur(5px);
+}
+
+
+/* CENTERED PHOTO FRAME */
+
+#portfolio-lightbox .portfolio-lightbox-frame {
+    position: relative !important;
+
+    display: block;
+
+    width: fit-content !important;
+    height: fit-content !important;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: transparent;
+}
+
+
+/* ENLARGED PHOTOGRAPH */
+
+#portfolio-lightbox #lightbox-image {
+    display: block;
+
+    width: auto !important;
+    height: auto !important;
+
+    max-width: min(75vw, 1100px) !important;
+
+    max-height: 75vh !important;
+    max-height: 75dvh !important;
+
+    object-fit: contain !important;
+
+    margin: 0 !important;
+
+    border: none;
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, .5);
+}
+
+
+/* X CLOSE BUTTON */
+
+#portfolio-lightbox .portfolio-lightbox-close {
+    position: absolute !important;
+
+    top: 12px !important;
+    right: 12px !important;
+
+    left: auto !important;
+    bottom: auto !important;
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    margin: 0;
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, .6);
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, .65);
+
+    color: #ffffff;
+
+    font: 300 30px/1 Arial, sans-serif;
+
+    cursor: pointer;
+
+    transition:
+        background .3s ease,
+        transform .3s ease;
+}
+
+
+/* CLOSE BUTTON HOVER */
+
+#portfolio-lightbox .portfolio-lightbox-close:hover {
+    background: #852a32;
+
+    transform: scale(1.08);
+}
+
+
+/* CENTERED VIDEO */
+
+#portfolio-lightbox #lightbox-video {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 75vw !important;
+    max-height: 75dvh !important;
+
+    object-fit: contain;
+}
+
+
+/* CENTERED PDF DOCUMENT */
+
+#portfolio-lightbox #lightbox-document {
+    width: min(75vw, 1050px);
+    height: 75dvh;
+
+    border: none;
+}
+
+
+/* PREVENT BACKGROUND SCROLLING */
+
+body.lightbox-open {
+    overflow: hidden !important;
+}
+
+
+/* HIDE INACTIVE MEDIA */
+
+#portfolio-lightbox:not([open]),
+#portfolio-lightbox [hidden] {
+    display: none !important;
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 700px) {
+
+    #portfolio-lightbox[open] {
+        padding: 15px !important;
+    }
+
+    #portfolio-lightbox #lightbox-image,
+    #portfolio-lightbox #lightbox-video {
+        max-width: 90vw !important;
+        max-height: 80dvh !important;
+    }
+
+    #portfolio-lightbox #lightbox-document {
+        width: 90vw;
+        height: 75dvh;
+    }
+
+    #portfolio-lightbox .portfolio-lightbox-close {
+        top: 8px !important;
+        right: 8px !important;
+    }
+
+}
+
+/* ==========================================
+   END OF MONSE MEDIA PORTFOLIO STYLESHEET
+   ========================================== */

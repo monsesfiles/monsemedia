@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================
+         MONSE MEDIA | MY PORTFOLIO
+         Author: Monse Montes
+         Filename: portfolio.html
+         ========================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Explore Monse Media's photography, videography, graphic design, web design, and creative direction portfolio.">
+
+    <title>Portfolio | Monse Media</title>
+
+    <!-- FAVICON -->
+
+    <link rel="icon"
+          type="image/gif"
+          href="images/monse-logo.jpg.gif?v=2">
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&amp;family=Poppins:wght@300;400;500;600;700&amp;family=Raleway:wght@300;400;500;600;700&amp;display=swap"
+          rel="stylesheet">
+
+    <!-- ADOBE FONTS | GUNTER -->
+
+    <link rel="stylesheet"
+          href="https://use.typekit.net/njulgsa.css">
+
+    <!-- STYLESHEETS -->
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portfolio.css">
+
+</head>
+
+
+<body class="portfolio-page">
+
+
+    <!-- ==========================================
+         01 | WEBSITE HEADER
+         ========================================== -->
+
+    <header class="portfolio-header">
+
+        <!-- MONSE MEDIA LOGO -->
+
+        <a href="index.html"
+           class="portfolio-logo"
+           aria-label="Monse Media Home">
+
+            <span class="portfolio-logo-monse">
+                MONSE
+            </span>
+
+            <span class="portfolio-logo-media">
+                MEDIA
+            </span>
+
+        </a>
+
+
+        <!-- MAIN NAVIGATION -->
+
+        <nav class="portfolio-nav"
+             aria-label="Main navigation">
+
+            <a href="index.html">HOME</a>
+
+            <a href="about.html">ABOUT</a>
+
+            <a href="portfolio.html"
+               aria-current="page">PORTFOLIO</a>
+
+            <a href="services.html">SERVICES</a>
+
+            <a href="contact.html">CONTACT</a>
+
+            <a href="client.html">CLIENT PORTAL</a>
+
+        </nav>
+
+
+        <!-- BOOKING BUTTON -->
+
+        <a href="contact.html"
+           class="portfolio-booking">
+
+            LET'S CREATE ↗
+
+        </a>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             02 | CINEMATIC PORTFOLIO HERO
+
+             Background:
+             images/portfolio-banner.jpg
+             ========================================== -->
+
+        <section class="portfolio-hero">
+
+            <p class="portfolio-hero-eyebrow">
+
+                VISUAL STORIES
+
+                <br>
+
+                FOR A MORE BEAUTIFUL WORLD
+
+            </p>
+
+
+            <h1>PORTFOLIO</h1>
+
+
+            <!-- CREATIVE DISCIPLINES -->
+
+            <div class="portfolio-hero-categories">
+
+                <span>PHOTOGRAPHY</span>
+
+                <span>/</span>
+
+                <span>DESIGN</span>
+
+                <span>/</span>
+
+                <span>CREATIVE DIRECTION</span>
+
+            </div>
+
+
+            <!-- INTRODUCTION -->
+
+            <p class="portfolio-hero-description">
+
+                Bold visuals. Meaningful stories.
+                A curated collection of work,
+                ideas, and creative experiences
+                by Monse Media.
+
+            </p>
+
+
+            <a href="#my-work"
+               class="portfolio-explore">
+
+                EXPLORE THE WORK ↗
+
+            </a>
+
+        </section>
+
+
+        <!-- ==========================================
+             03 | PORTFOLIO COLLECTIONS
+
+             ALL contains the original 30 projects.
+
+             Each remaining collection contains
+             10 independent project spaces.
+             ========================================== -->
+
+        <div class="portfolio-filters"
+             role="group"
+             aria-label="Portfolio collections">
+
+
+            <!-- ALL PROJECTS -->
+
+            <button class="portfolio-filter active"
+                    data-filter="all"
+                    type="button"
+                    aria-pressed="true">
+
+                ALL
+
+            </button>
+
+
+            <!-- PHOTOGRAPHY -->
+
+            <button class="portfolio-filter"
+                    data-filter="photography"
+                    type="button"
+                    aria-pressed="false">
+
+                PHOTOGRAPHY
+
+            </button>
+
+
+            <!-- VIDEOGRAPHY -->
+
+            <button class="portfolio-filter"
+                    data-filter="videography"
+                    type="button"
+                    aria-pressed="false">
+
+                VIDEOGRAPHY
+
+            </button>
+
+
+            <!-- GRAPHIC DESIGN -->
+
+            <button class="portfolio-filter"
+                    data-filter="graphic-design"
+                    type="button"
+                    aria-pressed="false">
+
+                GRAPHIC DESIGN
+
+            </button>
+
+
+            <!-- WEB DESIGN -->
+
+            <button class="portfolio-filter"
+                    data-filter="web-design"
+                    type="button"
+                    aria-pressed="false">
+
+                WEB DESIGN
+
+            </button>
+
+        </div>
+
+
+        <!-- ==========================================
+             04 | PORTFOLIO GALLERY
+
+             JavaScript automatically displays
+             the selected collection here.
+             ========================================== -->
+
+        <section class="portfolio-gallery"
+                 id="my-work"
+                 aria-label="All creative work">
+
+        </section>
+
+
+        <noscript>
+
+            <p class="portfolio-noscript">
+
+                Please enable JavaScript
+                to view the portfolio.
+
+            </p>
+
+        </noscript>
+
+
+        <!-- ==========================================
+             05 | FINAL CONTACT SECTION
+             ========================================== -->
+
+        <section class="portfolio-outro">
+
+            <p>
+
+                HAVE A STORY WORTH TELLING?
+
+            </p>
+
+            <h2>
+
+                LET'S MAKE SOMETHING BEAUTIFUL.
+
+            </h2>
+
+            <a href="contact.html">
+
+                LET'S CREATE ↗
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         06 | FULL-SCREEN PROJECT VIEWER
+
+         Opens photographs without navigating
+         away from the portfolio.
+
+         The X button closes the enlarged project.
+         ========================================== -->
+
+    <dialog id="portfolio-lightbox"
+            class="portfolio-lightbox"
+            aria-label="Full-size portfolio project">
+
+        <div class="portfolio-lightbox-frame">
+
+
+            <!-- CLOSE BUTTON -->
+
+            <button type="button"
+                    class="portfolio-lightbox-close"
+                    aria-label="Close and return to portfolio"
+                    autofocus>
+
+                ×
+
+            </button>
+
+
+            <!-- FULL-SIZE PHOTOGRAPH -->
+
+            <img id="lightbox-image"
+                 alt=""
+                 hidden>
+
+
+            <!-- PDF DOCUMENT VIEWER -->
+
+            <iframe id="lightbox-document"
+                    title="Portfolio PDF"
+                    hidden>
+
+            </iframe>
+
+
+            <!-- VIDEO PROJECT VIEWER -->
+
+            <video id="lightbox-video"
+                   controls
+                   playsinline
+                   hidden>
+
+            </video>
+
+
+            <!-- ORIGINAL PDF FALLBACK LINK -->
+
+            <a id="lightbox-document-link"
+               target="_blank"
+               rel="noopener noreferrer"
+               hidden>
+
+                OPEN ORIGINAL PDF ↗
+
+            </a>
+
+        </div>
+
+    </dialog>
+
+
+    <!-- ==========================================
+         07 | MONSE MEDIA VIDEO FOOTER
+         ========================================== -->
+
+    <footer class="site-footer">
+
+
+        <!-- BACKGROUND VIDEO -->
+
+        <video class="footer-video"
+               autoplay
+               muted
+               loop
+               playsinline
+               preload="metadata"
+               aria-hidden="true">
+
+            <source src="videos/footer.mp4"
+                    type="video/mp4">
+
+        </video>
+
+
+        <!-- DARK VIDEO OVERLAY -->
+
+        <div class="footer-overlay"></div>
+
+
+        <!-- FOOTER CONTENT -->
+
+        <div class="footer-content">
+
+
+            <!-- FOOTER LOGO -->
+
+            <div class="footer-brand">
+
+                <a href="index.html"
+                   class="footer-logo-link">
+
+                    <img src="images/monse-logo.jpg.gif"
+                         alt="Monse Media Logo"
+                         class="footer-logo"
+                         loading="lazy">
+
+                </a>
+
+            </div>
+
+
+            <!-- FOOTER NAVIGATION -->
+
+            <div class="footer-links">
+
+                <a href="index.html">HOME</a>
+
+                <a href="about.html">ABOUT</a>
+
+                <a href="portfolio.html"
+                   aria-current="page">PORTFOLIO</a>
+
+                <a href="services.html">SERVICES</a>
+
+                <a href="contact.html">CONTACT</a>
+
+            </div>
+
+
+            <!-- COPYRIGHT -->
+
+            <div class="footer-bottom">
+
+                <p>
+
+                    © 2026 MONSE MEDIA.
+                    ALL RIGHTS RESERVED.
+
+                </p>
+
+                <p>
+
+                    PHOTOGRAPHY. FILM. CREATIVE DIRECTION.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==========================================
+         08 | PORTFOLIO JAVASCRIPT
+         ========================================== -->
+
+    <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        "use strict";
+
+
+        /* ======================================
+           MAIN PORTFOLIO
+
+           All original 30 projects remain here.
+
+           These projects are NOT assigned
+           to individual category galleries.
+           ====================================== */
+
+        const mainGallery = [
+
+            "images/portfolio-01.jpg",
+
+            "images/portfolio-02.jpg",
+
+            "images/portfolio-03.jpg",
+
+            "images/portfolio-04.jpg",
+
+            "images/portfolio-05.jpg",
+
+            "images/portfolio-06.jpg",
+
+            "images/portfolio-07.jpg",
+
+            "images/portfolio-08.jpg",
+
+            "images/portfolio-09.jpg",
+
+            "images/portfolio-10.jpg",
+
+            "images/portfolio-11.jpg",
+
+            "images/portfolio-12.jpg",
+
+            "images/portfolio-13.jpg",
+
+            "images/portfolio-14.jpg",
+
+            "images/portfolio-15.jpg",
+
+            "images/portfolio-16.jpg",
+
+
+            /* PROJECT 17 | PDF DOCUMENT */
+
+            {
+                src: "images/portfolio-17.jpg",
+                href: "images/portfolio-17.pdf",
+                alt: "Portfolio project 17 PDF"
+            },
+
+
+            "images/portfolio-18.jpg",
+
+            "images/portfolio-19.jpg",
+
+            "images/portfolio-20.jpg",
+
+            "images/portfolio-21.jpg",
+
+            "images/portfolio-22.jpg",
+
+            "images/portfolio-23.jpg",
+
+            "images/portfolio-24.jpg",
+
+            "images/portfolio-25.jpg",
+
+            "images/portfolio-26.jpg",
+
+            "images/portfolio-27.jpg",
+
+            "images/portfolio-28.jpg",
+
+            "images/portfolio-29.jpg",
+
+            "images/portfolio-30.jpg"
+
+        ];
+
+
+        /* ======================================
+           INDEPENDENT PORTFOLIO COLLECTIONS
+
+           Replace null with an image filename
+           whenever you want to add a project.
+           ====================================== */
+
+        const collections = {
+
+
+            /* MAIN PORTFOLIO */
+
+            all: mainGallery,
+
+
+            /* ==================================
+               PHOTOGRAPHY | 10 PROJECT SPACES
+               ================================== */
+
+            photography: [
+
+                null, // Photography 01
+
+                null, // Photography 02
+
+                null, // Photography 03
+
+                null, // Photography 04
+
+                null, // Photography 05
+
+                null, // Photography 06
+
+                null, // Photography 07
+
+                null, // Photography 08
+
+                null, // Photography 09
+
+                null  // Photography 10
+
+            ],
+
+
+            /* ==================================
+               VIDEOGRAPHY | 10 PROJECT SPACES
+               ================================== */
+
+            videography: [
+
+                null, // Videography 01
+
+                null, // Videography 02
+
+                null, // Videography 03
+
+                null, // Videography 04
+
+                null, // Videography 05
+
+                null, // Videography 06
+
+                null, // Videography 07
+
+                null, // Videography 08
+
+                null, // Videography 09
+
+                null  // Videography 10
+
+            ],
+
+
+            /* ==================================
+               GRAPHIC DESIGN | 10 PROJECT SPACES
+               ================================== */
+
+            "graphic-design": [
+
+                null, // Graphic Design 01
+
+                null, // Graphic Design 02
+
+                null, // Graphic Design 03
+
+                null, // Graphic Design 04
+
+                null, // Graphic Design 05
+
+                null, // Graphic Design 06
+
+                null, // Graphic Design 07
+
+                null, // Graphic Design 08
+
+                null, // Graphic Design 09
+
+                null  // Graphic Design 10
+
+            ],
+
+
+            /* ==================================
+               WEB DESIGN | 10 PROJECT SPACES
+               ================================== */
+
+            "web-design": [
+
+                null, // Web Design 01
+
+                null, // Web Design 02
+
+                null, // Web Design 03
+
+                null, // Web Design 04
+
+                null, // Web Design 05
+
+                null, // Web Design 06
+
+                null, // Web Design 07
+
+                null, // Web Design 08
+
+                null, // Web Design 09
+
+                null  // Web Design 10
+
+            ]
+
+        };
+
+
+        /* ======================================
+           COLLECTION DISPLAY NAMES
+           ====================================== */
+
+        const names = {
+
+            all: "All creative work",
+
+            photography: "Photography",
+
+            videography: "Videography",
+
+            "graphic-design": "Graphic design",
+
+            "web-design": "Web design"
+
+        };
+
+
+        /* ======================================
+           SELECT PAGE ELEMENTS
+           ====================================== */
+
+        const gallery =
+            document.getElementById("my-work");
+
+        const filterButtons =
+            document.querySelectorAll(".portfolio-filter");
+
+        const dialog =
+            document.getElementById("portfolio-lightbox");
+
+        const closeButton =
+            dialog.querySelector(".portfolio-lightbox-close");
+
+        const fullImage =
+            document.getElementById("lightbox-image");
+
+        const pdf =
+            document.getElementById("lightbox-document");
+
+        const video =
+            document.getElementById("lightbox-video");
+
+        const pdfLink =
+            document.getElementById("lightbox-document-link");
+
+
+        let previousFocus = null;
+
+
+        /* ======================================
+           IDENTIFY PROJECT FILE TYPE
+           ====================================== */
+
+        function mediaType(path) {
+
+            if (/\.pdf(?:[?#]|$)/i.test(path)) {
+
+                return "pdf";
+
+            }
+
+            if (/\.(mp4|webm|mov|ogg)(?:[?#]|$)/i.test(path)) {
+
+                return "video";
+
+            }
+
+            return "image";
+
+        }
+
+
+        /* ======================================
+           OPEN FULL-SIZE PROJECT
+
+           Photographs open in a lightbox instead
+           of opening a separate browser tab.
+           ====================================== */
+
+        function openProject(project, trigger) {
+
+            previousFocus = trigger;
+
+            const type = mediaType(project.href);
+
+
+            /* DISPLAY THE CORRECT MEDIA TYPE */
+
+            fullImage.hidden = type !== "image";
+
+            pdf.hidden = type !== "pdf";
+
+            video.hidden = type !== "video";
+
+            pdfLink.hidden = type !== "pdf";
+
+
+            /* OPEN PDF */
+
+            if (type === "pdf") {
+
+                pdf.src = project.href;
+
+                pdfLink.href = project.href;
+
+            }
+
+
+            /* OPEN VIDEO */
+
+            else if (type === "video") {
+
+                video.src = project.href;
+
+            }
+
+
+            /* OPEN PHOTOGRAPH */
+
+            else {
+
+                fullImage.src = project.href;
+
+                fullImage.alt = project.alt;
+
+            }
+
+
+            /* OPEN THE FULL-SCREEN VIEWER */
+
+            dialog.showModal();
+
+
+            /* PREVENT BACKGROUND SCROLLING */
+
+            document.body.classList.add("lightbox-open");
+
+
+            /* FOCUS THE CLOSE BUTTON */
+
+            closeButton.focus();
+
+        }
+
+
+        /* ======================================
+           CLOSE THE PROJECT VIEWER
+           ====================================== */
+
+        closeButton.addEventListener("click", function () {
+
+            dialog.close();
+
+        });
+
+
+        /* CLOSE BY CLICKING OUTSIDE THE PROJECT */
+
+        dialog.addEventListener("click", function (event) {
+
+            if (event.target === dialog) {
+
+                dialog.close();
+
+            }
+
+        });
+
+
+        /* ======================================
+           RESTORE ORIGINAL PORTFOLIO VIEW
+
+           Also runs when Escape is pressed.
+           ====================================== */
+
+        dialog.addEventListener("close", function () {
+
+            document.body.classList.remove("lightbox-open");
+
+
+            /* CLEAR PHOTOGRAPH */
+
+            fullImage.removeAttribute("src");
+
+
+            /* CLEAR PDF */
+
+            pdf.removeAttribute("src");
+
+            pdfLink.removeAttribute("href");
+
+
+            /* STOP VIDEO PLAYBACK */
+
+            video.pause();
+
+            video.removeAttribute("src");
+
+            video.load();
+
+
+            /* RETURN TO ORIGINAL PHOTO */
+
+            if (previousFocus?.isConnected) {
+
+                previousFocus.focus({
+
+                    preventScroll: true
+
+                });
+
+            }
+
+        });
+
+
+        /* ======================================
+           BUILD THE SELECTED PORTFOLIO COLLECTION
+           ====================================== */
+
+        function renderGallery(category) {
+
+
+            /* CLEAR PREVIOUS COLLECTION */
+
+            gallery.replaceChildren();
+
+
+            gallery.setAttribute(
+
+                "aria-label",
+
+                names[category]
+
+            );
+
+
+            /* UPDATE THE ACTIVE CATEGORY BUTTON */
+
+            filterButtons.forEach(function (button) {
+
+                const active =
+
+                    button.dataset.filter === category;
+
+
+                button.classList.toggle(
+
+                    "active",
+
+                    active
+
+                );
+
+
+                button.setAttribute(
+
+                    "aria-pressed",
+
+                    String(active)
+
+                );
+
+            });
+
+
+            /* ==================================
+               GENERATE EACH PROJECT
+               ================================== */
+
+            collections[category].forEach(function (entry, i) {
+
+
+                const number = String(i + 1)
+
+                    .padStart(2, "0");
+
+
+                const card =
+
+                    document.createElement("article");
+
+
+                card.className = "portfolio-card";
+
+
+                /* ==================================
+                   EMPTY PLACEHOLDER
+                   ================================== */
+
+                if (!entry) {
+
+
+                    card.classList.add(
+
+                        "portfolio-placeholder"
+
+                    );
+
+
+                    const label =
+
+                        document.createElement("div");
+
+
+                    label.className =
+
+                        "portfolio-placeholder-label";
+
+
+                    label.innerHTML = `
+
+                        <span class="placeholder-number">
+
+                            ${number}
+
+                        </span>
+
+                        <span>
+
+                            ${names[category].toUpperCase()}
+
+                        </span>
+
+                        <small>
+
+                            COMING SOON
+
+                        </small>
+
+                    `;
+
+
+                    card.append(label);
+
+                    gallery.append(card);
+
+
+                    return;
+
+                }
+
+
+                /* ==================================
+                   NORMALIZE PROJECT INFORMATION
+                   ================================== */
+
+                const project = typeof entry === "string"
+
+                    ? {
+
+                        src: entry,
+
+                        href: entry,
+
+                        alt: `Portfolio project ${number}`
+
+                    }
+
+                    : {
+
+                        ...entry,
+
+                        href: entry.href || entry.src,
+
+                        alt: entry.alt || `Project ${number}`
+
+                    };
+
+
+                /* ==================================
+                   CREATE CLICKABLE PROJECT LINK
+                   ================================== */
+
+                const link =
+
+                    document.createElement("a");
+
+
+                link.href = project.href;
+
+
+                link.dataset.slot = `PHOTO ${number}`;
+
+
+                link.setAttribute(
+
+                    "aria-label",
+
+                    `View ${project.alt}`
+
+                );
+
+
+                /* ==================================
+                   CREATE PROJECT IMAGE
+                   ================================== */
+
+                const img =
+
+                    document.createElement("img");
+
+
+                img.alt = project.alt;
+
+                img.loading = "lazy";
+
+                img.decoding = "async";
+
+
+                /* ==================================
+                   PROJECT NUMBER AND HOVER CAPTION
+                   ================================== */
+
+                const caption =
+
+                    document.createElement("span");
+
+
+                caption.className =
+
+                    "portfolio-card-content";
+
+
+                const type = mediaType(project.href);
+
+
+                const projectLabel =
+
+                    type === "pdf"
+
+                        ? "VIEW PDF"
+
+                        : type === "video"
+
+                            ? "VIEW VIDEO"
+
+                            : "VIEW PHOTO";
+
+
+                caption.innerHTML = `
+
+                    <span class="portfolio-card-number">
+
+                        ${number}
+
+                    </span>
+
+                    <span class="portfolio-card-label">
+
+                        ${projectLabel} ↗
+
+                    </span>
+
+                `;
+
+
+                /* ==================================
+                   HANDLE MISSING IMAGES
+                   ================================== */
+
+                function markMissing() {
+
+
+                    img.classList.add("is-missing");
+
+
+                    link.classList.add(
+
+                        "has-missing-image"
+
+                    );
+
+
+                    /* KEEP PDF AND VIDEO LINKS ACTIVE */
+
+                    if (type === "image") {
+
+
+                        card.classList.add(
+
+                            "portfolio-placeholder"
+
+                        );
+
+
+                        link.removeAttribute("href");
+
+
+                        link.setAttribute(
+
+                            "aria-disabled",
+
+                            "true"
+
+                        );
+
+
+                        link.setAttribute(
+
+                            "aria-label",
+
+                            "Portfolio image coming soon"
+
+                        );
+
+
+                        link.dataset.slot =
+
+                            `PHOTO ${number} — COMING SOON`;
+
+                    }
+
+                }
+
+
+                /* DETECT MISSING FILES */
+
+                img.addEventListener(
+
+                    "error",
+
+                    markMissing
+
+                );
+
+
+                img.src = project.src;
+
+
+                if (img.complete && !img.naturalWidth) {
+
+                    markMissing();
+
+                }
+
+
+                /* ==================================
+                   OPEN PROJECT IN LIGHTBOX
+                   ================================== */
+
+                link.addEventListener("click", function (event) {
+
+
+                    event.preventDefault();
+
+
+                    if (
+
+                        card.classList.contains(
+
+                            "portfolio-placeholder"
+
+                        )
+
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    openProject(project, link);
+
+                });
+
+
+                /* ADD PROJECT TO THE GALLERY */
+
+                link.append(img, caption);
+
+                card.append(link);
+
+                gallery.append(card);
+
+            });
+
+        }
+
+
+        /* ======================================
+           CATEGORY BUTTON INTERACTIONS
+           ====================================== */
+
+        filterButtons.forEach(function (button) {
+
+
+            button.addEventListener("click", function () {
+
+
+                const category = button.dataset.filter;
+
+
+                renderGallery(category);
+
+
+                /* UPDATE CATEGORY IN THE URL */
+
+                if (window.location.protocol !== "file:") {
+
+
+                    const url =
+
+                        new URL(window.location.href);
+
+
+                    if (category === "all") {
+
+
+                        url.searchParams.delete(
+
+                            "category"
+
+                        );
+
+
+                    } else {
+
+
+                        url.searchParams.set(
+
+                            "category",
+
+                            category
+
+                        );
+
+                    }
+
+
+                    if (url.href !== window.location.href) {
+
+
+                        window.history.pushState(
+
+                            null,
+
+                            "",
+
+                            url.href
+
+                        );
+
+                    }
+
+                }
+
+            });
+
+        });
+
+
+        /* ======================================
+           HOMEPAGE TO PORTFOLIO CONNECTION
+
+           Example:
+
+           portfolio.html?category=photography#my-work
+           ====================================== */
+
+        function loadCategoryFromURL() {
+
+
+            const params =
+
+                new URLSearchParams(window.location.search);
+
+
+            const requested =
+
+                params.get("category") || "all";
+
+
+            const valid =
+
+                Object.prototype.hasOwnProperty.call(
+
+                    collections,
+
+                    requested
+
+                );
+
+
+            renderGallery(
+
+                valid ? requested : "all"
+
+            );
+
+        }
+
+
+        /* LOAD THE DEFAULT COLLECTION */
+
+        loadCategoryFromURL();
+
+
+        /* SUPPORT BROWSER BACK AND FORWARD */
+
+        window.addEventListener(
+
+            "popstate",
+
+            loadCategoryFromURL
+
+        );
+
+
+        /* ======================================
+           REDUCED MOTION ACCESSIBILITY
+           ====================================== */
+
+        const footerVideo =
+
+            document.querySelector(".footer-video");
+
+
+        const motionPreference = window.matchMedia(
+
+            "(prefers-reduced-motion: reduce)"
+
+        );
+
+
+        function updateVideoMotion() {
+
+
+            if (!footerVideo) return;
+
+
+            if (motionPreference.matches) {
+
+
+                footerVideo.autoplay = false;
+
+                footerVideo.pause();
+
+
+            } else {
+
+
+                footerVideo.autoplay = true;
+
+                footerVideo.play().catch(function () {});
+
+            }
+
+        }
+
+
+        updateVideoMotion();
+
+
+        if (motionPreference.addEventListener) {
+
+
+            motionPreference.addEventListener(
+
+                "change",
+
+                updateVideoMotion
+
+            );
+
+        }
+
+    });
+
+    </script>
+
+
+    <!-- ==========================================
+         END OF MONSE MEDIA PORTFOLIO
+         ========================================== -->
+
+</body>
+
+</html>
