@@ -1,0 +1,3373 @@
+/* =========================================================
+   MONSE MEDIA | ABOUT PAGE
+   Author: Monse Montes
+   Filename: about.css
+   ========================================================= */
+
+/* 01 | BRAND COLORS */
+
+:root {
+    --about-burgundy: #852a32;
+    --about-wine: #3c0008;
+    --about-ivory: #f0eae2;
+    --about-cream: #e5d9ca;
+    --about-ink: #191817;
+}
+
+body {
+    position: relative;
+}
+
+
+/* =========================================================
+   02 | HEADER AND NAVIGATION
+   ========================================================= */
+
+.main-navigation a[aria-current="page"] {
+    color: var(--about-cream);
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 5px;
+}
+
+.editorial-eyebrow {
+    font-family: "Raleway", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .27em;
+    line-height: 1.8;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    padding: 20px clamp(205px, 20vw, 300px) 20px 5%;
+}
+
+.site-header .header-logo {
+    flex-shrink: 0;
+}
+
+.site-header .main-navigation {
+    flex: 1;
+    min-width: 0;
+}
+
+.site-header .main-navigation ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(14px, 2vw, 35px);
+}
+
+.site-header .header-booking {
+    transform: none;
+    flex-shrink: 0;
+    white-space: nowrap;
+    margin-left: 0;
+}
+
+
+/* =========================================================
+   03 | TOP RIGHT FLORAL DECORATION
+   ========================================================= */
+
+.floral-frame {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 440px;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.floral-frame .floral-top-right {
+    display: block;
+    position: relative;
+    width: 70%;
+    height: auto;
+    margin-left: auto;
+    top: -45px;
+    right: -45px;
+    object-fit: contain;
+    transform: none;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,.2));
+}
+
+
+/* =========================================================
+   04 | EDITORIAL HERO
+   ========================================================= */
+
+.about-editorial-hero {
+    position: relative;
+    isolation: isolate;
+    min-height: 850px;
+    height: min(900px, 100vh);
+    background: var(--about-ivory);
+    color: var(--about-ink);
+    overflow: hidden;
+}
+
+.about-hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(
+            rgba(133,42,50,.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(133,42,50,.045) 1px,
+            transparent 1px
+        );
+    background-size: 78px 78px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+/* CENTER PORTRAIT */
+
+.about-portrait {
+    position: absolute;
+    width: min(46vw, 630px);
+    height: 100%;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.about-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+
+/* =========================================================
+   05 | ABOUT MONSE TYPOGRAPHY
+   ========================================================= */
+
+.about-hero-left {
+    position: absolute;
+    top: 10%;
+    left: 4.5%;
+    width: 39%;
+    z-index: 4;
+}
+
+.editorial-number {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 43px;
+    color: var(--about-wine);
+    font: 18px "Playfair Display", Georgia, serif;
+}
+
+.editorial-rule {
+    display: inline-block;
+    height: 1px;
+    width: 120px;
+    background: rgba(60,0,8,.45);
+}
+
+.about-hero-left .editorial-eyebrow {
+    color: var(--about-burgundy);
+    margin-bottom: 18px;
+}
+
+/* ABOUT — RALEWAY */
+
+.about-hero-left h1,
+.about-hero-left h1 span {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.about-hero-left h1 span {
+    display: block;
+    font-size: .68em;
+}
+
+/* MONSE — GUNTER */
+
+.about-hero-left h2,
+.about-hero-left h2 span {
+    font-family: "gunter", "Gunter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0;
+}
+
+.about-hero-left h2 {
+    font-size: clamp(64px, 10vw, 120px);
+    line-height: .85;
+    color: var(--about-wine);
+}
+
+.about-hero-left h1 strong {
+    display: block;
+    font-family: "Gunter", sans-serif;
+    font-size: 1.32em;
+    font-weight: 400;
+}
+
+/* SCROLL TO EXPLORE */
+
+.about-scroll {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 65px;
+    font-size: 9px;
+    letter-spacing: .25em;
+}
+
+.about-scroll span {
+    font: 44px/1 Georgia, serif;
+}
+
+
+/* =========================================================
+   06 | BORN TO CREATE
+   ========================================================= */
+
+.about-hero-right {
+    position: absolute;
+    top: 30%;
+    right: 4.5%;
+    width: 25%;
+    max-width: 340px;
+    z-index: 4;
+}
+
+.about-hero-right h2 {
+    font: 400 clamp(26px, 2.9vw, 44px)/1.15
+        "Playfair Display", Georgia, serif;
+    color: var(--about-wine);
+    margin-bottom: 26px;
+}
+
+.about-hero-right > p:not(.editorial-eyebrow) {
+    font: 400 12px/1.9 "Raleway", sans-serif;
+    margin-bottom: 17px;
+}
+
+.about-hero-right .about-personal-quote {
+    font: italic 18px/1.6 "Playfair Display", Georgia, serif;
+    color: var(--about-burgundy);
+    border-left: 2px solid var(--about-burgundy);
+    padding-left: 18px;
+    margin-top: 25px;
+}
+
+.about-script-note {
+    display: none !important;
+}
+
+.about-side-label {
+    position: absolute;
+    right: 4%;
+    bottom: 6%;
+    z-index: 4;
+    color: var(--about-burgundy);
+    font-size: 9px;
+    letter-spacing: .22em;
+}
+
+
+/* =========================================================
+   07 | ANIMATED LIQUID BURGUNDY RIBBONS
+   ========================================================= */
+
+.about-liquid-art {
+    position: absolute;
+    top: -20%;
+    left: 25%;
+    width: 68%;
+    height: 120%;
+    transform: translateX(-10px);
+    z-index: 1;
+    opacity: .95;
+    pointer-events: none;
+}
+
+.about-liquid-art svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.liquid-ribbon {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(2px 3px 2px rgba(60,0,8,.15));
+}
+
+.liquid-ribbon-two {
+    stroke: #750016;
+    stroke-width: 4;
+    opacity: .85;
+}
+
+.liquid-detail {
+    fill: none;
+    stroke: #a82337;
+    stroke-width: 2;
+    stroke-linecap: round;
+    opacity: .8;
+}
+
+.liquid-dots {
+    fill: none;
+    stroke: #570016;
+    stroke-width: 1.5;
+    stroke-dasharray: 1 5;
+    stroke-linecap: round;
+    opacity: .65;
+    animation: liquidDots 15s linear infinite;
+}
+
+@keyframes liquidDots {
+    to {
+        stroke-dashoffset: -180;
+    }
+}
+
+
+/* =========================================================
+   08 | REALISTIC VINTAGE TELEPHONE
+
+   Approved vector handset:
+   images/telephone-handset.svg
+
+   Gravity, cord stretching, spring physics and
+   bouncing are controlled by the HTML JavaScript.
+   ========================================================= */
+
+/* TELEPHONE POSITION */
+
+.about-editorial-hero .monse-telephone.phone-spring {
+    position: absolute;
+    top: 0;
+    left: 40%;
+
+    width: clamp(96px, 8.2vw, 128px);
+
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+
+    z-index: 5;
+
+    background: transparent;
+    text-decoration: none;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* TELEPHONE CONTAINER */
+
+.about-editorial-hero .phone-spring .monse-telephone-drop {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+
+    animation: none !important;
+    transform: none !important;
+}
+
+/* REALISTIC SVG TELEPHONE */
+
+.about-editorial-hero .phone-spring .monse-telephone-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-width: none;
+    max-height: none;
+
+    overflow: hidden;
+    background: transparent;
+
+    animation: none !important;
+    transform: none !important;
+
+    transition: filter .3s ease;
+}
+
+/* HANDSET ANIMATION PERFORMANCE */
+
+.phone-spring .phone-handset {
+    will-change: transform;
+}
+
+/* PICK UP TO CONNECT LABEL */
+
+.about-editorial-hero .phone-spring .monse-telephone-label {
+    margin-top: -12px;
+
+    color: var(--about-burgundy);
+
+    font: 600 9px/1.7 "Raleway", sans-serif;
+
+    letter-spacing: 1.6px;
+    text-align: center;
+    white-space: nowrap;
+
+    opacity: 1;
+
+    transition:
+        opacity .4s ease,
+        color .3s ease;
+}
+
+/* PREVENT CLICKING DURING FALL */
+
+.about-editorial-hero .phone-spring.is-falling {
+    pointer-events: none;
+}
+
+/* HIDE LABEL DURING FALL */
+
+.about-editorial-hero
+.phone-spring.is-falling
+.monse-telephone-label {
+    opacity: 0;
+}
+
+/* ACTIVATE CONTACT LINK AFTER SETTLING */
+
+.about-editorial-hero .phone-spring.is-ready {
+    cursor: pointer;
+}
+
+/* SUBTLE STUDIO LIGHTING ON HOVER */
+
+.about-editorial-hero
+.phone-spring:hover
+.monse-telephone-image {
+    filter: brightness(1.08);
+}
+
+.about-editorial-hero
+.phone-spring:hover
+.monse-telephone-label {
+    color: var(--about-wine);
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+.about-editorial-hero .phone-spring:focus-visible {
+    outline: 2px solid var(--about-burgundy);
+    outline-offset: 5px;
+}
+
+
+/* =========================================================
+   09 | PERSONAL STORY CHAPTERS
+   ========================================================= */
+
+.about-philosophy-band {
+    position: relative;
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0,1fr));
+
+    gap: 30px;
+    row-gap: 55px;
+
+    padding: 65px 7%;
+    min-height: 520px;
+    align-items: start;
+
+    background-image:
+        linear-gradient(
+            rgba(39,3,24,.89),
+            rgba(39,3,24,.92)
+        ),
+        url("images/about-floral-bg.jpg");
+
+    background-size: cover;
+    background-position: center 42%;
+
+    color: var(--about-ivory);
+}
+
+.about-philosophy-band:has(.about-polaroid-collage) {
+    grid-template-columns:
+        minmax(0,1fr)
+        minmax(0,1fr)
+        minmax(340px,1.55fr);
+}
+
+.philosophy-item {
+    min-width: 0;
+    padding-right: 20px;
+    border-right: 1px solid rgba(255,255,255,.25);
+}
+
+.philosophy-item > span {
+    display: block;
+    margin-bottom: 30px;
+    font: 600 10px "Raleway", sans-serif;
+    letter-spacing: 3px;
+    color: #e5b6be;
+}
+
+.philosophy-item h3 {
+    font: 500 17px/1.5 "Raleway", sans-serif;
+    letter-spacing: 2px;
+    color: var(--about-ivory);
+}
+
+.philosophy-item p {
+    margin-top: 25px;
+    font: 400 13px/2 "Raleway", sans-serif;
+    color: var(--about-cream);
+}
+
+
+/* =========================================================
+   10 | INTERACTIVE POLAROID COLLAGE
+   ========================================================= */
+
+.about-polaroid-collage {
+    position: relative;
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    align-self: center;
+    height: 345px;
+    width: 100%;
+    min-width: 0;
+    z-index: 3;
+}
+
+.monse-photo-stack {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+    isolation: isolate;
+}
+
+.monse-photo-stack:focus-visible {
+    outline: 2px solid #e5b6be;
+    outline-offset: 5px;
+}
+
+.monse-photo {
+    position: absolute;
+    top: 12%;
+    left: 0;
+    display: block;
+    width: 38%;
+    aspect-ratio: 1 / 1.05;
+    overflow: hidden;
+    transform-origin: center 85%;
+
+    filter: drop-shadow(
+        5px 12px 10px rgba(0,0,0,.45)
+    );
+
+    transition:
+        transform .7s cubic-bezier(.22,1,.36,1),
+        filter .4s ease;
+}
+
+.monse-photo img {
+    position: absolute;
+    top: -27%;
+    left: -5%;
+    width: 110%;
+    height: auto;
+    max-width: none;
+    display: block;
+    object-fit: contain;
+}
+
+/* CLOSED POLAROID STACK */
+
+.monse-photo-1 {
+    z-index: 1;
+    transform: rotate(5deg);
+}
+
+.monse-photo-2 {
+    z-index: 2;
+    transform: rotate(-3deg);
+}
+
+.monse-photo-3 {
+    z-index: 3;
+    transform: rotate(2deg);
+}
+
+.monse-photo-4 {
+    z-index: 4;
+    transform: rotate(-7deg);
+}
+
+/* OPEN POLAROID STACK */
+
+.monse-photo-stack.is-open .monse-photo-4 {
+    transform: translate(0,7%) rotate(-12deg);
+}
+
+.monse-photo-stack.is-open .monse-photo-3 {
+    transform: translate(55%,-14%) rotate(-4deg);
+}
+
+.monse-photo-stack.is-open .monse-photo-2 {
+    transform: translate(110%,-19%) rotate(7deg);
+}
+
+.monse-photo-stack.is-open .monse-photo-1 {
+    transform: translate(165%,-6%) rotate(14deg);
+}
+
+/* SELECTED PHOTOGRAPHS */
+
+.monse-photo-stack.is-open .monse-photo.is-selected {
+    z-index: 20;
+    filter: drop-shadow(
+        10px 22px 16px rgba(0,0,0,.55)
+    );
+}
+
+.monse-photo-stack.is-open .monse-photo-1.is-selected {
+    transform:
+        translate(165%,-22%)
+        rotate(0)
+        scale(1.18);
+}
+
+.monse-photo-stack.is-open .monse-photo-2.is-selected {
+    transform:
+        translate(110%,-28%)
+        rotate(0)
+        scale(1.18);
+}
+
+.monse-photo-stack.is-open .monse-photo-3.is-selected {
+    transform:
+        translate(55%,-22%)
+        rotate(0)
+        scale(1.18);
+}
+
+.monse-stack-caption {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    font: 500 9px "Raleway", sans-serif;
+    letter-spacing: 2.5px;
+    color: #e5b6be;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   11 | MY CREATIVE TOOLKIT
+   ========================================================= */
+
+.about-toolkit {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 35px;
+    padding-top: 45px;
+    border-top: 1px solid rgba(255,255,255,.2);
+    position: relative;
+    z-index: 4;
+}
+
+.toolkit-heading span {
+    display: block;
+    font-family: "Raleway", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #e5b6be;
+    margin-bottom: 12px;
+}
+
+.toolkit-heading h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(28px,3vw,43px);
+    font-weight: 400;
+    color: #f0eae2;
+    margin-bottom: 35px;
+}
+
+.toolkit-grid {
+    display: grid;
+    grid-template-columns: repeat(5,minmax(0,1fr));
+    gap: 20px;
+}
+
+.toolkit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    min-width: 0;
+    min-height: 150px;
+
+    padding: 24px 12px;
+
+    background: rgba(255,255,255,.035);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 4px;
+
+    transition:
+        transform .35s ease,
+        background-color .35s ease,
+        border-color .35s ease;
+}
+
+.toolkit-item:hover {
+    transform: translateY(-7px);
+    background: rgba(255,255,255,.09);
+    border-color: rgba(229,182,190,.7);
+}
+
+.toolkit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 62px;
+    height: 62px;
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    font-family: Arial, sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: -1px;
+
+    transition: transform .35s ease;
+}
+
+.toolkit-item:hover .toolkit-icon {
+    transform: scale(1.1);
+}
+
+/* PHOTOSHOP */
+
+.icon-ps {
+    background: #001e36;
+    color: #31a8ff;
+    border: 1px solid #31a8ff;
+}
+
+/* LIGHTROOM */
+
+.icon-lr {
+    background: #001e36;
+    color: #add5f7;
+    border: 1px solid #add5f7;
+}
+
+/* ILLUSTRATOR */
+
+.icon-ai {
+    background: #330000;
+    color: #ff9a00;
+    border: 1px solid #ff9a00;
+}
+
+/* ADOBE XD */
+
+.icon-xd {
+    background: #470137;
+    color: #ff61f6;
+    border: 1px solid #ff61f6;
+}
+
+/* PREMIERE PRO */
+
+.icon-pr {
+    background: #1f1147;
+    color: #9999ff;
+    border: 1px solid #9999ff;
+}
+
+/* CAPCUT */
+
+.icon-capcut {
+    background: #111111;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    font-size: 34px;
+}
+
+/* INDESIGN */
+
+.icon-id {
+    background: #49021f;
+    color: #ff3366;
+    border: 1px solid #ff3366;
+}
+
+/* VISUAL STUDIO CODE */
+
+.icon-vscode {
+    background: #073e60;
+    color: #29b6f6;
+    border: 1px solid #29b6f6;
+    font-size: 20px;
+}
+
+/* HTML */
+
+.icon-html {
+    background: #e34f26;
+    color: #ffffff;
+}
+
+/* PYTHON */
+
+.icon-python {
+    background:
+        linear-gradient(
+            135deg,
+            #3776ab 50%,
+            #ffd43b 50%
+        );
+
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* SOFTWARE NAMES */
+
+.toolkit-item p {
+    font-family: "Raleway", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    text-align: center;
+    color: #f0eae2;
+    margin: 0;
+}
+
+
+/* =========================================================
+   12 | ART IS MORE THAN WHAT YOU SEE
+   ========================================================= */
+
+.about-story-section {
+    position: relative;
+    isolation: isolate;
+
+    display: grid;
+    grid-template-columns:
+        minmax(0,1fr)
+        minmax(0,1fr);
+
+    align-items: center;
+    gap: 9%;
+
+    padding: 125px 8%;
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(
+            110deg,
+            rgba(14,5,15,.90),
+            rgba(25,7,22,.80) 45%,
+            rgba(8,4,12,.70)
+        ),
+        url("images/about-floral-bg.jpg");
+
+    background-size: cover;
+    background-position: center 45%;
+    background-repeat: no-repeat;
+
+    color: #f0eae2;
+}
+
+.about-story-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at 70% 40%,
+            rgba(141,43,102,.17),
+            transparent 50%
+        );
+}
+
+.about-story-section > * {
+    position: relative;
+    z-index: 1;
+    min-width: 0;
+}
+
+.about-story-heading .editorial-eyebrow {
+    color: #dfb3c5;
+    margin-bottom: 33px;
+}
+
+.about-story-heading h2 {
+    font: 400 clamp(44px,5vw,82px)/1.13
+        "Playfair Display", Georgia, serif;
+
+    letter-spacing: -.04em;
+    color: #fff6f2;
+}
+
+.about-story-heading h2 em {
+    color: #e9adbe;
+}
+
+.about-story-divider {
+    width: 95px;
+    height: 1px;
+    background: #c78b9f;
+    margin: 42px 0;
+}
+
+.about-story-heading > p:not(.editorial-eyebrow) {
+    max-width: 520px;
+    margin-bottom: 22px;
+    font: 400 13px/2 "Raleway", sans-serif;
+    color: #f2e5e8;
+}
+
+.about-editorial-button {
+    display: inline-block;
+    padding: 20px 34px;
+    margin-top: 28px;
+
+    background: var(--about-burgundy);
+
+    border: 1px solid rgba(255,255,255,.23);
+
+    color: #fff4ee;
+    font-size: 10px;
+    letter-spacing: .2em;
+
+    transition:
+        transform .3s ease,
+        background-color .3s ease;
+}
+
+.about-editorial-button:hover {
+    background: #ab4558;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   13 | EDITORIAL PHOTO COLLAGE
+   ========================================================= */
+
+.about-story-collage {
+    position: relative;
+    min-height: 640px;
+}
+
+.collage-frame {
+    position: absolute;
+    top: 4%;
+    left: 7%;
+    width: 68%;
+    height: 78%;
+    overflow: hidden;
+    background: #cfc4bb;
+    border: 1px solid rgba(255,255,255,.3);
+    box-shadow: 0 25px 70px rgba(0,0,0,.3);
+}
+
+.collage-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    filter: grayscale(1);
+}
+
+.collage-graphic {
+    position: absolute;
+    right: 0;
+    top: 28%;
+    width: 48%;
+    min-height: 245px;
+    padding: 30px 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: rgba(39,8,27,.94);
+    color: var(--about-ivory);
+
+    border: 1px solid rgba(240,234,226,.22);
+
+    z-index: 2;
+}
+
+.collage-graphic span {
+    font-size: 10px;
+    letter-spacing: .3em;
+}
+
+.collage-graphic strong {
+    font: 400 clamp(22px,3vw,40px)/1.2
+        "Playfair Display", Georgia, serif;
+}
+
+.collage-script {
+    position: absolute;
+    left: 0;
+    bottom: 2%;
+    z-index: 3;
+    font: 78px/.75 "Italianno", cursive;
+    color: #f0bccc;
+    transform: rotate(-10deg);
+}
+
+.collage-outline {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 65%;
+    height: 85%;
+    border: 1px solid rgba(238,182,204,.7);
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   14 | EXPERIENCE AND WEB DESIGN
+   ========================================================= */
+
+.about-expertise-section {
+    display: grid;
+    grid-template-columns:
+        minmax(0,1fr)
+        minmax(0,1fr);
+
+    gap: 11%;
+    padding: 120px 8%;
+
+    background:
+        linear-gradient(
+            125deg,
+            #f0eae2,
+            #e4d7d1 68%,
+            #f6eee6
+        );
+
+    color: var(--about-ink);
+}
+
+a.webdesign-link {
+    display: grid;
+    grid-template-columns: 45px minmax(0,1fr) 25px;
+    gap: 12px;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+}
+
+a.webdesign-link:hover {
+    color: #852a32;
+    padding-left: 8px;
+}
+
+a.webdesign-link:focus-visible {
+    outline: 2px solid #852a32;
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   15 | MONSES.FILES ARCHIVE
+
+   Connected to js/archive.js
+   ========================================================= */
+
+html {
+    scroll-behavior: auto !important;
+}
+
+.mm-files {
+    --mf-cream: #eee7e0;
+    --mf-burgundy: #4b0e1e;
+    --mf-brown: #ad8658;
+    --mf-manila: #d8b47d;
+    --mf-outline: #9e805b;
+    --mf-open: 0;
+    --mm-mark-paper: #eee7e0;
+
+    position: relative;
+    height: 100vh;
+
+    background: var(--mf-cream);
+    color: var(--mf-burgundy);
+
+    isolation: isolate;
+
+    font-family:
+        "Poppins",
+        "Raleway",
+        Arial,
+        sans-serif;
+}
+
+.mm-files *,
+.mm-files *::before,
+.mm-files *::after {
+    box-sizing: border-box;
+}
+
+.mm-files-pin {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at 38% 65%,
+            rgba(255,255,255,.33),
+            transparent 55%
+        ),
+        var(--mf-cream);
+}
+
+/* ARCHIVE HEADER AND FOOTER */
+
+.mm-files-meta,
+.mm-files-footer {
+    position: relative;
+    z-index: 15;
+
+    padding-left: clamp(20px,5.4vw,86px);
+    padding-right: clamp(20px,5.4vw,86px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: 600;
+    letter-spacing: .22em;
+    font-size: clamp(9px,.75vw,12px);
+}
+
+.mm-files-meta {
+    padding-top: clamp(22px,4.5vh,54px);
+}
+
+.mm-files-meta-right {
+    color: #976167;
+}
+
+/* ARCHIVE ANIMATION SCENE */
+
+.mm-files-scene {
+    flex: 1;
+    min-height: 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    perspective: 1400px;
+}
+
+.mm-files-scene::before {
+    content: "M";
+
+    position: absolute;
+    right: 2%;
+    top: 2%;
+
+    font-family: Georgia, serif;
+    font-size: clamp(250px,55vw,760px);
+    line-height: .8;
+
+    color: rgba(87,36,45,.035);
+
+    pointer-events: none;
+}
+
+.mm-files-caption {
+    position: absolute;
+    top: clamp(22px,7vh,72px);
+    left: clamp(20px,5.4vw,86px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    color: #97585e;
+
+    font-size: clamp(9px,.78vw,12px);
+    font-weight: 600;
+    letter-spacing: .18em;
+    line-height: 1.65;
+
+    z-index: 12;
+}
+
+
+/* =========================================================
+   16 | UPRIGHT MANILA FOLDER
+   ========================================================= */
+
+.mm-upright-folder {
+    position: absolute;
+    z-index: 10;
+
+    width: clamp(205px,25vw,345px);
+    height: clamp(268px,32vw,445px);
+
+    top: 51%;
+    left: clamp(180px,23vw,340px);
+
+    transform: translateY(-45%) rotate(-3deg);
+
+    transform-style: preserve-3d;
+    perspective: 1200px;
+
+    filter: drop-shadow(
+        17px 23px 15px rgba(51,28,12,.15)
+    );
+
+    pointer-events: none;
+}
+
+/* FOLDER TAB */
+
+.mm-folder-tab {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 4%;
+    width: 44%;
+    height: 10%;
+
+    background:
+        linear-gradient(
+            100deg,
+            #be975f,
+            #e1bd84 85%
+        );
+
+    border: 1px solid #aa8958;
+    border-radius: 8px 13px 0 0;
+}
+
+/* BACK OF FOLDER */
+
+.mm-folder-back {
+    position: absolute;
+    z-index: 2;
+    inset: 7% 0 0;
+
+    border: 1px solid #b08d5d;
+    border-radius: 2px 5px 4px 5px;
+
+    background:
+        repeating-linear-gradient(
+            112deg,
+            transparent 0 4px,
+            rgba(255,255,255,.025) 5px 7px
+        ),
+        linear-gradient(
+            115deg,
+            #dfc08f 0%,
+            #cba66c 70%,
+            #b58c54 100%
+        );
+
+    box-shadow:
+        inset -18px 8px 29px rgba(110,68,30,.13);
+}
+
+.mm-folder-back::after {
+    content: "";
+    position: absolute;
+    inset: 13px;
+    border: 1px dashed rgba(120,80,39,.18);
+}
+
+/* PAPER INSIDE FOLDER */
+
+.mm-folder-inner-sheet {
+    position: absolute;
+    z-index: 3;
+    top: 12%;
+    left: 9%;
+
+    height: 92%;
+    width: 81%;
+
+    background:
+        linear-gradient(
+            160deg,
+            #fffaf0,
+            #e9ddca
+        );
+
+    box-shadow: 1px 3px 8px rgba(54,34,13,.12);
+    border: 1px solid #cdb995;
+}
+
+.mm-folder-inner-sheet.sheet-b {
+    transform: rotate(4deg) translate(4px,2px);
+}
+
+.mm-folder-inner-sheet.sheet-a {
+    transform: rotate(-2deg);
+    padding: 13px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: .15em;
+
+    color: #a77f5b;
+}
+
+.mm-folder-inner-sheet strong {
+    font-family: Georgia, serif;
+    font-size: clamp(54px,6vw,90px);
+    font-weight: 400;
+    color: #b58b66;
+    align-self: center;
+}
+
+/* OPENING FOLDER COVER */
+
+.mm-folder-opening-leaf {
+    position: absolute;
+    z-index: 7;
+    inset: 7% 0 0;
+
+    transform-origin: 0 50%;
+    transform-style: preserve-3d;
+
+    transform:
+        rotateY(calc(var(--mf-open) * -145deg));
+}
+
+/* FRONT COVER */
+
+.mm-folder-front-cover {
+    position: absolute;
+    inset: 0;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    border: 1px solid var(--mf-outline);
+    border-radius: 2px 5px 5px 4px;
+
+    background:
+        repeating-linear-gradient(
+            110deg,
+            rgba(113,71,29,.018) 0 1px,
+            transparent 1px 5px
+        ),
+        linear-gradient(
+            145deg,
+            #e6c795 0%,
+            #dcba84 48%,
+            #c49a63 100%
+        );
+
+    box-shadow:
+        inset -15px 4px 25px rgba(116,78,36,.1),
+        3px 5px 9px rgba(70,44,19,.12);
+
+    padding: clamp(17px,2.4vw,32px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* INSIDE COVER */
+
+.mm-folder-back-of-cover {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(180deg);
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #c49c66,
+            #dbb985 56%,
+            #e8c99a
+        );
+
+    border: 1px solid #b08c58;
+    box-shadow: 6px 7px 12px rgba(58,31,14,.12);
+}
+
+/* FOLDER TYPOGRAPHY */
+
+.mm-folder-cover-id,
+.mm-folder-cover-foot {
+    color: #7d5538;
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: clamp(7px,.72vw,10px);
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: .16em;
+}
+
+.mm-folder-cover-id {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mm-folder-cover-name {
+    align-self: flex-start;
+    color: #4f1921;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(23px,2.9vw,40px);
+    font-weight: 400;
+
+    letter-spacing: -.06em;
+    line-height: 1.04;
+    white-space: nowrap;
+}
+
+.mm-folder-cover-name > span {
+    color: #9a3c4b;
+}
+
+.mm-folder-cover-rule {
+    width: 100%;
+    height: 1px;
+    background: rgba(107,68,38,.35);
+}
+
+/* FOLDER SPINE */
+
+.mm-folder-spine {
+    position: absolute;
+    z-index: 8;
+    left: 0;
+    top: 7%;
+    height: 93%;
+    width: 5px;
+    background: #b68b53;
+    box-shadow: 2px 0 5px rgba(93,52,20,.22);
+}
+
+
+/* =========================================================
+   17 | TEN ARCHIVE PHOTOGRAPHS
+   ========================================================= */
+
+.mm-files-gallery {
+    position: absolute;
+    inset: 0;
+    z-index: 6;
+    pointer-events: none;
+}
+
+.mm-files-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: clamp(143px,15.9vw,226px);
+    height: clamp(181px,21.1vw,301px);
+
+    background: #fffaf5;
+
+    padding:
+        clamp(7px,.9vw,13px)
+        clamp(7px,.9vw,13px)
+        32px;
+
+    border: 1px solid #e1d6cf;
+    border-radius: 0;
+
+    box-shadow:
+        8px 13px 20px rgba(48,19,27,.2);
+
+    transform:
+        translate3d(-500px,0,0)
+        rotate(var(--photo-rotate,0deg));
+
+    opacity: 0;
+
+    pointer-events: none;
+    cursor: pointer;
+
+    color: #6b4546;
+
+    transition: filter .18s;
+
+    will-change: transform;
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.mm-files-photo.is-visible {
+    pointer-events: auto;
+}
+
+.mm-files-photo:hover {
+    filter: brightness(.95);
+}
+
+.mm-files-photo:focus-visible {
+    outline: 3px solid var(--mf-burgundy);
+    outline-offset: 3px;
+}
+
+.mm-files-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.mm-files-photo span {
+    position: absolute;
+    bottom: 9px;
+    left: 13px;
+
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: .15em;
+}
+
+
+/* =========================================================
+   18 | ARCHIVE PROGRESS INDICATOR
+   ========================================================= */
+
+.mm-files-footer {
+    min-height: 89px;
+    padding-top: 10px;
+    padding-bottom: clamp(18px,3vw,39px);
+    gap: clamp(12px,3vw,44px);
+}
+
+.mm-files-progress-label {
+    white-space: nowrap;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    letter-spacing: 0;
+}
+
+.mm-files-progress-label i {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0 5px;
+    color: #ad8583;
+}
+
+.mm-files-progress-track {
+    height: 1px;
+    background: #cdb6ae;
+    flex: 1;
+    max-width: 400px;
+}
+
+.mm-files-progress-bar {
+    background: var(--mf-burgundy);
+    width: 0;
+    height: 2px;
+    transform: translateY(-.5px);
+}
+
+/* SKIP ANIMATION */
+
+.mm-files-continue {
+    border: 0;
+    padding: 11px 0;
+    background: transparent;
+    color: var(--mf-burgundy);
+
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: clamp(9px,.75vw,12px);
+    font-weight: 600;
+
+    letter-spacing: .12em;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.mm-files-continue span {
+    margin-left: 12px;
+    font-size: 17px;
+    vertical-align: middle;
+}
+
+.mm-files-continue:hover,
+.mm-files-continue:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+
+/* =========================================================
+   19 | ANATOMY OF A MARK
+
+   THREE M'S. ONE IDENTITY.
+   ========================================================= */
+
+.mm-files .mm-mark-story {
+    position: absolute;
+    z-index: 12;
+    inset: 0;
+
+    display: grid;
+    grid-template-columns:
+        minmax(290px,.95fr)
+        minmax(350px,1.25fr);
+
+    align-items: center;
+    gap: clamp(24px,4vw,72px);
+
+    padding: 4vh clamp(26px,6vw,98px);
+
+    background: var(--mm-mark-paper);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    color: #4b0e1e;
+
+    overflow: hidden;
+    will-change: opacity;
+}
+
+.mm-files .mm-mark-story-copy {
+    position: relative;
+    z-index: 1;
+}
+
+.mm-files .mm-mark-eyebrow {
+    color: #8c4753;
+
+    font: 600 clamp(10px,.75vw,12px)/1.5
+        "Raleway", sans-serif;
+
+    letter-spacing: .25em;
+    margin-bottom: 35px;
+}
+
+.mm-files .mm-mark-story h2 {
+    font: 400 clamp(45px,5.3vw,90px)/.96
+        "Playfair Display", Georgia, serif;
+
+    letter-spacing: -.065em;
+    margin: 0 0 25px;
+    color: #4b0e1e;
+}
+
+.mm-files .mm-mark-story h2 em {
+    font-weight: 400;
+    letter-spacing: -.07em;
+    white-space: nowrap;
+}
+
+.mm-files .mm-mark-description {
+    max-width: 470px;
+
+    font: 400 clamp(13px,1.05vw,16px)/1.9
+        "Raleway", sans-serif;
+
+    color: #302729;
+    margin: 0 0 25px;
+}
+
+/* LOGO ANNOTATIONS */
+
+.mm-files .mm-mark-annotations {
+    border-top: 1px solid #c7ada9;
+    max-width: 410px;
+    font: 600 10px/1.3 "Raleway", sans-serif;
+    letter-spacing: .14em;
+    color: #6c3640;
+}
+
+.mm-files .mm-mark-annotations div {
+    border-bottom: 1px solid #c7ada9;
+    padding: 12px 0;
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
+
+.mm-files .mm-mark-annotations span {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #a46b6e;
+}
+
+.mm-files .mm-mark-footnote {
+    font: 600 9px/1.5 "Raleway", sans-serif;
+    letter-spacing: .14em;
+    color: #a07071;
+    margin-top: 23px;
+}
+
+/* LOGO VISUAL */
+
+.mm-files .mm-mark-visual {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.55;
+    max-height: min(60vh,560px);
+    isolation: isolate;
+}
+
+/* LOGO GRAPH */
+
+.mm-files .mm-mark-graph {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(96,34,47,.09) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(96,34,47,.09) 1px,
+            transparent 1px
+        );
+
+    background-size: 33px 33px;
+    opacity: .5;
+
+    mask-image:
+        radial-gradient(
+            ellipse,
+            black 35%,
+            transparent 83%
+        );
+}
+
+.mm-files .mm-mark-graph::before,
+.mm-files .mm-mark-graph::after {
+    content: "";
+    position: absolute;
+    background: rgba(92,37,51,.32);
+}
+
+.mm-files .mm-mark-graph::before {
+    width: 1px;
+    height: 100%;
+    left: 50%;
+}
+
+.mm-files .mm-mark-graph::after {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+}
+
+.mm-files .mm-mark-ring {
+    position: absolute;
+    inset: 7% 16%;
+    border-radius: 50%;
+    border: 1px solid #c7aaa9;
+    opacity: .55;
+}
+
+/* THREE INTERLOCKING M'S */
+
+.mm-files .mm-mark-piece {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translate3d(0,0,0);
+    will-change: transform;
+}
+
+.mm-files .mm-mark-piece img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* LOGO COMPONENT NUMBERS */
+
+.mm-files .mm-mark-index {
+    position: absolute;
+    font: 500 10px/1 "Raleway", sans-serif;
+    letter-spacing: .1em;
+    color: #844455;
+    opacity: 0;
+    transition: opacity .12s;
+}
+
+.mm-files .mm-mark-index-1 {
+    left: 17%;
+    top: 9%;
+}
+
+.mm-files .mm-mark-index-2 {
+    right: 2%;
+    top: 46%;
+}
+
+.mm-files .mm-mark-index-3 {
+    left: 16%;
+    bottom: 4%;
+}
+
+/* LOGO ANIMATION TIMELINE */
+
+.mm-files .mm-mark-timeline {
+    position: absolute;
+    bottom: 19px;
+    right: clamp(26px,6vw,98px);
+    font: 600 9px/1.4 "Raleway", sans-serif;
+    letter-spacing: .22em;
+    color: #7e4852;
+}
+
+.mm-files .mm-mark-timeline span {
+    color: #bd9ea2;
+}
+
+
+/* =========================================================
+   20 | ORIGINAL LOGO RESPONSIVE SETTINGS
+   ========================================================= */
+
+@media (max-width: 860px) {
+
+    .mm-files .mm-mark-story {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto minmax(0,1fr);
+        gap: 0;
+        padding: 68px 7vw 42px;
+    }
+
+    .mm-files .mm-mark-eyebrow {
+        margin-bottom: 10px;
+    }
+
+    .mm-files .mm-mark-story h2 {
+        font-size: clamp(34px,7vw,58px);
+        margin-bottom: 7px;
+    }
+
+    .mm-files .mm-mark-description {
+        font-size: 12px;
+        line-height: 1.55;
+        margin: 0 0 10px;
+    }
+
+    .mm-files .mm-mark-annotations div {
+        padding: 5px 0;
+    }
+
+    .mm-files .mm-mark-annotations {
+        font-size: 9px;
+    }
+
+    .mm-files .mm-mark-footnote {
+        display: none;
+    }
+
+    .mm-files .mm-mark-visual {
+        align-self: center;
+        max-width: 550px;
+        margin: auto;
+        max-height: 36vh;
+    }
+
+    .mm-files .mm-mark-timeline {
+        bottom: 7px;
+        right: 7vw;
+    }
+
+}
+
+@media (max-height: 610px) and (min-width: 861px) {
+
+    .mm-files .mm-mark-story h2 {
+        font-size: clamp(43px,4.4vw,75px);
+    }
+
+    .mm-files .mm-mark-eyebrow {
+        margin-bottom: 14px;
+    }
+
+    .mm-files .mm-mark-annotations div {
+        padding: 8px 0;
+    }
+
+}
+
+
+/* =========================================================
+   21 | LOGO EMERGES FROM THE ARCHIVE FOLDER
+   ========================================================= */
+
+.mm-files .mm-mark-story {
+    position: absolute;
+    inset: 0;
+    z-index: 9;
+
+    display: block;
+    padding: 0;
+
+    background: transparent;
+
+    overflow: visible;
+    pointer-events: none;
+
+    opacity: 1;
+    visibility: hidden;
+}
+
+.mm-files .mm-mark-story-copy {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+
+    width: 44%;
+    max-width: 600px;
+
+    padding:
+        clamp(16px,2vw,27px)
+        clamp(17px,2vw,30px);
+
+    background:
+        linear-gradient(
+            125deg,
+            #faf5ec 0%,
+            #f4eae1 100%
+        );
+
+    color: #4b0e1e;
+
+    border: 1px solid rgba(112,75,53,.22);
+    border-left: 3px solid #9c6770;
+
+    box-shadow:
+        9px 17px 28px rgba(72,37,26,.14);
+
+    transform-origin: 50% 50%;
+
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+.mm-files .mm-mark-eyebrow {
+    margin: 0 0 14px;
+    font-size: 10px;
+}
+
+.mm-files .mm-mark-story h2 {
+    font-size: clamp(27px,3.2vw,51px);
+    margin: 0 0 12px;
+    line-height: 1.04;
+}
+
+.mm-files .mm-mark-description {
+    font-size: clamp(11px,.9vw,13px);
+    line-height: 1.65;
+    margin: 0 0 13px;
+}
+
+.mm-files .mm-mark-annotations {
+    max-width: none;
+    font-size: 9px;
+}
+
+.mm-files .mm-mark-annotations div {
+    padding: 6px 0;
+}
+
+.mm-files .mm-mark-annotations span {
+    font-size: 14px;
+}
+
+.mm-files .mm-mark-footnote {
+    margin: 12px 0 0;
+    font-size: 8px;
+}
+
+.mm-files .mm-mark-visual {
+    position: absolute;
+    left: 52%;
+    bottom: 4%;
+    width: 40%;
+    height: 42%;
+
+    max-height: none;
+    aspect-ratio: auto;
+
+    overflow: visible;
+    isolation: isolate;
+}
+
+.mm-files .mm-mark-piece {
+    z-index: 2;
+    transform-origin: 50% 50%;
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+.mm-files .mm-mark-piece img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.mm-files .mm-mark-graph,
+.mm-files .mm-mark-ring {
+    opacity: 0;
+}
+
+.mm-files .mm-mark-index {
+    opacity: 0;
+}
+
+.mm-files .mm-mark-timeline {
+    bottom: 0;
+    right: 5%;
+    opacity: 0;
+    font-size: 8px;
+}
+
+/* FINAL ARCHIVE POSITIONING */
+
+.mm-files .mm-upright-folder {
+    left: clamp(68px,18vw,270px);
+    z-index: 10;
+}
+
+.mm-files .mm-files-gallery {
+    position: absolute;
+    inset: 0;
+    z-index: 6;
+    overflow: visible;
+}
+
+.mm-files .mm-files-photo {
+    transform-origin: center center;
+    will-change: transform, opacity;
+}
+
+
+/* =========================================================
+   22 | ANIMATED HANDWRITTEN SIGNATURE
+   ========================================================= */
+
+.experience-signature {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+
+    min-height: clamp(260px,36vw,440px);
+    padding: 65px clamp(24px,5.4vw,86px);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: #eee7e0;
+
+    line-height: 0;
+    font-size: 0;
+}
+
+.experience-signature .signature-image {
+    display: block;
+    width: min(380px,80vw);
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* HIDE SIGNATURE BEFORE SCROLLING */
+
+.experience-signature.signature-pending .signature-image {
+    clip-path: inset(0 100% 0 0);
+    -webkit-clip-path: inset(0 100% 0 0);
+}
+
+/* HANDWRITING REVEAL ANIMATION */
+
+.experience-signature.is-writing .signature-image {
+    animation:
+        monseSignatureReveal 3.5s linear forwards;
+}
+
+@keyframes monseSignatureReveal {
+
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+
+}
+
+
+/* =========================================================
+   23 | ANIMATED WALKING BEAR
+   ========================================================= */
+
+.monse-bear-strip {
+    position: relative;
+    width: 100%;
+    height: 225px;
+    overflow: hidden;
+    background: #eee5df;
+}
+
+.monse-bear-mover {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+
+    width: clamp(210px,29vw,340px);
+
+    animation: monseBearCross 15s linear infinite;
+
+    will-change: left, transform;
+}
+
+.monse-bear-art {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.monse-leg {
+    transform-box: view-box;
+}
+
+.monse-leg.far-rear {
+    transform-origin: 112px 150px;
+    animation:
+        monseBearStep .8s ease-in-out infinite alternate;
+}
+
+.monse-leg.far-front {
+    transform-origin: 274px 146px;
+    animation:
+        monseBearStep .8s ease-in-out infinite alternate-reverse;
+}
+
+.monse-leg.near-rear {
+    transform-origin: 129px 155px;
+    animation:
+        monseBearStep .8s ease-in-out infinite alternate-reverse;
+}
+
+.monse-leg.near-front {
+    transform-origin: 286px 147px;
+    animation:
+        monseBearStep .8s ease-in-out infinite alternate;
+}
+
+/* BEAR WALKS ACROSS THE PAGE */
+
+@keyframes monseBearCross {
+
+    from {
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        left: 100%;
+        transform: translateX(0);
+    }
+
+}
+
+/* BEAR LEG MOVEMENT */
+
+@keyframes monseBearStep {
+
+    from {
+        transform: rotate(-10deg);
+    }
+
+    to {
+        transform: rotate(10deg);
+    }
+
+}
+
+
+/* =========================================================
+   24 | RESPONSIVE DESIGN — SMALL DESKTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .site-header {
+        padding: 20px 165px 20px 3%;
+        gap: 14px;
+    }
+
+    .site-header .main-navigation ul {
+        gap: 12px;
+    }
+
+    .site-header .header-booking {
+        padding: 12px;
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   25 | RESPONSIVE POLAROID COLLAGE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .about-philosophy-band:has(.about-polaroid-collage) {
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+    .about-polaroid-collage {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        width: min(100%,680px);
+        height: 330px;
+        margin: 20px auto 0;
+    }
+
+}
+
+
+/* =========================================================
+   26 | RESPONSIVE DESIGN — TABLET HERO
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .about-editorial-hero {
+        min-height: 940px;
+        height: auto;
+    }
+
+    .about-portrait {
+        width: 57%;
+        height: 75%;
+        bottom: 8%;
+    }
+
+    .about-hero-left {
+        top: 6%;
+        width: 54%;
+    }
+
+    .about-hero-left h1 {
+        font-size: clamp(62px,9vw,102px);
+    }
+
+    .about-hero-right {
+        top: auto;
+        bottom: 5%;
+        width: 36%;
+    }
+
+    .about-script-note {
+        display: none;
+    }
+
+    .about-story-section,
+    .about-expertise-section {
+        gap: 6%;
+        padding: 100px 6%;
+    }
+
+    /* TABLET TELEPHONE */
+
+    .about-editorial-hero
+    .monse-telephone.phone-spring {
+        top: 0;
+        left: 25%;
+        width: clamp(82px,10.5vw,110px);
+    }
+
+    .about-editorial-hero
+    .phone-spring
+    .monse-telephone-label {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+}
+
+
+/* =========================================================
+   27 | TABLET CREATIVE TOOLKIT
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .toolkit-grid {
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+    }
+
+}
+
+
+/* =========================================================
+   28 | TABLET LOGO ANIMATION
+   ========================================================= */
+
+@media (max-width: 860px) {
+
+    .mm-files .mm-mark-story {
+        display: block;
+        padding: 0;
+    }
+
+    .mm-files .mm-mark-story-copy {
+        top: 6%;
+        left: 46%;
+        width: 51%;
+        padding: 12px 14px;
+    }
+
+    .mm-files .mm-mark-eyebrow {
+        font-size: 8px;
+        margin-bottom: 7px;
+    }
+
+    .mm-files .mm-mark-story h2 {
+        font-size: clamp(21px,3.7vw,36px);
+        margin-bottom: 6px;
+    }
+
+    .mm-files .mm-mark-description {
+        font-size: 10px;
+        line-height: 1.5;
+        margin-bottom: 7px;
+    }
+
+    .mm-files .mm-mark-annotations {
+        font-size: 8px;
+    }
+
+    .mm-files .mm-mark-annotations div {
+        padding: 3px 0;
+    }
+
+    .mm-files .mm-mark-footnote {
+        display: none;
+    }
+
+    .mm-files .mm-mark-visual {
+        left: 49%;
+        bottom: 5%;
+        width: 46%;
+        height: 36%;
+        max-height: none;
+        margin: 0;
+    }
+
+    .mm-files .mm-mark-timeline {
+        right: 5%;
+        bottom: 1%;
+        font-size: 7px;
+    }
+
+}
+
+
+/* =========================================================
+   29 | MOBILE ARCHIVE FOLDER
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .mm-files-meta-right {
+        display: none;
+    }
+
+    .mm-files-caption {
+        top: 28px;
+    }
+
+    .mm-upright-folder {
+        left: 7vw;
+        top: 51%;
+
+        width: clamp(155px,39vw,235px);
+        height: clamp(210px,51vw,315px);
+    }
+
+    .mm-files .mm-upright-folder {
+        left: 3vw;
+    }
+
+    .mm-folder-cover-name {
+        font-size: clamp(18px,4.1vw,26px);
+    }
+
+    .mm-folder-opening-leaf {
+        transform:
+            rotateY(calc(var(--mf-open) * -100deg));
+    }
+
+    .mm-files-photo {
+        width: 38vw;
+        height: 50vw;
+        padding: 6px 6px 25px;
+    }
+
+    .mm-files-progress-track {
+        display: none;
+    }
+
+    .mm-files-footer {
+        min-height: 68px;
+        gap: 12px;
+    }
+
+    .mm-files-continue {
+        white-space: normal;
+        text-align: right;
+        max-width: 68%;
+    }
+
+}
+
+
+/* SHORT DESKTOP SCREENS */
+
+@media (max-height: 560px) and (min-width: 761px) {
+
+    .mm-upright-folder {
+        width: 190px;
+        height: 250px;
+        top: 54%;
+    }
+
+    .mm-files-photo {
+        width: 160px;
+        height: 205px;
+    }
+
+}
+
+
+/* =========================================================
+   30 | MOBILE ABOUT PAGE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* MOBILE HEADER */
+
+    .site-header {
+        flex-wrap: wrap;
+        padding: 18px 115px 18px 5%;
+    }
+
+    .site-header .main-navigation {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    .site-header .main-navigation ul {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    /* MOBILE FLOWERS */
+
+    .floral-frame {
+        width: 220px;
+    }
+
+    .floral-frame .floral-top-right {
+        top: -15px;
+        right: -20px;
+    }
+
+    /* MOBILE HERO */
+
+    .about-editorial-hero {
+        min-height: 1080px;
+        height: auto;
+    }
+
+    .about-portrait {
+        width: 100%;
+        height: 62%;
+        bottom: 16%;
+    }
+
+    /* MOBILE TYPOGRAPHY */
+
+    .about-hero-left {
+        top: 4%;
+        left: 6%;
+        width: 88%;
+    }
+
+    .about-hero-left h1 {
+        font-size: 32px;
+    }
+
+    .about-hero-left h2 {
+        font-size: clamp(50px,15vw,95px);
+    }
+
+    .editorial-number {
+        margin-bottom: 22px;
+    }
+
+    .about-scroll,
+    .about-script-note,
+    .about-side-label {
+        display: none;
+    }
+
+    /* MOBILE REALISTIC TELEPHONE */
+
+    .about-editorial-hero
+    .monse-telephone.phone-spring {
+
+        top: 0;
+        left: 18%;
+
+        width: clamp(70px,16vw,90px);
+
+    }
+
+    .about-editorial-hero
+    .phone-spring
+    .monse-telephone-label {
+
+        font-size: 7px;
+        letter-spacing: .7px;
+        white-space: normal;
+
+    }
+
+    /* MOBILE BORN TO CREATE */
+
+    .about-hero-right {
+        top: auto;
+        bottom: 3%;
+
+        left: 5%;
+        right: 5%;
+
+        width: 90%;
+        max-width: none;
+
+        padding: 22px;
+
+        background: rgba(240,234,226,.95);
+    }
+
+    .about-hero-right h2 {
+        font-size: 27px;
+        margin-bottom: 14px;
+    }
+
+    .about-hero-right > p:not(.editorial-eyebrow) {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+
+    /* STACK MAIN SECTIONS */
+
+    .about-philosophy-band,
+    .about-philosophy-band:has(.about-polaroid-collage),
+    .about-story-section,
+    .about-expertise-section {
+        grid-template-columns: 1fr;
+    }
+
+    /* MOBILE PHILOSOPHY SECTION */
+
+    .about-philosophy-band {
+        padding: 52px 7%;
+        row-gap: 35px;
+    }
+
+    .philosophy-item {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255,255,255,.25);
+        padding-bottom: 23px;
+    }
+
+    .philosophy-item p {
+        font-size: 12px;
+    }
+
+    /* MOBILE POLAROIDS */
+
+    .about-polaroid-collage {
+        grid-column: 1;
+        width: 100%;
+        height: 260px;
+        margin-top: 20px;
+    }
+
+    .monse-photo {
+        width: 43%;
+    }
+
+    .monse-photo-stack.is-open .monse-photo-3 {
+        transform:
+            translate(43%,-14%)
+            rotate(-4deg);
+    }
+
+    .monse-photo-stack.is-open .monse-photo-2 {
+        transform:
+            translate(86%,-19%)
+            rotate(7deg);
+    }
+
+    .monse-photo-stack.is-open .monse-photo-1 {
+        transform:
+            translate(129%,-6%)
+            rotate(14deg);
+    }
+
+    /* SELECTED MOBILE PHOTOGRAPHS */
+
+    .monse-photo-stack.is-open .monse-photo-3.is-selected {
+        transform:
+            translate(43%,-15%)
+            rotate(0)
+            scale(1.1);
+    }
+
+    .monse-photo-stack.is-open .monse-photo-2.is-selected {
+        transform:
+            translate(86%,-15%)
+            rotate(0)
+            scale(1.1);
+    }
+
+    .monse-photo-stack.is-open .monse-photo-1.is-selected {
+        transform:
+            translate(129%,-15%)
+            rotate(0)
+            scale(1.1);
+    }
+
+    .monse-stack-caption {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    /* MOBILE STORY SECTION */
+
+    .about-story-section,
+    .about-expertise-section {
+        padding: 78px 7%;
+    }
+
+    .about-story-section {
+        background-image:
+            linear-gradient(
+                rgba(16,4,17,.91),
+                rgba(16,4,17,.88)
+            ),
+            url("images/about-floral-bg.jpg");
+
+        background-position: 55% center;
+    }
+
+    .about-story-collage {
+        min-height: 510px;
+    }
+
+    .collage-script {
+        font-size: 60px;
+    }
+
+}
+
+
+/* =========================================================
+   31 | SMALL MOBILE CREATIVE TOOLKIT
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .about-toolkit {
+        margin-top: 20px;
+        padding-top: 35px;
+    }
+
+    .toolkit-grid {
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        gap: 12px;
+    }
+
+    .toolkit-item {
+        min-height: 125px;
+        padding: 18px 8px;
+    }
+
+    .toolkit-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 23px;
+    }
+
+    .toolkit-item p {
+        font-size: 10px;
+    }
+
+    /* MOBILE WALKING BEAR */
+
+    .monse-bear-strip {
+        height: 165px;
+    }
+
+    .monse-bear-mover {
+        width: 230px;
+    }
+
+}
+
+
+/* =========================================================
+   32 | SMALL MOBILE LOGO ANIMATION
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+    .mm-files .mm-mark-story-copy {
+        left: 40%;
+        width: 57%;
+        top: 10%;
+        padding: 10px;
+    }
+
+    .mm-files .mm-mark-story h2 {
+        font-size: clamp(18px,5vw,24px);
+    }
+
+    .mm-files .mm-mark-description {
+        font-size: 9px;
+        line-height: 1.42;
+    }
+
+    .mm-files .mm-mark-annotations div {
+        gap: 8px;
+    }
+
+    .mm-files .mm-mark-annotations span {
+        font-size: 12px;
+    }
+
+    .mm-files .mm-mark-visual {
+        left: 40%;
+        width: 57%;
+        bottom: 8%;
+        height: 30%;
+    }
+
+    .mm-files .mm-mark-timeline {
+        bottom: 0;
+        font-size: 6px;
+    }
+
+}
+
+
+/* =========================================================
+   33 | REDUCED MOTION ACCESSIBILITY
+
+   Respects users who disable animations
+   through their operating system.
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    /* BURGUNDY RIBBONS AND SIGNATURE */
+
+    .liquid-dots,
+    .experience-signature.is-writing .signature-image {
+        animation: none;
+    }
+
+    .experience-signature.signature-pending .signature-image {
+        clip-path: none;
+        -webkit-clip-path: none;
+    }
+
+    /* POLAROIDS, TOOLKIT AND ARCHIVE */
+
+    .monse-photo,
+    .skill-row,
+    .about-editorial-button,
+    .toolkit-item,
+    .toolkit-icon,
+    .mm-files-photo,
+    .mm-folder-front-cover {
+        transition: none;
+    }
+
+    .mm-files .mm-mark-story-copy,
+    .mm-files .mm-mark-piece {
+        will-change: auto;
+    }
+
+    /* WALKING BEAR */
+
+    .monse-bear-mover,
+    .monse-leg {
+        animation: none !important;
+    }
+
+    .monse-bear-mover {
+        left: 5%;
+        transform: none;
+    }
+
+    /* REALISTIC TELEPHONE */
+
+    .phone-spring,
+    .phone-spring * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .phone-spring .phone-handset {
+        will-change: auto;
+    }
+
+}
+/* =========================================================
+   MONSE MEDIA | CREATIVE TOOLKIT — EDITORIAL HERO
+   ========================================================= */
+
+
+/* TOOLKIT POSITION */
+
+.about-editorial-hero .about-toolkit {
+    position: absolute;
+
+    left: 4.5%;
+    bottom: 7%;
+
+    width: min(32%, 480px);
+
+    margin: 0;
+    padding: 20px 0 0;
+
+    border-top: 1px solid rgba(133, 42, 50, .35);
+
+    z-index: 4;
+}
+
+
+/* THE TOOLS BEHIND THE VISION */
+
+.about-editorial-hero .toolkit-heading span {
+    display: block;
+
+    font: 600 9px/1.6 "Raleway", sans-serif;
+
+    letter-spacing: 2.5px;
+
+    color: var(--about-burgundy);
+
+    margin-bottom: 10px;
+}
+
+
+/* MY CREATIVE TOOLKIT TITLE */
+
+.about-editorial-hero .toolkit-heading h2 {
+    font: 400 clamp(22px, 2.3vw, 36px)/1.2
+        "Playfair Display", Georgia, serif;
+
+    color: var(--about-wine);
+
+    margin: 0 0 24px;
+}
+
+
+/* =========================================================
+   SOFTWARE ICON GRID
+   Two rows of five icons
+   ========================================================= */
+
+.about-editorial-hero .toolkit-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 22px 12px;
+}
+
+
+/* REMOVE ORIGINAL SOFTWARE CARD BACKGROUNDS */
+
+.about-editorial-hero .toolkit-item {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 8px;
+
+    min-width: 0;
+    min-height: 0;
+
+    padding: 0;
+
+    background: transparent;
+
+    border: none;
+    border-radius: 0;
+
+    transition: transform .35s ease;
+}
+
+
+/* SMALL SOFTWARE ICONS */
+
+.about-editorial-hero .toolkit-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    font-size: 21px;
+
+    box-shadow:
+        0 3px 6px rgba(60, 0, 8, .10);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+
+/* VISUAL STUDIO CODE */
+
+.about-editorial-hero .icon-vscode {
+    font-size: 14px;
+}
+
+
+/* CAPCUT */
+
+.about-editorial-hero .icon-capcut {
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   SOFTWARE NAMES
+   ========================================================= */
+
+.about-editorial-hero .toolkit-item p {
+    font: 500 9px/1.5 "Raleway", sans-serif;
+
+    letter-spacing: .15px;
+
+    color: var(--about-wine);
+
+    text-align: center;
+
+    margin: 0;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   INTERACTIVE HOVER ANIMATIONS
+   ========================================================= */
+
+.about-editorial-hero .toolkit-item:hover {
+    transform: translateY(-4px);
+
+    background: transparent;
+}
+
+
+/* ICON LIFTS AND ENLARGES SLIGHTLY */
+
+.about-editorial-hero
+.toolkit-item:hover
+.toolkit-icon {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 8px 15px rgba(60, 0, 8, .18);
+}
+
+
+/* =========================================================
+   ORIGINAL STORY AND POLAROID SECTION
+
+   Keeps the photographs aligned after removing
+   the toolkit from its previous location.
+   ========================================================= */
+
+.about-philosophy-band .about-polaroid-collage {
+    grid-row: 1;
+}
+
+@media (max-width: 1100px) {
+
+    .about-philosophy-band .about-polaroid-collage {
+        grid-row: auto;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET RESPONSIVE LAYOUT
+   ========================================================= */
+
+@media (min-width: 701px) and (max-width: 1050px) {
+
+    .about-editorial-hero {
+        height: 940px;
+    }
+
+
+    /* TABLET TOOLKIT POSITION */
+
+    .about-editorial-hero .about-toolkit {
+        left: 4.5%;
+        bottom: 5%;
+
+        width: 34%;
+    }
+
+
+    /* TABLET ICON GRID */
+
+    .about-editorial-hero .toolkit-grid {
+        gap: 18px 6px;
+    }
+
+
+    /* TABLET ICON SIZE */
+
+    .about-editorial-hero .toolkit-icon {
+        width: 34px;
+        height: 34px;
+
+        font-size: 17px;
+    }
+
+
+    /* TABLET SOFTWARE NAMES */
+
+    .about-editorial-hero .toolkit-item p {
+        font-size: 8px;
+    }
+
+
+    /* TABLET EDITORIAL LABEL */
+
+    .about-editorial-hero .toolkit-heading span {
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .about-editorial-hero .icon-vscode {
+        font-size: 12px;
+    }
+
+    .about-editorial-hero .icon-capcut {
+        font-size: 21px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE LAYOUT
+
+   Prevents the toolkit, portrait, telephone
+   and biography from overlapping.
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+
+    /* MOBILE EDITORIAL HERO */
+
+    .about-editorial-hero {
+        display: flex;
+
+        flex-direction: column;
+
+        min-height: 0;
+        height: auto;
+
+        gap: 22px;
+
+        padding: 42px 5% 35px;
+    }
+
+
+    /* MOBILE ABOUT MONSE HEADING */
+
+    .about-editorial-hero .about-hero-left {
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        width: 76%;
+
+        margin: 0;
+    }
+
+    .about-editorial-hero .about-hero-left h2 {
+        font-size: clamp(42px, 11vw, 75px);
+    }
+
+
+    /* MOBILE PORTRAIT */
+
+    .about-editorial-hero .about-portrait {
+        position: relative;
+
+        left: auto;
+        bottom: auto;
+
+        transform: none;
+
+        width: 100%;
+
+        height: clamp(350px, 90vw, 540px);
+    }
+
+
+    /* MOBILE BORN TO CREATE */
+
+    .about-editorial-hero .about-hero-right {
+        position: relative;
+
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+
+        width: 100%;
+        max-width: none;
+
+        padding: 20px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* MOBILE REALISTIC TELEPHONE */
+
+    .about-editorial-hero
+    .monse-telephone.phone-spring {
+
+        top: 0;
+        left: 83%;
+
+        width: clamp(65px, 15vw, 85px);
+    }
+
+
+    /* MOBILE CREATIVE TOOLKIT */
+
+    .about-editorial-hero .about-toolkit {
+        position: relative;
+
+        left: auto;
+        bottom: auto;
+
+        width: 100%;
+
+        padding-top: 20px;
+
+        margin: 0;
+    }
+
+
+    /* MOBILE TOOLKIT TITLE */
+
+    .about-editorial-hero .toolkit-heading h2 {
+        font-size: 28px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* MOBILE SOFTWARE GRID */
+
+    .about-editorial-hero .toolkit-grid {
+        grid-template-columns:
+            repeat(5, minmax(0, 1fr));
+
+        gap: 18px 8px;
+    }
+
+
+    /* MOBILE SOFTWARE ICONS */
+
+    .about-editorial-hero .toolkit-icon {
+        width: 36px;
+        height: 36px;
+
+        font-size: 18px;
+    }
+
+
+    /* MOBILE SOFTWARE LABELS */
+
+    .about-editorial-hero .toolkit-item p {
+        font-size: 8px;
+    }
+
+    .about-editorial-hero .icon-vscode {
+        font-size: 12px;
+    }
+
+    .about-editorial-hero .icon-capcut {
+        font-size: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-editorial-hero .toolkit-item,
+    .about-editorial-hero .toolkit-icon {
+
+        transition: none;
+
+    }
+
+    .about-editorial-hero .toolkit-item:hover,
+    .about-editorial-hero
+    .toolkit-item:hover
+    .toolkit-icon {
+
+        transform: none;
+
+    }
+
+}
+/* DISABLE FALLING ROSE PETALS ON ABOUT PAGE */
+
+#petal-container,
+.flower-petal {
+    display: none !important;
+}
+
+/* =========================================================
+   END OF CREATIVE TOOLKIT STYLING
+   ========================================================= */
+
+/* =========================================================
+   END OF MONSE MEDIA ABOUT PAGE STYLESHEET
+   ========================================================= */
