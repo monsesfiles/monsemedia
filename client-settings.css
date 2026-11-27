@@ -1,0 +1,1542 @@
+/* ==========================================
+   MONSE MEDIA | CLIENT ACCOUNT SETTINGS
+   Author: Monse Montes
+   Filename: client-settings.css
+
+   Base styles: client.css
+   Navigation: index.html
+   ========================================== */
+
+
+/* 01 | BRAND COLORS */
+
+.settings-page {
+    --settings-black: #080607;
+    --settings-dark: #100607;
+    --settings-wine: #3c0008;
+    --settings-burgundy: #852a32;
+    --settings-red: #a43a48;
+    --settings-ivory: #f0eae2;
+    --settings-cream: #e5d9ca;
+    --settings-rose: #d79ca6;
+    --settings-muted: #c5aeaa;
+    --settings-border: #493035;
+    --settings-card: #18090d;
+    --settings-gold: #e6c878;
+    --settings-green: #a8d6bd;
+}
+
+
+/* ==========================================
+   02 | GENERAL PAGE SETTINGS
+   ========================================== */
+
+.settings-page {
+    min-height: 100vh;
+
+    background: var(--settings-dark);
+    color: var(--settings-ivory);
+
+    font-family: "Raleway", sans-serif;
+    color-scheme: dark;
+}
+
+.settings-page [hidden],
+.settings-page .hidden {
+    display: none !important;
+}
+
+.settings-page .settings-main {
+    width: 100%;
+    max-width: 1450px;
+    min-height: 75vh;
+
+    margin: 0 auto;
+    padding: 75px 6% 100px;
+}
+
+
+/* ==========================================
+   03 | SETTINGS HERO SECTION
+   ========================================== */
+
+.settings-page .settings-hero {
+    max-width: 1100px;
+
+    padding-bottom: 45px;
+    margin-bottom: 35px;
+
+    border-bottom: 1px solid var(--settings-border);
+}
+
+.settings-page .settings-hero h1 {
+    margin: 22px 0 28px;
+
+    color: var(--settings-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(42px, 7.5vw, 110px);
+    font-weight: 300;
+
+    line-height: 1.05;
+    letter-spacing: -3px;
+
+    overflow-wrap: anywhere;
+}
+
+.settings-page .settings-hero h1 span {
+    color: var(--settings-rose);
+}
+
+.settings-page .settings-hero > .muted {
+    max-width: 700px;
+
+    font-size: 14px;
+    line-height: 2;
+}
+
+
+/* BACK TO DASHBOARD */
+
+.settings-page .settings-back-link {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 44px;
+    margin-bottom: 25px;
+
+    color: var(--settings-rose);
+
+    font: 600 10px/1.8 "Raleway", sans-serif;
+    letter-spacing: 2px;
+
+    transition: color .3s ease;
+}
+
+.settings-page .settings-back-link:hover {
+    color: var(--settings-ivory);
+}
+
+
+/* ==========================================
+   04 | ACCOUNT ACCESS SCREEN
+   ========================================== */
+
+.settings-page .settings-access {
+    max-width: 750px;
+
+    margin: 35px auto;
+    padding: clamp(25px, 5vw, 60px);
+}
+
+.settings-page .settings-access .secondary {
+    margin-top: 20px;
+}
+
+.settings-page #settingsWorkspace {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* ==========================================
+   05 | CLIENT ACCOUNT NAVIGATION
+   ========================================== */
+
+.settings-page .settings-navigation {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 8px 28px;
+
+    padding: 12px 0;
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid var(--settings-border);
+}
+
+.settings-page .settings-navigation a {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 44px;
+    padding: 12px 0;
+
+    color: var(--settings-muted);
+
+    font: 600 10px/1.6 "Raleway", sans-serif;
+    letter-spacing: 1.5px;
+
+    transition: color .3s ease;
+}
+
+.settings-page .settings-navigation a:hover {
+    color: var(--settings-ivory);
+}
+
+.settings-page
+.settings-navigation
+a[aria-current="page"] {
+    color: var(--settings-rose);
+}
+
+.settings-page
+.settings-navigation
+a[aria-current="page"]::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 2px;
+
+    background: var(--settings-rose);
+}
+
+
+/* ==========================================
+   06 | CLIENT PROFILE SUMMARY
+   ========================================== */
+
+.settings-page .settings-profile-summary {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin-bottom: 35px;
+    padding: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #300e16,
+        #18090d
+    );
+
+    border: 1px solid var(--settings-border);
+    border-left: 3px solid var(--settings-burgundy);
+}
+
+
+/* PERSONALIZED CLIENT INITIALS */
+
+.settings-page .settings-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 90px;
+    height: 90px;
+
+    background: var(--settings-burgundy);
+    border: 1px solid var(--settings-rose);
+    border-radius: 50%;
+
+    color: var(--settings-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+
+    letter-spacing: 2px;
+
+    user-select: none;
+}
+
+
+/* CLIENT ACCOUNT INFORMATION */
+
+.settings-page .settings-profile-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.settings-page .settings-profile-details .eyebrow {
+    margin: 0 0 8px;
+}
+
+.settings-page #settingsClientName {
+    margin: 8px 0;
+
+    color: var(--settings-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(23px, 4vw, 38px);
+    font-weight: 400;
+
+    overflow-wrap: anywhere;
+}
+
+.settings-page #settingsClientEmail {
+    margin: 5px 0;
+    overflow-wrap: anywhere;
+}
+
+.settings-page #memberSince {
+    margin: 5px 0 0;
+}
+
+
+/* LOGOUT BUTTON */
+
+.settings-page #settingsLogout {
+    flex-shrink: 0;
+}
+
+
+/* ==========================================
+   07 | TWO COLUMN SETTINGS LAYOUT
+
+   Left: Account navigation
+   Right: Account settings forms
+   ========================================== */
+
+.settings-page .settings-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(220px, 280px)
+        minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 30px;
+}
+
+.settings-page .settings-layout > * {
+    min-width: 0;
+}
+
+.settings-page .settings-content {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* ==========================================
+   08 | SETTINGS SIDEBAR
+   ========================================== */
+
+.settings-page .settings-sidebar {
+    position: sticky;
+    top: 25px;
+
+    min-width: 0;
+}
+
+.settings-page .settings-sidebar .panel {
+    padding: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+/* SETTINGS SECTION NAVIGATION */
+
+.settings-page .settings-menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+}
+
+.settings-page .settings-menu > .eyebrow {
+    margin-bottom: 15px;
+}
+
+.settings-page .settings-menu a {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    min-height: 48px;
+
+    padding: 15px 5px;
+
+    border-bottom: 1px solid var(--settings-border);
+
+    color: var(--settings-muted);
+
+    font: 500 12px/1.7 "Raleway", sans-serif;
+
+    transition:
+        color .3s ease,
+        padding-left .3s ease;
+}
+
+.settings-page .settings-menu a:last-child {
+    border-bottom: none;
+}
+
+.settings-page .settings-menu a span {
+    color: var(--settings-rose);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.settings-page .settings-menu a:hover {
+    padding-left: 10px;
+
+    color: var(--settings-ivory);
+}
+
+.settings-page .settings-menu a.active,
+.settings-page .settings-menu a[aria-current="location"] {
+    color: var(--settings-rose);
+}
+
+
+/* ==========================================
+   09 | QUICK ACCOUNT LINKS
+   ========================================== */
+
+.settings-page .settings-quick-links {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.settings-page .settings-quick-links .eyebrow {
+    margin-bottom: 10px;
+}
+
+.settings-page .settings-quick-links a {
+    width: 100%;
+
+    padding: 14px 12px;
+
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+
+/* PRIMARY BURGUNDY LINK */
+
+.settings-page .settings-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    max-width: 100%;
+    min-height: 44px;
+
+    padding: 17px 25px;
+
+    background: var(--settings-burgundy);
+    border: 1px solid #a64d59;
+
+    color: white;
+
+    font: 600 10px/1.6 "Raleway", sans-serif;
+    letter-spacing: 2px;
+
+    text-align: center;
+    overflow-wrap: anywhere;
+
+    cursor: pointer;
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease;
+}
+
+.settings-page .settings-primary:hover {
+    background: var(--settings-red);
+    border-color: var(--settings-rose);
+}
+
+
+/* ==========================================
+   10 | SETTINGS CONTENT SECTIONS
+   ========================================== */
+
+.settings-page .settings-section {
+    min-width: 0;
+
+    margin-bottom: 30px;
+
+    padding: clamp(25px, 4vw, 45px);
+
+    scroll-margin-top: 30px;
+}
+
+.settings-page .settings-section h2 {
+    margin: 15px 0 20px;
+
+    overflow-wrap: anywhere;
+}
+
+.settings-page .settings-section > .muted {
+    max-width: 750px;
+    margin-bottom: 25px;
+}
+
+.settings-page .settings-section h3 {
+    color: var(--settings-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 400;
+
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   11 | ACCOUNT SETTINGS FORMS
+   ========================================== */
+
+.settings-page .settings-section form,
+.settings-page .settings-dialog form {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+}
+
+.settings-page fieldset {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-width: 0;
+
+    gap: 12px;
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+}
+
+.settings-page fieldset:disabled {
+    opacity: .6;
+}
+
+.settings-page fieldset:disabled input,
+.settings-page fieldset:disabled select,
+.settings-page fieldset:disabled textarea,
+.settings-page fieldset:disabled button {
+    cursor: not-allowed;
+}
+
+.settings-page form label:not(.checkline) {
+    display: block;
+
+    margin: 15px 0 2px;
+
+    color: var(--settings-rose);
+
+    font: 600 10px/1.8 "Raleway", sans-serif;
+    letter-spacing: 2px;
+}
+
+
+/* ==========================================
+   12 | FORM INPUT FIELDS
+   ========================================== */
+
+.settings-page form input:not([type="checkbox"]),
+.settings-page form select,
+.settings-page form textarea {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 54px;
+
+    padding: 16px 18px;
+
+    background: rgba(8, 6, 7, .35);
+
+    border: 1px solid #65464a;
+    border-radius: 0;
+
+    color: var(--settings-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    transition:
+        border-color .3s ease,
+        background-color .3s ease;
+}
+
+.settings-page form input:focus,
+.settings-page form textarea:focus,
+.settings-page form select:focus {
+    background: var(--settings-card);
+
+    border-color: var(--settings-rose);
+}
+
+.settings-page form input::placeholder,
+.settings-page form textarea::placeholder {
+    color: #a48d90;
+    opacity: 1;
+}
+
+.settings-page form input[readonly] {
+    background: rgba(133, 42, 50, .06);
+
+    color: var(--settings-muted);
+
+    border-color: var(--settings-border);
+
+    cursor: default;
+}
+
+.settings-page form textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+.settings-page form select {
+    color-scheme: dark;
+    cursor: pointer;
+}
+
+.settings-page form select option {
+    background: var(--settings-dark);
+    color: var(--settings-ivory);
+}
+
+
+/* ==========================================
+   13 | PERSONAL INFORMATION FIELD GRID
+   ========================================== */
+
+.settings-page .settings-field-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.settings-page .settings-field {
+    min-width: 0;
+}
+
+.settings-page .settings-field label {
+    margin-bottom: 12px;
+}
+
+.settings-page fieldset > .muted.small {
+    margin: 0 0 5px;
+}
+
+
+/* SAVE INFORMATION BUTTONS */
+
+.settings-page #saveProfile,
+.settings-page #changeEmail,
+.settings-page #saveNotifications,
+.settings-page #changePassword {
+    margin-top: 15px;
+}
+
+
+/* ==========================================
+   14 | EMAIL ADDRESS SUMMARY
+   ========================================== */
+
+.settings-page .settings-email-summary {
+    margin: 25px 0;
+    padding: 22px;
+
+    background: var(--settings-card);
+
+    border: 1px solid var(--settings-border);
+    border-left: 3px solid var(--settings-burgundy);
+}
+
+.settings-page .settings-value {
+    margin: 8px 0;
+
+    color: var(--settings-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(16px, 3vw, 23px);
+    font-weight: 500;
+
+    overflow-wrap: anywhere;
+}
+
+.settings-page #emailVerificationStatus {
+    margin: 8px 0 0;
+}
+
+
+/* EMAIL VERIFICATION STATUS */
+
+.settings-page
+#emailVerificationStatus[data-status="verified"] {
+    color: var(--settings-green);
+}
+
+.settings-page
+#emailVerificationStatus[data-status="unverified"],
+
+.settings-page
+#emailVerificationStatus[data-status="pending"] {
+    color: var(--settings-gold);
+}
+
+
+/* ==========================================
+   15 | NOTIFICATION SUMMARY
+   ========================================== */
+
+.settings-page .settings-notification-summary {
+    margin: 25px 0;
+    padding: 22px;
+
+    background: var(--settings-card);
+
+    border: 1px solid var(--settings-border);
+    border-left: 3px solid var(--settings-burgundy);
+}
+
+.settings-page .settings-notification-summary .eyebrow {
+    margin: 0 0 12px;
+}
+
+.settings-page #settingsSmsStatus {
+    margin: 8px 0;
+}
+
+.settings-page
+#settingsSmsStatus[data-status="opted-in"] {
+    color: var(--settings-green);
+}
+
+.settings-page
+#settingsSmsStatus[data-status="opted-out"] {
+    color: var(--settings-muted);
+}
+
+.settings-page
+#settingsSmsStatus[data-status="pending"] {
+    color: var(--settings-gold);
+}
+
+.settings-page #settingsPhoneVerification {
+    margin: 8px 0 0;
+}
+
+
+/* ==========================================
+   16 | OPTIONAL SMS CONSENT
+   ========================================== */
+
+.settings-page .settings-sms-consent {
+    margin: 15px 0;
+    padding: 25px;
+
+    background: var(--settings-card);
+
+    border: 1px solid var(--settings-border);
+    border-left: 3px solid var(--settings-burgundy);
+}
+
+.settings-page .settings-sms-consent > .eyebrow {
+    margin: 0 0 20px;
+}
+
+.settings-page .checkline {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin: 15px 0;
+
+    color: var(--settings-cream);
+
+    font: 400 13px/1.9 "Raleway", sans-serif;
+
+    cursor: pointer;
+}
+
+.settings-page .checkline input[type="checkbox"] {
+    flex: 0 0 20px;
+
+    width: 20px;
+    height: 20px;
+
+    margin: 3px 0 0;
+
+    accent-color: var(--settings-burgundy);
+
+    cursor: pointer;
+}
+
+.settings-page .checkline span {
+    flex: 1;
+    min-width: 0;
+}
+
+.settings-page .settings-sms-consent:has(
+    #settingsSmsConsent:checked
+) {
+    background: linear-gradient(
+        135deg,
+        #260c13,
+        #18090d
+    );
+
+    border-color: var(--settings-rose);
+}
+
+
+/* ==========================================
+   17 | AUTOMATED REMINDER TIMELINE
+   ========================================== */
+
+.settings-page .settings-reminder-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+
+    margin: 28px 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.settings-page .settings-reminder-list li {
+    position: relative;
+
+    margin-left: 8px;
+    padding: 5px 0 25px 25px;
+
+    border-left: 1px solid var(--settings-border);
+}
+
+.settings-page .settings-reminder-list li:last-child {
+    padding-bottom: 5px;
+
+    border-left-color: transparent;
+}
+
+
+/* TIMELINE DOTS */
+
+.settings-page .settings-reminder-list li::before {
+    content: "";
+
+    position: absolute;
+
+    top: 9px;
+    left: -6px;
+
+    width: 11px;
+    height: 11px;
+
+    background: var(--settings-burgundy);
+    border: 2px solid var(--settings-rose);
+    border-radius: 50%;
+}
+
+.settings-page .settings-reminder-list strong {
+    display: block;
+
+    color: var(--settings-rose);
+
+    font: 600 10px/1.8 "Raleway", sans-serif;
+    letter-spacing: 1.5px;
+}
+
+.settings-page .settings-reminder-list p {
+    margin: 6px 0 0;
+}
+
+
+/* SMS TERMS */
+
+.settings-page #notificationTerms {
+    margin: 20px 0 0;
+    padding-top: 20px;
+
+    border-top: 1px solid var(--settings-border);
+
+    color: var(--settings-muted);
+
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+
+/* ==========================================
+   18 | TURN OFF TEXT REMINDERS
+   ========================================== */
+
+.settings-page .settings-unsubscribe {
+    margin-top: 30px;
+    padding-top: 25px;
+
+    border-top: 1px solid var(--settings-border);
+}
+
+.settings-page .settings-unsubscribe .muted {
+    max-width: 600px;
+}
+
+.settings-page #disableReminders {
+    margin-top: 15px;
+}
+
+
+/* ==========================================
+   19 | PASSWORD SECURITY
+   ========================================== */
+
+.settings-page .settings-password-requirements {
+    margin: 10px 0;
+    padding: 20px;
+
+    background: var(--settings-card);
+
+    border: 1px solid var(--settings-border);
+}
+
+.settings-page .settings-password-requirements .eyebrow {
+    margin: 0 0 15px;
+}
+
+.settings-page .settings-password-requirements ul {
+    margin: 0;
+    padding-left: 20px;
+
+    color: var(--settings-muted);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.settings-page .settings-password-requirements li {
+    padding: 3px 0;
+}
+
+.settings-page
+.settings-password-requirements li::marker {
+    color: var(--settings-rose);
+}
+
+
+/* SHOW PASSWORD CHECKBOX */
+
+.settings-page .checkline:has(#showPasswords) {
+    margin: 8px 0;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   20 | PASSWORD RECOVERY SECTION
+   ========================================== */
+
+.settings-page .settings-password-recovery {
+    margin-top: 20px;
+}
+
+.settings-page .settings-password-recovery h3 {
+    margin: 0 0 15px;
+}
+
+.settings-page .settings-password-recovery .secondary {
+    margin-top: 15px;
+}
+
+
+/* ==========================================
+   21 | PRIVACY AND PERSONAL DATA
+   ========================================== */
+
+.settings-page .settings-privacy-item {
+    margin: 25px 0;
+    padding: 25px;
+
+    background: var(--settings-card);
+
+    border: 1px solid var(--settings-border);
+}
+
+.settings-page .settings-privacy-item h3 {
+    margin: 0 0 15px;
+
+    font-size: 20px;
+}
+
+.settings-page .settings-privacy-item .secondary {
+    margin-top: 15px;
+}
+
+
+/* ==========================================
+   22 | ACCOUNT DELETION SECTION
+   ========================================== */
+
+.settings-page .settings-danger-zone {
+    padding: 25px;
+
+    background: rgba(133, 42, 50, .1);
+
+    border: 1px solid #75404a;
+    border-left: 3px solid var(--settings-red);
+}
+
+.settings-page .settings-danger-zone .eyebrow {
+    margin-top: 0;
+
+    color: #ffaaaa;
+}
+
+.settings-page .settings-danger-zone h3 {
+    margin: 15px 0;
+
+    color: #f1b4b4;
+
+    font-size: clamp(20px, 3vw, 27px);
+}
+
+
+/* DELETION REQUEST BUTTON */
+
+.settings-page main .settings-danger-button,
+.settings-page .settings-dialog .settings-danger-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    max-width: 100%;
+    min-height: 44px;
+
+    padding: 17px 20px;
+
+    background: transparent;
+
+    border: 1px solid #b96e75;
+    border-radius: 0;
+
+    color: #ffaaaa;
+
+    font: 600 10px/1.7 "Raleway", sans-serif;
+    letter-spacing: 1.5px;
+
+    text-align: center;
+
+    overflow-wrap: anywhere;
+    cursor: pointer;
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease,
+        color .3s ease;
+}
+
+.settings-page
+.settings-danger-button:hover:not(:disabled) {
+    background: var(--settings-burgundy);
+
+    border-color: var(--settings-rose);
+
+    color: white;
+}
+
+.settings-page .settings-danger-button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.settings-page #requestAccountDeletion {
+    margin-top: 15px;
+}
+
+
+/* ==========================================
+   23 | ACCOUNT DELETION CONFIRMATION DIALOG
+   ========================================== */
+
+.settings-page #deletionDialog {
+    position: fixed;
+
+    inset: 0;
+
+    width: min(620px, calc(100% - 32px));
+
+    max-width: 620px;
+    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
+
+    margin: auto;
+    padding: 0;
+
+    background: #18090d;
+
+    border: 1px solid #75404a;
+    border-radius: 0;
+
+    color: var(--settings-ivory);
+
+    box-shadow: 0 25px 100px rgba(0, 0, 0, .6);
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.settings-page #deletionDialog:not([open]) {
+    display: none !important;
+}
+
+.settings-page #deletionDialog::backdrop {
+    background: rgba(0, 0, 0, .88);
+
+    backdrop-filter: blur(5px);
+}
+
+body.settings-page:has(#deletionDialog[open]) {
+    overflow: hidden;
+}
+
+.settings-page .settings-dialog-content {
+    position: relative;
+
+    padding: 55px 35px 35px;
+}
+
+.settings-page .settings-dialog-content h2 {
+    margin: 15px 0 20px;
+
+    font-size: clamp(25px, 4vw, 38px);
+
+    overflow-wrap: anywhere;
+}
+
+
+/* DIALOG CLOSE BUTTON */
+
+.settings-page .settings-dialog-close {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    background: transparent;
+
+    border: 1px solid var(--settings-border);
+    border-radius: 50%;
+
+    color: var(--settings-ivory);
+
+    font: 300 30px/1 "Poppins", sans-serif;
+
+    cursor: pointer;
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease;
+}
+
+.settings-page .settings-dialog-close:hover {
+    background: var(--settings-burgundy);
+
+    border-color: var(--settings-rose);
+}
+
+
+/* DIALOG FORM BUTTONS */
+
+.settings-page #confirmDeletion {
+    width: 100%;
+
+    margin-top: 15px;
+}
+
+.settings-page #cancelDeletion {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 44px;
+
+    margin-top: 15px;
+    padding: 16px;
+
+    background: transparent;
+
+    border: 1px solid var(--settings-ivory);
+    border-radius: 0;
+
+    color: var(--settings-ivory);
+
+    font: 600 10px/1.7 "Raleway", sans-serif;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
+
+.settings-page #cancelDeletion:hover:not(:disabled) {
+    background: var(--settings-ivory);
+
+    color: var(--settings-wine);
+}
+
+
+/* ==========================================
+   24 | ACCOUNT FEEDBACK MESSAGES
+   ========================================== */
+
+.settings-page .settings-feedback,
+.settings-page #settingsMessage,
+.settings-page #settingsAccessStatus {
+    color: var(--settings-muted);
+
+    font: 400 13px/1.9 "Raleway", sans-serif;
+
+    overflow-wrap: anywhere;
+}
+
+.settings-page .settings-feedback:not(:empty),
+.settings-page #settingsMessage:not(:empty) {
+    margin-top: 20px;
+    padding: 15px 18px;
+
+    background: var(--settings-card);
+
+    border-left: 2px solid var(--settings-rose);
+}
+
+.settings-page .settings-feedback:empty,
+.settings-page #settingsMessage:empty {
+    margin: 0;
+    padding: 0;
+}
+
+.settings-page .settings-feedback.success,
+.settings-page #settingsMessage.success {
+    color: var(--settings-green);
+
+    border-color: #547a67;
+}
+
+.settings-page .settings-feedback.error,
+.settings-page .settings-feedback.is-error,
+.settings-page #settingsMessage.error,
+.settings-page #settingsMessage.is-error,
+.settings-page #settingsAccessStatus.is-error {
+    color: #ffaaaa;
+
+    border-color: var(--settings-red);
+}
+
+
+/* ==========================================
+   25 | CLIENT SUPPORT SECTION
+   ========================================== */
+
+.settings-page .settings-support {
+    background: linear-gradient(
+        135deg,
+        #300e16,
+        #16070b
+    );
+}
+
+.settings-page .settings-support .secondary {
+    margin-top: 15px;
+}
+
+
+/* ==========================================
+   26 | ACCESSIBILITY
+   ========================================== */
+
+.settings-page a:focus-visible,
+.settings-page button:focus-visible,
+.settings-page input:focus-visible,
+.settings-page textarea:focus-visible,
+.settings-page select:focus-visible {
+    outline: 2px solid var(--settings-rose);
+
+    outline-offset: 3px;
+}
+
+.settings-page button:disabled {
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   27 | TABLET RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 1100px) {
+
+    .settings-page .settings-main {
+        padding: 65px 5% 90px;
+    }
+
+    .settings-page .settings-layout {
+        grid-template-columns:
+            minmax(190px, 240px)
+            minmax(0, 1fr);
+
+        gap: 22px;
+    }
+
+    .settings-page .settings-sidebar .panel {
+        padding: 20px;
+    }
+
+    .settings-page .settings-field-grid {
+        gap: 15px;
+    }
+
+}
+
+
+/* ==========================================
+   28 | SMALL TABLET RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .settings-page .settings-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .settings-page .settings-sidebar {
+        position: static;
+    }
+
+    .settings-page .settings-menu {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px 20px;
+    }
+
+    .settings-page .settings-menu > .eyebrow {
+        grid-column: 1 / -1;
+    }
+
+    .settings-page .settings-menu a:last-child {
+        border-bottom: 1px solid var(--settings-border);
+    }
+
+    .settings-page .settings-quick-links {
+        display: none;
+    }
+
+}
+
+
+/* ==========================================
+   29 | MOBILE RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 760px) {
+
+    .settings-page .settings-main {
+        padding: 45px 5% 75px;
+    }
+
+    .settings-page .settings-hero {
+        padding-bottom: 30px;
+    }
+
+    .settings-page .settings-hero h1 {
+        font-size: clamp(38px, 9vw, 70px);
+
+        letter-spacing: -1px;
+    }
+
+    .settings-page .settings-navigation {
+        flex-wrap: nowrap;
+
+        gap: 20px;
+        padding-bottom: 15px;
+
+        overflow-x: auto;
+
+        scrollbar-width: thin;
+
+        scrollbar-color:
+            var(--settings-burgundy)
+            var(--settings-dark);
+    }
+
+    .settings-page .settings-navigation a {
+        flex-shrink: 0;
+
+        font-size: 9px;
+        white-space: nowrap;
+    }
+
+    .settings-page .settings-profile-summary {
+        gap: 18px;
+        padding: 22px;
+    }
+
+    .settings-page .settings-avatar {
+        width: 65px;
+        height: 65px;
+
+        font-size: 24px;
+    }
+
+    .settings-page #settingsLogout {
+        width: 100%;
+    }
+
+    .settings-page .settings-section {
+        padding: 28px 22px;
+    }
+
+    .settings-page .settings-sms-consent,
+    .settings-page .settings-danger-zone {
+        padding: 20px;
+    }
+
+    .settings-page .settings-dialog-content {
+        padding: 55px 25px 25px;
+    }
+
+}
+
+
+/* ==========================================
+   30 | SMALL PHONE SCREENS
+   ========================================== */
+
+@media (max-width: 480px) {
+
+    .settings-page .settings-hero h1 {
+        font-size: clamp(30px, 9vw, 44px);
+    }
+
+    .settings-page .settings-access {
+        margin: 15px auto;
+    }
+
+    .settings-page .settings-profile-summary {
+        padding: 18px;
+    }
+
+    .settings-page .settings-profile-details {
+        flex-basis: 100%;
+    }
+
+    .settings-page .settings-avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    .settings-page .settings-menu {
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 0;
+    }
+
+    .settings-page .settings-section {
+        padding: 25px 18px;
+    }
+
+    .settings-page .settings-field-grid {
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 8px;
+    }
+
+    .settings-page form input:not([type="checkbox"]),
+    .settings-page form select,
+    .settings-page form textarea {
+        padding: 14px;
+
+        font-size: 16px;
+    }
+
+    .settings-page .settings-sms-consent,
+    .settings-page .settings-danger-zone,
+    .settings-page .settings-privacy-item {
+        padding: 16px;
+    }
+
+    .settings-page .checkline {
+        font-size: 12px;
+    }
+
+    .settings-page main .settings-danger-button {
+        width: 100%;
+    }
+
+    .settings-page .settings-dialog-content {
+        padding: 60px 18px 20px;
+    }
+
+    .settings-page .settings-value {
+        font-size: 18px;
+    }
+
+}
+
+
+/* ==========================================
+   31 | REDUCED MOTION ACCESSIBILITY
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .settings-page *,
+    .settings-page *::before,
+    .settings-page *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+
+
+/* ==========================================
+   END OF MONSE MEDIA ACCOUNT SETTINGS CSS
+   ========================================== */

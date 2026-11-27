@@ -1,0 +1,79 @@
+<!-- EMAIL NOTIFICATION SETTINGS -->
+
+<section id="notifications"
+         class="settings-section">
+
+    <h2>NOTIFICATION PREFERENCES.</h2>
+
+    <p>
+        Stay connected with Monse Media and
+        never miss an upcoming creative session.
+    </p>
+
+    <p id="settingsEmailReminderStatus">
+        Preferences unavailable.
+    </p>
+
+    <p id="settingsReminderEmail"></p>
+
+    <form id="notificationsForm">
+
+        <fieldset id="notificationFields" disabled>
+
+            <legend>EMAIL REMINDERS</legend>
+
+            <label class="checkbox-label">
+
+                <input type="checkbox"
+                       name="week_before">
+
+                Email me one week before my session.
+
+            </label>
+
+            <label class="checkbox-label">
+
+                <input type="checkbox"
+                       name="day_before">
+
+                Email me one day before my session.
+
+            </label>
+
+            <label class="checkbox-label">
+
+                <input type="checkbox"
+                       name="morning_of">
+
+                Email me the morning of my session,
+                when applicable.
+
+            </label>
+
+            <p class="muted small">
+                These preferences apply to all your
+                confirmed sessions. You can change
+                them at any time.
+            </p>
+
+            <button type="submit">
+                SAVE PREFERENCES ↗
+            </button>
+
+        </fieldset>
+
+    </form>
+
+    <button type="button"
+            id="disableReminders"
+            disabled>
+
+        TURN OFF ALL REMINDERS
+
+    </button>
+
+    <p id="notificationStatus"
+       role="status"
+       aria-live="polite"></p>
+
+</section>
