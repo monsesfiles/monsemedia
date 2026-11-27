@@ -1,0 +1,738 @@
+/* ==========================================
+   MONSE MEDIA | CONTACT PAGE
+   Author: Monse Montes
+   Filename: contact.css
+
+   Black, burgundy, ivory and florals.
+   ========================================== */
+
+
+/* ==========================================
+   01 | GENERAL PAGE SETTINGS
+   ========================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.contact-page {
+    margin: 0;
+    background: #100607;
+    color: #f0eae2;
+    font-family: "Raleway", sans-serif;
+}
+
+.contact-page,
+.contact-page *,
+.contact-page *::before,
+.contact-page *::after {
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   02 | WEBSITE HEADER
+   ========================================== */
+
+.contact-page .site-header {
+    background: #000000;
+}
+
+.contact-page .header-logo-image {
+    display: block;
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ACTIVE CONTACT NAVIGATION LINK */
+
+.contact-page .main-navigation a[aria-current="page"] {
+    color: #d79ca6;
+    border-bottom: 1px solid #d79ca6;
+}
+
+
+/* RECTANGULAR BOOKING BUTTON */
+
+.contact-page .header-booking {
+    border-radius: 0;
+}
+
+
+/* ==========================================
+   03 | FLORAL HERO
+   ========================================== */
+
+.contact-hero {
+    position: relative;
+    min-height: 490px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+
+    background-color: #2a050b;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(9, 0, 3, 0.90),
+            rgba(9, 0, 3, 0.35)
+        ),
+        url("images/portfolio-banner.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* HERO TEXT CONTAINER */
+
+.contact-hero-content {
+    max-width: 620px;
+    min-width: 0;
+}
+
+
+/* SMALL HEADINGS */
+
+.contact-eyebrow,
+.contact-subheading {
+    color: #d79ca6;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+
+/* MAIN HERO HEADING */
+
+.contact-hero h1 {
+    margin: 18px 0;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(52px, 7vw, 114px);
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+
+/* HERO DESCRIPTION */
+
+.contact-hero-description {
+    max-width: 390px;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* ==========================================
+   04 | CONTACT FORM AND INFORMATION
+
+   Left: Contact form
+   Right: Other ways to connect
+   ========================================== */
+
+.contact-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: clamp(40px, 7vw, 110px);
+    padding: 85px 8% 100px;
+    background: #100607;
+
+    scroll-margin-top: 120px;
+}
+
+.contact-form-column,
+.contact-info-column {
+    min-width: 0;
+}
+
+
+/* SECTION NUMBERS */
+
+.contact-section-number {
+    margin: 0 0 18px;
+    color: #c5aeaa;
+    font-size: 13px;
+}
+
+
+/* SECTION HEADINGS */
+
+.contact-main h2 {
+    margin: 0 0 12px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(32px, 4vw, 55px);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+
+/* SECTION SUBHEADINGS */
+
+.contact-subheading {
+    margin-bottom: 30px;
+}
+
+
+/* ==========================================
+   05 | CONTACT FORM INPUTS
+   ========================================== */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* INPUT LABELS */
+
+.contact-form label {
+    margin-top: 10px;
+    color: #d0b7b8;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+/* INPUTS, SELECT AND TEXTAREA */
+
+.contact-form input:not([type="hidden"]),
+.contact-form select,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 16px 18px;
+
+    border: 1px solid #65464a;
+    border-radius: 0;
+
+    background: transparent;
+    color: #f0eae2;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+
+    outline: none;
+
+    transition: border-color 0.3s ease;
+}
+
+
+/* HIDDEN FORM INPUTS */
+
+.contact-form input[type="hidden"] {
+    display: none;
+}
+
+
+/* PROJECT DROPDOWN */
+
+.contact-form select {
+    color-scheme: dark;
+    cursor: pointer;
+}
+
+.contact-form select option {
+    background: #100607;
+    color: #f0eae2;
+}
+
+
+/* FOCUSED INPUTS */
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #d79ca6;
+    outline: 1px solid #d79ca6;
+    outline-offset: 2px;
+}
+
+
+/* TEXTAREA */
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+
+/* INPUT PLACEHOLDERS */
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #a48d90;
+    opacity: 1;
+}
+
+
+/* ==========================================
+   06 | SEND MESSAGE BUTTON
+   ========================================== */
+
+.contact-submit {
+    display: block;
+    width: 100%;
+
+    margin-top: 12px;
+    padding: 20px;
+
+    background: #852a32;
+    border: 1px solid #a64d59;
+    border-radius: 0;
+    color: #ffffff;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.contact-submit:hover:not(:disabled) {
+    background: #a43a48;
+    border-color: #cc6975;
+}
+
+
+/* BUTTON WHILE SENDING */
+
+.contact-submit:disabled {
+    opacity: 0.6;
+    cursor: wait;
+    pointer-events: none;
+}
+
+
+/* KEYBOARD ACCESSIBILITY */
+
+.contact-submit:focus-visible,
+.contact-final-button:focus-visible,
+.contact-page .header-booking:focus-visible,
+.contact-page .main-navigation a:focus-visible,
+.contact-info-item a:focus-visible,
+.contact-page .studio-access:focus-visible {
+    outline: 2px solid #d79ca6;
+    outline-offset: 5px;
+}
+
+
+/* ==========================================
+   07 | CONTACT FORM STATUS
+
+   A small message appears underneath
+   the SEND MESSAGE button.
+   ========================================== */
+
+.contact-page .contact-form-status {
+    font-family: "Raleway", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+
+    margin: 14px 0 0;
+    min-height: 20px;
+
+    color: #ded2d2;
+    overflow-wrap: anywhere;
+}
+
+
+/* SUCCESSFUL SUBMISSION */
+
+.contact-page .contact-form-status.success {
+    color: #e6c878;
+}
+
+
+/* FAILED SUBMISSION */
+
+.contact-page .contact-form-status.error {
+    color: #ff7777;
+}
+
+
+/* LINKS INSIDE THE CONFIRMATION MESSAGE */
+
+.contact-page .contact-form-status a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+
+/* ==========================================
+   08 | OTHER WAYS TO CONNECT
+   ========================================== */
+
+.contact-info-intro {
+    color: #d7c3c2;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+
+/* CONTACT INFORMATION ITEMS */
+
+.contact-info-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #493035;
+}
+
+
+/* CONTACT INFORMATION LABELS */
+
+.contact-info-label {
+    display: block;
+    color: #d79ca6;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+
+/* CONTACT INFORMATION TEXT */
+
+.contact-info-item p,
+.contact-business-note p {
+    color: #f0eae2;
+    font-size: 14px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+
+/* CLICKABLE EMAIL */
+
+.contact-info-item a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info-item a:hover {
+    color: #d79ca6;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+
+/* SMALL LOCATION NOTE */
+
+.contact-info-item small {
+    color: #c5aeaa;
+}
+
+
+/* BUSINESS INQUIRIES */
+
+.contact-business-note {
+    margin-top: 45px;
+}
+
+
+/* ==========================================
+   09 | FLORAL BOTTOM SECTION
+
+   Left: Floral photograph
+   Right: Editorial statement
+   ========================================== */
+
+.contact-final {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    min-height: 540px;
+    background: #3c0008;
+}
+
+
+/* FLORAL IMAGE */
+
+.contact-final-image {
+    min-height: 450px;
+
+    background-color: #22070c;
+
+    background-image:
+        linear-gradient(
+            rgba(10, 0, 3, 0.10),
+            rgba(10, 0, 3, 0.30)
+        ),
+        url("images/contact-flowers.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* EDITORIAL TEXT SECTION */
+
+.contact-final-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    min-width: 0;
+
+    padding: 65px 10%;
+
+    background: linear-gradient(
+        135deg,
+        #40050c,
+        #270207
+    );
+}
+
+
+/* FINAL HEADING */
+
+.contact-final-content h2 {
+    margin: 22px 0;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(35px, 4vw, 65px);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+
+/* FINAL DESCRIPTION */
+
+.contact-final-content > p:not(.contact-eyebrow) {
+    max-width: 400px;
+    font-size: 13px;
+    line-height: 2;
+    color: #e2cacc;
+}
+
+
+/* LET'S CREATE BUTTON */
+
+.contact-final-button {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 17px 28px;
+
+    border: 1px solid #f0eae2;
+    border-radius: 0;
+
+    color: #f0eae2;
+    text-decoration: none;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* FINAL BUTTON HOVER */
+
+.contact-final-button:hover {
+    background: #f0eae2;
+    color: #3c0008;
+}
+
+
+/* ==========================================
+   10 | FIREWORKS ANIMATION
+
+   Transparent canvas.
+   Does not block website interaction.
+   ========================================== */
+
+.contact-page #fireworksCanvas {
+    position: fixed;
+    inset: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    background: transparent;
+    pointer-events: none;
+
+    z-index: 99999;
+}
+
+
+/* ==========================================
+   11 | REMOVE OLD MESSAGE OVERLAY
+   ========================================== */
+
+.contact-page .fireworks-message {
+    display: none !important;
+}
+
+
+/* ==========================================
+   12 | TABLET AND MOBILE LAYOUT
+   ========================================== */
+
+@media (max-width: 850px) {
+
+    /* STACK CONTACT COLUMNS */
+
+    .contact-main {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+
+    /* STACK FINAL FLORAL SECTION */
+
+    .contact-final {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+
+    .contact-final-image {
+        min-height: 380px;
+    }
+
+}
+
+
+/* ==========================================
+   13 | SMALL MOBILE SCREENS
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    /* HERO SPACING */
+
+    .contact-hero {
+        min-height: 420px;
+        padding: 75px 6%;
+    }
+
+
+    /* RESPONSIVE HERO HEADING */
+
+    .contact-hero h1 {
+        font-size: clamp(36px, 9vw, 65px);
+        line-height: 1.1;
+    }
+
+
+    /* CONTACT FORM SPACING */
+
+    .contact-main {
+        padding: 65px 6%;
+        gap: 55px;
+    }
+
+
+    /* PREVENT AUTOMATIC INPUT ZOOM ON IPHONE */
+
+    .contact-form input:not([type="hidden"]),
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 16px;
+    }
+
+
+    /* FLORAL SECTION SPACING */
+
+    .contact-final-content {
+        padding: 65px 7%;
+    }
+
+
+    .contact-final-image {
+        min-height: 300px;
+    }
+
+
+    /* SMALL FORM STATUS */
+
+    .contact-page .contact-form-status {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+
+    /* RESPONSIVE FINAL HEADING */
+
+    .contact-final-content h2 {
+        font-size: clamp(30px, 8vw, 45px);
+    }
+
+}
+
+
+/* ==========================================
+   14 | EXTRA SMALL MOBILE SCREENS
+   ========================================== */
+
+@media (max-width: 375px) {
+
+    .contact-hero h1 {
+        font-size: 34px;
+    }
+
+    .contact-main h2 {
+        font-size: 29px;
+    }
+
+    .contact-submit {
+        padding: 17px 12px;
+        letter-spacing: 2px;
+    }
+
+    .contact-final-button {
+        padding: 16px 20px;
+    }
+
+}
+
+
+/* ==========================================
+   15 | REDUCED MOTION ACCESSIBILITY
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea,
+    .contact-submit,
+    .contact-final-button,
+    .contact-info-item a {
+        transition: none;
+    }
+
+    .contact-page #fireworksCanvas {
+        display: none;
+    }
+
+}
+
+
+/* ==========================================
+   END OF MONSE MEDIA CONTACT STYLESHEET
+   ========================================== */
