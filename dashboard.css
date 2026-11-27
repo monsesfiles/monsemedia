@@ -1,0 +1,929 @@
+/* ==========================================
+   MONSE MEDIA | CLIENT DASHBOARD
+   Author: Monse Montes
+   Filename: dashboard.css
+
+   Base styles: client.css
+   Website navigation: index.html
+   ========================================== */
+
+
+/* 01 | DASHBOARD VARIABLES */
+
+.dashboard-page {
+    --dashboard-background: #100607;
+    --dashboard-panel: #210a10;
+    --dashboard-card: #18090d;
+    --dashboard-burgundy: #852a32;
+    --dashboard-red: #a43a48;
+    --dashboard-ivory: #f0eae2;
+    --dashboard-rose: #d79ca6;
+    --dashboard-muted: #c5aeaa;
+    --dashboard-border: #493035;
+    --dashboard-gold: #e6c878;
+    --dashboard-green: #a8d6bd;
+}
+
+
+/* 02 | MAIN DASHBOARD CONTAINER */
+
+.dashboard-page .dashboard-main {
+    width: 100%;
+    max-width: 1450px;
+    min-height: 75vh;
+
+    margin: 0 auto;
+    padding: 75px 6% 100px;
+}
+
+.dashboard-page [hidden] {
+    display: none !important;
+}
+
+
+/* 03 | ACCOUNT ACCESS SCREEN */
+
+.dashboard-page .dashboard-access {
+    max-width: 750px;
+    margin: 40px auto;
+    padding: clamp(25px, 5vw, 65px);
+}
+
+.dashboard-page .dashboard-access h1 {
+    margin: 20px 0 25px;
+
+    color: var(--dashboard-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(35px, 5vw, 70px);
+    font-weight: 300;
+
+    line-height: 1.1;
+    letter-spacing: -2px;
+    overflow-wrap: anywhere;
+}
+
+.dashboard-page .dashboard-access a {
+    margin-top: 25px;
+}
+
+
+/* 04 | PRIVATE CLIENT WORKSPACE */
+
+.dashboard-page #dashboardWorkspace {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* ==========================================
+   05 | PERSONALIZED WELCOME SECTION
+   ========================================== */
+
+.dashboard-page .dashboard-hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 35px;
+
+    padding-bottom: 45px;
+    margin-bottom: 35px;
+
+    border-bottom: 1px solid var(--dashboard-border);
+}
+
+.dashboard-page .dashboard-hero > div {
+    min-width: 0;
+}
+
+.dashboard-page .dashboard-hero h1 {
+    margin: 18px 0 25px;
+
+    color: var(--dashboard-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(38px, 5.5vw, 85px);
+    font-weight: 300;
+
+    line-height: 1.08;
+    letter-spacing: -2px;
+    overflow-wrap: anywhere;
+}
+
+.dashboard-page #clientFirstName {
+    color: var(--dashboard-rose);
+}
+
+.dashboard-page .dashboard-hero .muted {
+    max-width: 650px;
+}
+
+.dashboard-page #clientAccountEmail {
+    margin-top: 12px;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   06 | DASHBOARD ACTION BUTTONS
+   ========================================== */
+
+.dashboard-page .dashboard-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 12px;
+}
+
+.dashboard-page .dashboard-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    max-width: 100%;
+    min-height: 44px;
+
+    padding: 17px 25px;
+
+    background: var(--dashboard-burgundy);
+    border: 1px solid #a64d59;
+
+    color: white;
+
+    font: 600 10px/1.6 "Raleway", sans-serif;
+    letter-spacing: 2px;
+
+    text-align: center;
+    text-decoration: none;
+
+    overflow-wrap: anywhere;
+    cursor: pointer;
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease;
+}
+
+.dashboard-page .dashboard-primary:hover {
+    background: var(--dashboard-red);
+    border-color: var(--dashboard-rose);
+}
+
+.dashboard-page .dashboard-actions button,
+.dashboard-page .dashboard-actions a {
+    width: 100%;
+}
+
+
+/* ==========================================
+   07 | CLIENT ACCOUNT NAVIGATION
+   ========================================== */
+
+.dashboard-page .dashboard-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 8px 28px;
+
+    padding: 15px 0;
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid var(--dashboard-border);
+}
+
+.dashboard-page .dashboard-nav a {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 44px;
+    padding: 12px 0;
+
+    color: var(--dashboard-muted);
+
+    font: 600 10px/1.6 "Raleway", sans-serif;
+    letter-spacing: 1.5px;
+
+    text-decoration: none;
+
+    transition: color .3s ease;
+}
+
+.dashboard-page .dashboard-nav a:hover {
+    color: var(--dashboard-ivory);
+}
+
+.dashboard-page .dashboard-nav a[aria-current="page"] {
+    color: var(--dashboard-rose);
+}
+
+.dashboard-page .dashboard-nav a[aria-current="page"]::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 2px;
+
+    background: var(--dashboard-rose);
+}
+
+
+/* ==========================================
+   08 | DASHBOARD OVERVIEW STATISTICS
+   ========================================== */
+
+.dashboard-page .dashboard-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin-bottom: 35px;
+}
+
+.dashboard-page .dashboard-stat {
+    min-width: 0;
+    margin: 0;
+    padding: 30px;
+
+    transition:
+        border-color .3s ease,
+        background-color .3s ease;
+}
+
+.dashboard-page .dashboard-stat:hover {
+    border-color: var(--dashboard-burgundy);
+}
+
+.dashboard-page .dashboard-stat .eyebrow {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.dashboard-page .dashboard-stat-number {
+    margin: 15px 0 0;
+
+    color: var(--dashboard-rose);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(40px, 6vw, 75px);
+    font-weight: 300;
+
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+
+/* ==========================================
+   09 | DASHBOARD CONTENT SECTIONS
+   ========================================== */
+
+.dashboard-page .dashboard-section {
+    margin-bottom: 30px;
+    scroll-margin-top: 30px;
+}
+
+.dashboard-page .dashboard-section > .muted {
+    max-width: 750px;
+}
+
+.dashboard-page .dashboard-section > a {
+    margin-top: 25px;
+}
+
+.dashboard-page .dashboard-section h2,
+.dashboard-page .dashboard-support h2 {
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   10 | UPCOMING SESSION LIST
+   ========================================== */
+
+.dashboard-page .dashboard-session-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin: 25px 0;
+}
+
+.dashboard-page .dashboard-session-list:empty {
+    margin: 0;
+}
+
+.dashboard-page .dashboard-session-card {
+    min-width: 0;
+    padding: 25px;
+
+    background: var(--dashboard-card);
+    border: 1px solid var(--dashboard-border);
+    border-left: 3px solid var(--dashboard-burgundy);
+
+    transition: border-color .3s ease;
+}
+
+.dashboard-page .dashboard-session-card:hover {
+    border-color: var(--dashboard-rose);
+}
+
+.dashboard-page .dashboard-session-card h3 {
+    margin: 12px 0 20px;
+
+    color: var(--dashboard-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(20px, 3vw, 30px);
+    font-weight: 400;
+
+    overflow-wrap: anywhere;
+}
+
+.dashboard-page .dashboard-session-card p {
+    margin: 10px 0;
+    overflow-wrap: anywhere;
+}
+
+.dashboard-page .dashboard-session-card .secondary {
+    margin-top: 18px;
+}
+
+
+/* ==========================================
+   11 | APPOINTMENT STATUS COLORS
+
+   Applied by dashboard.js using data-status.
+   ========================================== */
+
+.dashboard-page [data-status="confirmed"],
+.dashboard-page [data-status="completed"],
+.dashboard-page [data-status="signed"],
+.dashboard-page [data-status="delivered"],
+.dashboard-page [data-status="published"] {
+    color: var(--dashboard-green);
+}
+
+.dashboard-page [data-status="pending"],
+.dashboard-page [data-status="more_info"],
+.dashboard-page [data-status="scheduled"] {
+    color: var(--dashboard-gold);
+}
+
+.dashboard-page [data-status="approved"] {
+    color: var(--dashboard-rose);
+}
+
+.dashboard-page [data-status="cancelled"],
+.dashboard-page [data-status="declined"],
+.dashboard-page [data-status="failed"] {
+    color: #ff8888;
+}
+
+
+/* ==========================================
+   12 | PAST SESSION GALLERY GRID
+   ========================================== */
+
+.dashboard-page .dashboard-gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+
+    margin: 30px 0;
+}
+
+.dashboard-page .dashboard-gallery-grid:empty {
+    margin: 0;
+}
+
+
+/* INDIVIDUAL PAST SESSION CARD */
+
+.dashboard-page .dashboard-gallery-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    padding: 16px;
+
+    background: var(--dashboard-card);
+    border: 1px solid var(--dashboard-border);
+
+    transition: border-color .3s ease;
+}
+
+.dashboard-page .dashboard-gallery-card:hover {
+    border-color: var(--dashboard-burgundy);
+}
+
+
+/* GALLERY COVER */
+
+.dashboard-page .dashboard-gallery-cover {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    margin-bottom: 15px;
+
+    background: linear-gradient(
+        135deg,
+        #300e16,
+        #100607
+    );
+
+    overflow: hidden;
+}
+
+.dashboard-page .dashboard-gallery-cover img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .5s ease;
+}
+
+.dashboard-page .dashboard-gallery-cover:hover img {
+    transform: scale(1.04);
+}
+
+
+/* GALLERY PLACEHOLDER */
+
+.dashboard-page .dashboard-gallery-cover span {
+    padding: 20px;
+
+    color: var(--dashboard-rose);
+
+    font: 600 10px/1.8 "Raleway", sans-serif;
+    letter-spacing: 3px;
+
+    text-align: center;
+}
+
+
+/* GALLERY CARD TYPOGRAPHY */
+
+.dashboard-page .dashboard-gallery-card h3 {
+    margin: 10px 0 15px;
+
+    color: var(--dashboard-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.dashboard-page .dashboard-gallery-card p {
+    margin: 8px 0;
+    overflow-wrap: anywhere;
+}
+
+.dashboard-page .dashboard-gallery-card .eyebrow {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+/* GALLERY DOWNLOAD BUTTONS */
+
+.dashboard-page .dashboard-gallery-card a.secondary,
+.dashboard-page .dashboard-gallery-card button {
+    width: 100%;
+    margin-top: 12px;
+
+    padding: 14px 12px;
+
+    font-size: 9px;
+    letter-spacing: 1.4px;
+}
+
+.dashboard-page .dashboard-gallery-card a.secondary {
+    margin-top: auto;
+}
+
+
+/* ==========================================
+   13 | BOOKING REQUESTS
+   ========================================== */
+
+.dashboard-page #bookingRequests {
+    margin-bottom: 30px;
+}
+
+.dashboard-page #requests .dashboard-primary {
+    margin-top: 15px;
+}
+
+
+/* ==========================================
+   14 | SMS NOTIFICATION PREFERENCES
+   ========================================== */
+
+.dashboard-page .sms-consent {
+    margin: 25px 0;
+
+    padding: 25px;
+
+    background: var(--dashboard-card);
+
+    border: 1px solid var(--dashboard-border);
+    border-left: 3px solid var(--dashboard-burgundy);
+}
+
+.dashboard-page #smsPreferenceStatus {
+    margin: 12px 0;
+
+    color: var(--dashboard-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+
+    overflow-wrap: anywhere;
+}
+
+.dashboard-page #smsPreferenceStatus[data-status="opted-in"] {
+    color: var(--dashboard-green);
+}
+
+.dashboard-page #smsPreferenceStatus[data-status="opted-out"] {
+    color: var(--dashboard-muted);
+}
+
+.dashboard-page #smsPhone {
+    margin-bottom: 0;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   15 | AUTOMATED REMINDER TIMELINE
+   ========================================== */
+
+.dashboard-page .dashboard-reminder-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+
+    margin: 30px 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.dashboard-page .dashboard-reminder-list li {
+    position: relative;
+
+    margin-left: 8px;
+    padding: 5px 0 30px 30px;
+
+    border-left: 1px solid var(--dashboard-border);
+}
+
+.dashboard-page .dashboard-reminder-list li:last-child {
+    padding-bottom: 5px;
+    border-left-color: transparent;
+}
+
+
+/* REMINDER TIMELINE DOTS */
+
+.dashboard-page .dashboard-reminder-list li::before {
+    content: "";
+
+    position: absolute;
+
+    top: 10px;
+    left: -6px;
+
+    width: 11px;
+    height: 11px;
+
+    background: var(--dashboard-burgundy);
+    border: 2px solid var(--dashboard-rose);
+    border-radius: 50%;
+}
+
+.dashboard-page .dashboard-reminder-list strong {
+    display: block;
+
+    color: var(--dashboard-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dashboard-page .dashboard-reminder-list p {
+    margin: 8px 0 0;
+}
+
+
+/* ==========================================
+   16 | EMPTY STATE MESSAGES
+   ========================================== */
+
+.dashboard-page #upcomingEmpty,
+.dashboard-page #historyEmpty,
+.dashboard-page #requestsEmpty {
+    margin: 25px 0;
+    padding: 30px 20px;
+
+    background: rgba(133, 42, 50, .06);
+    border: 1px dashed #65464a;
+
+    color: var(--dashboard-muted);
+
+    text-align: center;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   17 | DASHBOARD FEEDBACK MESSAGES
+   ========================================== */
+
+.dashboard-page #dashboardMessage,
+.dashboard-page #accessStatus {
+    color: var(--dashboard-muted);
+
+    font: 400 13px/1.8 "Raleway", sans-serif;
+
+    overflow-wrap: anywhere;
+}
+
+.dashboard-page #dashboardMessage:not(:empty) {
+    padding: 15px 18px;
+    margin: 20px 0;
+
+    background: var(--dashboard-card);
+    border-left: 2px solid var(--dashboard-rose);
+}
+
+.dashboard-page #dashboardMessage:empty {
+    margin: 0;
+}
+
+.dashboard-page #dashboardMessage.error,
+.dashboard-page #dashboardMessage.is-error,
+.dashboard-page #accessStatus.is-error {
+    color: #ff8888;
+}
+
+.dashboard-page #dashboardMessage.success {
+    color: var(--dashboard-green);
+}
+
+
+/* ==========================================
+   18 | CLIENT SUPPORT SECTION
+   ========================================== */
+
+.dashboard-page .dashboard-support {
+    background: linear-gradient(
+        135deg,
+        #300e16,
+        #16070b
+    );
+}
+
+.dashboard-page .dashboard-support .secondary {
+    margin-top: 20px;
+}
+
+
+/* ==========================================
+   19 | ACCESSIBILITY
+   ========================================== */
+
+.dashboard-page a:focus-visible,
+.dashboard-page button:focus-visible {
+    outline: 2px solid var(--dashboard-rose);
+    outline-offset: 4px;
+}
+
+.dashboard-page button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   20 | TABLET RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 1100px) {
+
+    .dashboard-page .dashboard-main {
+        padding: 65px 5% 90px;
+    }
+
+    .dashboard-page .dashboard-gallery-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-page .dashboard-nav {
+        gap: 8px 20px;
+    }
+
+    .dashboard-page .dashboard-stat {
+        padding: 25px;
+    }
+
+}
+
+
+/* ==========================================
+   21 | MOBILE RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 760px) {
+
+    .dashboard-page .dashboard-main {
+        padding: 45px 5% 75px;
+    }
+
+    .dashboard-page .dashboard-hero {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 20px;
+
+        padding-bottom: 30px;
+    }
+
+    .dashboard-page .dashboard-hero h1 {
+        font-size: clamp(35px, 8vw, 55px);
+        letter-spacing: -1px;
+    }
+
+    .dashboard-page .dashboard-actions {
+        width: 100%;
+    }
+
+    .dashboard-page .dashboard-nav {
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        gap: 22px;
+        padding: 10px 0 15px;
+
+        scrollbar-width: thin;
+        scrollbar-color:
+            var(--dashboard-burgundy)
+            var(--dashboard-background);
+    }
+
+    .dashboard-page .dashboard-nav a {
+        flex-shrink: 0;
+        white-space: nowrap;
+        font-size: 9px;
+    }
+
+    .dashboard-page .dashboard-stats {
+        gap: 12px;
+    }
+
+    .dashboard-page .dashboard-stat {
+        padding: 20px 14px;
+    }
+
+    .dashboard-page .dashboard-stat .eyebrow {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .dashboard-page .dashboard-stat-number {
+        font-size: 42px;
+    }
+
+    .dashboard-page .dashboard-gallery-grid {
+        gap: 14px;
+    }
+
+    .dashboard-page .dashboard-session-card {
+        padding: 20px;
+    }
+
+}
+
+
+/* ==========================================
+   22 | SMALL PHONE SCREENS
+   ========================================== */
+
+@media (max-width: 480px) {
+
+    .dashboard-page .dashboard-hero h1 {
+        font-size: clamp(30px, 9vw, 42px);
+    }
+
+    .dashboard-page .dashboard-stats {
+        grid-template-columns:
+            minmax(0, 1fr);
+
+        gap: 10px;
+    }
+
+    .dashboard-page .dashboard-stat {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    .dashboard-page .dashboard-stat-number {
+        margin: 0;
+        font-size: 40px;
+    }
+
+    .dashboard-page .dashboard-gallery-grid {
+        grid-template-columns:
+            minmax(0, 1fr);
+    }
+
+    .dashboard-page .dashboard-primary {
+        width: 100%;
+        padding: 16px 14px;
+
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .dashboard-page .dashboard-session-card {
+        padding: 18px;
+    }
+
+    .dashboard-page .dashboard-gallery-card {
+        padding: 12px;
+    }
+
+    .dashboard-page .dashboard-gallery-cover {
+        aspect-ratio: 4 / 3;
+    }
+
+    .dashboard-page .sms-consent {
+        padding: 18px;
+    }
+
+    .dashboard-page .dashboard-access {
+        margin: 15px auto;
+    }
+
+}
+
+
+/* ==========================================
+   23 | REDUCED MOTION ACCESSIBILITY
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .dashboard-page *,
+    .dashboard-page *::before,
+    .dashboard-page *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+
+
+/* ==========================================
+   END OF MONSE MEDIA DASHBOARD STYLESHEET
+   ========================================== */

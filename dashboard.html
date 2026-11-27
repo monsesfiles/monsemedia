@@ -1,0 +1,815 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- MONSE MEDIA | PRIVATE CLIENT DASHBOARD -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="referrer" content="no-referrer">
+
+    <meta name="description"
+          content="Your private Monse Media client dashboard. Review appointments, booking requests, completed sessions, and email reminders.">
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>My Dashboard | Monse Media</title>
+
+    <link rel="icon"
+          type="image/gif"
+          href="images/monse-logo.jpg.gif?v=2">
+
+
+    <!-- FONTS -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Raleway:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://use.typekit.net/njulgsa.css">
+
+
+    <!-- STYLESHEETS -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="client.css">
+
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+    <!-- ==========================================
+         01 | WEBSITE HEADER
+         ========================================== -->
+
+    <header class="site-header">
+
+        <a href="index.html"
+           class="header-logo">
+
+            <img src="images/monse-logo.jpg.gif"
+                 alt="Monse Media — home"
+                 class="header-logo-image">
+
+        </a>
+
+
+        <nav class="main-navigation"
+             aria-label="Main navigation">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+
+                <li>
+                    <a href="about.html">ABOUT</a>
+                </li>
+
+                <li>
+                    <a href="portfolio.html">PORTFOLIO</a>
+                </li>
+
+                <li>
+                    <a href="services.html">SERVICES</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">CONTACT</a>
+                </li>
+
+                <li>
+                    <a href="client.html"
+                       aria-current="page">
+                        CLIENT PORTAL
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <a href="contact.html#contact"
+           class="header-booking">
+
+            BOOK A SESSION ↗
+
+        </a>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         02 | DASHBOARD MAIN
+         ========================================== -->
+
+    <main class="dashboard-main">
+
+
+        <!-- ======================================
+             03 | ACCOUNT ACCESS
+             ====================================== -->
+
+        <section id="dashboardAccess"
+                 class="dashboard-access panel"
+                 aria-labelledby="accessHeading">
+
+            <p class="eyebrow">
+                MONSE MEDIA / PRIVATE CLIENT EXPERIENCE
+            </p>
+
+            <h1 id="accessHeading">
+                YOUR PRIVATE CREATIVE SPACE.
+            </h1>
+
+            <p class="muted">
+                Your appointments, projects, and creative
+                experience all in one place.
+            </p>
+
+            <p id="accessStatus"
+               role="status"
+               aria-live="polite">
+
+                Checking account access...
+
+            </p>
+
+            <a href="client.html"
+               class="secondary">
+
+                RETURN TO CLIENT PORTAL ↗
+
+            </a>
+
+        </section>
+
+
+
+        <!-- ======================================
+             04 | CLIENT DASHBOARD WORKSPACE
+             ====================================== -->
+
+        <div id="dashboardWorkspace" hidden>
+
+
+            <!-- DASHBOARD INTRODUCTION -->
+
+            <section class="dashboard-hero">
+
+                <div>
+
+                    <p class="eyebrow">
+                        YOUR PRIVATE CREATIVE SPACE
+                    </p>
+
+                    <h1>
+                        WELCOME BACK,
+                        <span id="clientFirstName">CLIENT</span>.
+                    </h1>
+
+                    <p class="muted">
+                        Your memories, your vision,
+                        your creative journey.
+                    </p>
+
+                    <p id="clientAccountEmail"
+                       class="muted small"></p>
+
+                </div>
+
+
+                <div class="dashboard-actions">
+
+                    <button type="button"
+                            id="dashboardLogout"
+                            class="secondary">
+
+                        SIGN OUT ↗
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- DASHBOARD FEEDBACK -->
+
+            <p id="dashboardMessage"
+               class="dashboard-message"
+               role="status"
+               aria-live="polite"
+               hidden></p>
+
+
+
+            <!-- ==================================
+                 05 | DASHBOARD NAVIGATION
+                 ================================== -->
+
+            <nav class="dashboard-nav"
+                 aria-label="Dashboard sections">
+
+                <a href="#upcoming">
+                    UPCOMING
+                </a>
+
+                <a href="#requests">
+                    REQUESTS
+                </a>
+
+                <a href="#history">
+                    HISTORY
+                </a>
+
+                <a href="#notifications">
+                    REMINDERS
+                </a>
+
+            </nav>
+
+
+
+            <!-- ==================================
+                 06 | DASHBOARD STATISTICS
+                 ================================== -->
+
+            <section class="dashboard-stats"
+                     aria-label="Account overview">
+
+
+                <article class="dashboard-stat">
+
+                    <p class="eyebrow">
+                        UPCOMING
+                    </p>
+
+                    <p id="upcomingCount"
+                       class="dashboard-stat-number">
+                        —
+                    </p>
+
+                    <p class="muted small">
+                        Upcoming sessions
+                    </p>
+
+                </article>
+
+
+                <article class="dashboard-stat">
+
+                    <p class="eyebrow">
+                        COMPLETED
+                    </p>
+
+                    <p id="completedCount"
+                       class="dashboard-stat-number">
+                        —
+                    </p>
+
+                    <p class="muted small">
+                        Completed projects
+                    </p>
+
+                </article>
+
+
+                <article class="dashboard-stat">
+
+                    <p class="eyebrow">
+                        GALLERIES
+                    </p>
+
+                    <p id="galleryCount"
+                       class="dashboard-stat-number">
+                        —
+                    </p>
+
+                    <p class="muted small">
+                        Available galleries
+                    </p>
+
+                </article>
+
+
+            </section>
+
+
+
+            <!-- ==================================
+                 07 | UPCOMING APPOINTMENTS
+                 ================================== -->
+
+            <section id="upcoming"
+                     class="panel dashboard-section"
+                     aria-labelledby="upcomingHeading">
+
+                <p class="eyebrow">
+                    01 / YOUR SCHEDULE
+                </p>
+
+                <h2 id="upcomingHeading">
+                    UPCOMING SESSIONS.
+                </h2>
+
+                <p class="muted">
+                    Keep track of your confirmed
+                    appointments and upcoming sessions.
+                </p>
+
+
+                <p id="upcomingEmpty"
+                   class="dashboard-empty muted">
+
+                    You don't have any upcoming sessions
+                    right now.
+
+                </p>
+
+
+                <div id="upcomingSessions"
+                     class="dashboard-session-list">
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 08 | BOOKING REQUESTS
+                 ================================== -->
+
+            <section id="requests"
+                     class="panel dashboard-section"
+                     aria-labelledby="requestsHeading">
+
+                <p class="eyebrow">
+                    02 / IN PROGRESS
+                </p>
+
+                <h2 id="requestsHeading">
+                    BOOKING REQUESTS.
+                </h2>
+
+                <p class="muted">
+                    Review the status of your submitted
+                    booking requests.
+                </p>
+
+
+                <p id="requestsEmpty"
+                   class="dashboard-empty muted">
+
+                    You don't have any pending booking
+                    requests.
+
+                </p>
+
+
+                <div id="bookingRequests"
+                     class="dashboard-session-list">
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 09 | COMPLETED PROJECTS
+                 ================================== -->
+
+            <section id="history"
+                     class="panel dashboard-section"
+                     aria-labelledby="historyHeading">
+
+                <p class="eyebrow">
+                    03 / YOUR MEMORIES
+                </p>
+
+                <h2 id="historyHeading">
+                    COMPLETED PROJECTS.
+                </h2>
+
+                <p class="muted">
+                    Revisit your completed sessions
+                    and access available galleries.
+                </p>
+
+
+                <p id="historyEmpty"
+                   class="dashboard-empty muted">
+
+                    Your completed projects and galleries
+                    will appear here.
+
+                </p>
+
+
+                <div id="pastSessions"
+                     class="dashboard-gallery-grid">
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 10 | EMAIL REMINDER PREFERENCES
+                 ================================== -->
+
+            <section id="notifications"
+                     class="panel dashboard-section"
+                     aria-labelledby="notificationsHeading">
+
+                <p class="eyebrow">
+                    04 / STAY CONNECTED
+                </p>
+
+                <h2 id="notificationsHeading">
+                    EMAIL REMINDERS.
+                </h2>
+
+                <p class="muted">
+                    Choose optional appointment emails when you
+                    submit a booking request or manage your
+                    account preferences.
+                </p>
+
+
+                <div class="sms-consent">
+
+                    <p class="eyebrow">
+                        YOUR REMINDER PREFERENCES
+                    </p>
+
+                    <p id="emailPreferenceStatus"
+                       role="status">
+
+                        Preferences unavailable.
+
+                    </p>
+
+                    <p id="reminderEmail"
+                       class="muted small"></p>
+
+                </div>
+
+
+                <ul class="dashboard-reminder-list">
+
+                    <li>
+
+                        <strong>
+                            One week before
+                        </strong>
+
+                        <p class="muted">
+                            Preparation and session details.
+                        </p>
+
+                        <p id="weekReminderStatus"
+                           class="small">
+
+                            —
+
+                        </p>
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            One day before
+                        </strong>
+
+                        <p class="muted">
+                            Appointment time and location.
+                        </p>
+
+                        <p id="dayReminderStatus"
+                           class="small">
+
+                            —
+
+                        </p>
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Morning of your session
+                        </strong>
+
+                        <p class="muted">
+                            A final reminder when the session
+                            time allows.
+                        </p>
+
+                        <p id="morningReminderStatus"
+                           class="small">
+
+                            —
+
+                        </p>
+
+                    </li>
+
+                </ul>
+
+
+                <p id="emailReminderServiceStatus"
+                   class="muted small"></p>
+
+
+                <p class="muted small">
+
+                    Optional reminders apply to confirmed sessions
+                    and are sent to your verified account email.
+                    You can change your preferences at any time.
+
+                </p>
+
+
+                <a href="client-settings.html#notifications"
+                   class="secondary">
+
+                    MANAGE MY PREFERENCES ↗
+
+                </a>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 11 | CLIENT SUPPORT
+                 ================================== -->
+
+            <section class="panel dashboard-section dashboard-support">
+
+                <p class="eyebrow">
+                    NEED A LITTLE HELP?
+                </p>
+
+                <h2>
+                    LET'S STAY CONNECTED.
+                </h2>
+
+                <p class="muted">
+                    Have a question about your appointment,
+                    project, or gallery? Get in touch.
+                </p>
+
+                <a href="contact.html"
+                   class="secondary">
+
+                    CONTACT MONSE MEDIA ↗
+
+                </a>
+
+            </section>
+
+
+        </div>
+
+
+
+        <!-- ======================================
+             12 | SESSION CARD TEMPLATE
+             ====================================== -->
+
+        <template id="sessionCardTemplate">
+
+            <article class="dashboard-session-card">
+
+                <div class="dashboard-session-card-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            SESSION
+                        </p>
+
+                        <h3 data-field="title">
+                            Session title
+                        </h3>
+
+                    </div>
+
+                    <span data-field="status">
+                        STATUS
+                    </span>
+
+                </div>
+
+
+                <div class="dashboard-session-details">
+
+                    <p>
+                        <strong>Date:</strong>
+                        <span data-field="date"></span>
+                    </p>
+
+                    <p>
+                        <strong>Time:</strong>
+                        <span data-field="time"></span>
+                    </p>
+
+                    <p>
+                        <strong>Location:</strong>
+                        <span data-field="location"></span>
+                    </p>
+
+                    <p data-field="reminders"
+                       class="muted small"></p>
+
+                </div>
+
+
+                <a href="client.html"
+                   class="secondary"
+                   data-action="details">
+
+                    VIEW SESSION ↗
+
+                </a>
+
+            </article>
+
+        </template>
+
+
+
+        <!-- ======================================
+             13 | GALLERY CARD TEMPLATE
+             ====================================== -->
+
+        <template id="galleryCardTemplate">
+
+            <article class="dashboard-gallery-card">
+
+
+                <div class="dashboard-gallery-cover">
+
+                    <img data-field="cover"
+                         alt="Project gallery cover">
+
+                    <div data-field="placeholder"
+                         class="dashboard-gallery-placeholder">
+
+                        <span>
+                            MONSE MEDIA
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-gallery-information">
+
+                    <span data-field="status">
+                        COMPLETED
+                    </span>
+
+                    <h3 data-field="title">
+                        Project title
+                    </h3>
+
+                    <p data-field="date"
+                       class="muted small"></p>
+
+                    <p class="muted small">
+
+                        <span data-field="fileCount">
+                            0
+                        </span>
+
+                        files
+
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-gallery-actions">
+
+                    <a href="client-gallery.html"
+                       class="secondary"
+                       data-action="gallery">
+
+                        VIEW GALLERY ↗
+
+                    </a>
+
+                    <a href="#"
+                       class="secondary"
+                       data-action="download">
+
+                        DOWNLOAD ↗
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </template>
+
+
+    </main>
+
+
+
+    <!-- ==========================================
+         14 | FOOTER
+         ========================================== -->
+
+    <footer class="client-footer">
+
+        <p>
+            MONSE MEDIA — PHOTOGRAPHY, FILM
+            &amp; CREATIVE DIRECTION
+        </p>
+
+        <p>
+            A PERSONALIZED CREATIVE EXPERIENCE.
+        </p>
+
+
+        <div class="client-contact-links">
+
+            <a href="contact.html">
+                CONTACT
+            </a>
+
+            <a href="https://www.instagram.com/monses.media/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                INSTAGRAM
+
+            </a>
+
+            <a href="https://www.facebook.com/share/1CYvsiu62C/?mibextid=wwXIfr"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                FACEBOOK
+
+            </a>
+
+        </div>
+
+
+        <p style="margin-top: 28px;">
+
+            © MONSE MEDIA. ALL RIGHTS RESERVED.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- ==========================================
+         15 | BACKEND JAVASCRIPT CONNECTIONS
+
+         Keep these files in this order.
+         ========================================== -->
+
+    <script src="supabase.js" defer></script>
+
+    <script src="dashboard.js" defer></script>
+
+
+</body>
+
+</html>
