@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- MONSE MEDIA | CLIENT PORTAL -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="referrer" content="no-referrer">
+
+    <meta name="description"
+          content="Your private Monse Media client portal. Review bookings, sign agreements, share inspiration, and download your completed work.">
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Client Portal | Monse Media</title>
+
+    <link rel="icon"
+          type="image/gif"
+          href="images/monse-logo.jpg.gif?v=2">
+
+
+    <!-- ==========================================
+         FONTS
+         ========================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;family=Raleway:wght@300;400;500;600;700&amp;display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://use.typekit.net/njulgsa.css">
+
+
+    <!-- ==========================================
+         STYLESHEETS
+         ========================================== -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="client.css">
+
+
+    <!-- CLIENT PORTAL SAFEGUARDS -->
+
+    <style>
+
+        .client-page [hidden],
+        .client-page .hidden {
+            display: none !important;
+        }
+
+        .client-introduction {
+            margin-bottom: 36px;
+        }
+
+        .client-introduction h1 {
+            color: #f0eae2;
+        }
+
+        .client-introduction p {
+            line-height: 1.8;
+        }
+
+        .client-divider {
+            border: 0;
+            border-top: 1px solid #65464a;
+            margin: 25px 0;
+        }
+
+        .client-info-note {
+            padding: 16px 20px;
+            background: #1b0a0f;
+            border-left: 2px solid #a64d59;
+            color: #c5aeaa;
+            font: 400 12px/1.8 "Raleway", sans-serif;
+        }
+
+        .client-footer {
+            padding: 35px 5%;
+            border-top: 1px solid #493035;
+            background: #080607;
+            color: #c5aeaa;
+            font: 400 11px "Raleway", sans-serif;
+            text-align: center;
+        }
+
+        .client-footer a {
+            color: #f0eae2;
+            text-decoration: none;
+        }
+
+        .client-footer a:hover {
+            color: #d79ca6;
+        }
+
+        .client-contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 18px;
+        }
+
+        .client-page fieldset {
+            min-width: 0;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        .client-page :focus-visible {
+            outline: 2px solid #d79ca6;
+            outline-offset: 3px;
+        }
+
+    </style>
+
+</head>
+
+
+<body class="client-page">
+
+
+    <!-- ==========================================
+         01 | WEBSITE HEADER
+         ========================================== -->
+
+    <header class="site-header">
+
+        <a href="index.html"
+           class="header-logo">
+
+            <img src="images/monse-logo.jpg.gif"
+                 alt="Monse Media — home"
+                 class="header-logo-image">
+
+        </a>
+
+
+        <!-- MAIN NAVIGATION -->
+
+        <nav class="main-navigation"
+             aria-label="Main navigation">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+
+                <li>
+                    <a href="about.html">ABOUT</a>
+                </li>
+
+                <li>
+                    <a href="portfolio.html">PORTFOLIO</a>
+                </li>
+
+                <li>
+                    <a href="services.html">SERVICES</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">CONTACT</a>
+                </li>
+
+                <li>
+
+                    <a href="client.html"
+                       aria-current="page">
+
+                        CLIENT PORTAL
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- BOOKING BUTTON -->
+
+        <a href="contact.html#contact"
+           class="header-booking">
+
+            BOOK A SESSION ↗
+
+        </a>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             02 | CLIENT PORTAL INTRODUCTION
+             ========================================== -->
+
+        <section class="client-introduction">
+
+            <p class="eyebrow">
+
+                MONSE MEDIA / PRIVATE CLIENT EXPERIENCE
+
+            </p>
+
+            <h1>
+
+                YOUR CREATIVE JOURNEY.
+
+            </h1>
+
+            <p class="muted">
+
+                Your memories, your vision, your creative
+                journey — all in one place.
+
+                Follow your booking, share inspiration,
+                review your agreement, and download
+                your completed work.
+
+            </p>
+
+        </section>
+
+
+        <!-- ==========================================
+             03 | RETURNING CLIENT ACCOUNT
+             ========================================== -->
+
+        <section class="panel"
+                 id="clientAccountAccess"
+                 aria-labelledby="account-heading">
+
+            <p class="eyebrow">
+
+                WELCOME BACK / CLIENT ACCESS
+
+            </p>
+
+            <h2 id="account-heading">
+
+                YOUR CLIENT ACCOUNT
+
+            </h2>
+
+            <p class="muted">
+
+                Sign in to revisit previous shoots,
+                manage upcoming sessions, and request
+                new work.
+
+            </p>
+
+
+            <!-- ACCOUNT AVAILABILITY -->
+
+            <p class="client-info-note"
+               id="accountNotice">
+
+                Checking secure account access.
+
+                For an existing booking, you can also
+                use your original private access link.
+
+            </p>
+
+
+            <!-- ==========================================
+                 04 | CLIENT LOGIN FORM
+                 ========================================== -->
+
+            <form id="clientLoginForm"
+                  method="post"
+                  autocomplete="on">
+
+                <fieldset id="clientLoginFields"
+                          disabled>
+
+
+                    <!-- EMAIL ADDRESS -->
+
+                    <label for="client-email">
+
+                        EMAIL ADDRESS
+
+                    </label>
+
+                    <input id="client-email"
+                           name="email"
+                           type="email"
+                           autocomplete="username"
+                           required>
+
+
+                    <!-- PASSWORD -->
+
+                    <label for="client-password">
+
+                        PASSWORD
+
+                    </label>
+
+                    <input id="client-password"
+                           name="password"
+                           type="password"
+                           autocomplete="current-password"
+                           required>
+
+
+                    <!-- SIGN IN -->
+
+                    <p>
+
+                        <button type="submit">
+
+                            SIGN IN ↗
+
+                        </button>
+
+                    </p>
+
+
+                    <!-- CREATE ACCOUNT -->
+
+                    <p>
+
+                        <button type="button"
+                                id="createAccount"
+                                class="secondary">
+
+                            CREATE ACCOUNT
+
+                        </button>
+
+                    </p>
+
+
+                    <!-- PASSWORD RECOVERY -->
+
+                    <p>
+
+                        <button type="button"
+                                id="forgotPassword"
+                                class="secondary">
+
+                            FORGOT PASSWORD?
+
+                        </button>
+
+                    </p>
+
+                </fieldset>
+
+            </form>
+
+
+            <!-- AUTHENTICATION STATUS -->
+
+            <p id="accountStatus"
+               role="status"
+               aria-live="polite"></p>
+
+
+            <hr class="client-divider">
+
+
+            <!-- NEW SESSION REQUEST -->
+
+            <p class="muted small">
+
+                Ready for another creative experience?
+
+            </p>
+
+            <a href="contact.html#contact"
+               id="newSessionLink"
+               class="secondary">
+
+                REQUEST A NEW SESSION ↗
+
+            </a>
+
+        </section>
+
+
+        <!-- ==========================================
+             05 | PRIVATE BOOKING ACCESS STATUS
+             ========================================== -->
+
+        <p id="message"
+           role="status"
+           aria-live="polite"
+           class="muted"></p>
+
+        <noscript>
+
+            <p class="client-info-note">
+
+                Please enable JavaScript to access
+                your private booking.
+
+            </p>
+
+        </noscript>
+
+
+        <!-- ==========================================
+             06 | PRIVATE PROJECT DASHBOARD
+             ========================================== -->
+
+        <div id="dashboard"
+             class="hidden"
+             hidden>
+
+
+            <!-- BOOKING STATUS -->
+
+            <section class="panel"
+                     aria-labelledby="booking-heading">
+
+                <p class="eyebrow">
+
+                    01 / YOUR PROJECT
+
+                </p>
+
+                <h2 id="booking-heading">
+
+                    BOOKING STATUS
+
+                </h2>
+
+                <p id="status"
+                   class="tag"></p>
+
+                <p id="summary"
+                   class="muted"></p>
+
+                <button type="button"
+                        id="refresh"
+                        class="secondary">
+
+                    REFRESH STATUS ↗
+
+                </button>
+
+            </section>
+
+
+            <div class="grid">
+
+
+                <!-- ==========================================
+                     07 | CREATIVE INSPIRATION
+                     ========================================== -->
+
+                <section class="panel"
+                         aria-labelledby="vision-heading">
+
+                    <p class="eyebrow">
+
+                        02 / CREATIVE DIRECTION
+
+                    </p>
+
+                    <h2 id="vision-heading">
+
+                        YOUR VISION
+
+                    </h2>
+
+                    <p class="muted small">
+
+                        Every great project begins with an idea.
+
+                        Tell me what inspires you, what you're
+                        imagining, and which moments matter
+                        most to you.
+
+                    </p>
+
+
+                    <!-- CLIENT INSPIRATION FORM -->
+
+                    <form id="inspirationForm"
+                          method="post">
+
+                        <label for="inspiration-details">
+
+                            DESCRIBE YOUR VISION
+
+                        </label>
+
+                        <textarea id="inspiration-details"
+                                  name="inspiration"
+                                  maxlength="6000"
+                                  rows="8"
+                                  placeholder="Tell me about the mood, poses, outfits, locations, color palette, special moments, timeline, and overall feeling you're hoping to capture."></textarea>
+
+
+                        <!-- PINTEREST INSPIRATION -->
+
+                        <label for="inspiration-pinterest">
+
+                            PINTEREST BOARD OR INSPIRATION LINK
+
+                        </label>
+
+                        <input type="url"
+                               id="inspiration-pinterest"
+                               name="pinterest"
+                               placeholder="https://www.pinterest.com/...">
+
+
+                        <!-- SAVE INSPIRATION -->
+
+                        <p>
+
+                            <button type="submit">
+
+                                SAVE MY VISION ↗
+
+                            </button>
+
+                        </p>
+
+                    </form>
+
+
+                    <hr class="client-divider">
+
+
+                    <!-- ==========================================
+                         08 | VISUAL REFERENCE UPLOADS
+                         ========================================== -->
+
+                    <p class="eyebrow">
+
+                        VISUAL REFERENCES
+
+                    </p>
+
+                    <p class="muted small">
+
+                        Have screenshots of poses, outfits,
+                        photography styles, or locations
+                        you love?
+
+                        Upload them here so I can better
+                        understand your vision.
+
+                    </p>
+
+
+                    <form id="referenceForm"
+                          method="post"
+                          enctype="multipart/form-data">
+
+                        <label for="reference-files">
+
+                            UPLOAD YOUR INSPIRATION IMAGES
+
+                        </label>
+
+                        <input type="file"
+                               id="reference-files"
+                               name="files"
+                               accept="image/jpeg,image/png,image/webp"
+                               multiple
+                               required
+                               aria-describedby="reference-help">
+
+
+                        <!-- FILE REQUIREMENTS -->
+
+                        <p id="reference-help"
+                           class="muted small">
+
+                            JPG, PNG, or WebP.
+
+                            Maximum 10 MB per image.
+
+                        </p>
+
+
+                        <!-- UPLOAD BUTTON -->
+
+                        <p>
+
+                            <button type="submit">
+
+                                UPLOAD REFERENCES ↗
+
+                            </button>
+
+                        </p>
+
+                    </form>
+
+
+                    <!-- INSPIRATION STATUS -->
+
+                    <p id="inspirationStatus"
+                       role="status"
+                       aria-live="polite"></p>
+
+                </section>
+
+
+                <!-- ==========================================
+                     09 | PERSONALIZED CONTRACT
+                     ========================================== -->
+
+                <section class="panel"
+                         id="contractSection"
+                         aria-labelledby="contract-heading">
+
+                    <p class="eyebrow">
+
+                        03 / AGREEMENT
+
+                    </p>
+
+                    <h2 id="contract-heading">
+
+                        YOUR CONTRACT
+
+                    </h2>
+
+                    <p id="contractHint"
+                       class="muted">
+
+                        Your personalized agreement will
+                        appear here once your project has
+                        been approved.
+
+                    </p>
+
+
+                    <!-- GENERATED CONTRACT -->
+
+                    <pre id="contractText"
+                         class="hidden"
+                         hidden></pre>
+
+
+                    <!-- ==========================================
+                         10 | ELECTRONIC SIGNATURE
+                         ========================================== -->
+
+                    <form id="signForm"
+                          class="hidden"
+                          method="post"
+                          hidden>
+
+
+                        <!-- CLIENT LEGAL NAME -->
+
+                        <label for="signed-name">
+
+                            YOUR FULL LEGAL NAME
+
+                        </label>
+
+                        <input type="text"
+                               id="signed-name"
+                               name="signedName"
+                               placeholder="Type your full legal name"
+                               autocomplete="name"
+                               minlength="3"
+                               required>
+
+
+                        <!-- ELECTRONIC SIGNATURE CONSENT -->
+
+                        <label class="checkline">
+
+                            <input type="checkbox"
+                                   name="agree"
+                                   required>
+
+                            <span>
+
+                                I have reviewed this
+                                agreement and agree to
+                                sign it electronically.
+
+                            </span>
+
+                        </label>
+
+
+                        <!-- SIGN CONTRACT -->
+
+                        <p>
+
+                            <button type="submit">
+
+                                SIGN AGREEMENT ↗
+
+                            </button>
+
+                        </p>
+
+                    </form>
+
+
+                    <!-- DOWNLOAD CONTRACT PDF -->
+
+                    <button type="button"
+                            id="contractDownload"
+                            class="secondary hidden"
+                            hidden>
+
+                        DOWNLOAD AGREEMENT PDF ↓
+
+                    </button>
+
+
+                    <!-- SIGNATURE STATUS -->
+
+                    <p id="signStatus"
+                       role="status"
+                       aria-live="polite"></p>
+
+
+                    <!-- CONTRACT NOTICE -->
+
+                    <div class="client-info-note">
+
+                        Please review your agreement carefully
+                        before signing.
+
+                        If anything needs to be changed,
+                        contact Monse Media before completing
+                        your signature.
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- ==========================================
+                 11 | PRIVATE CLIENT GALLERY
+                 ========================================== -->
+
+            <section class="panel hidden"
+                     id="gallerySection"
+                     aria-labelledby="gallery-heading"
+                     hidden>
+
+                <p class="eyebrow">
+
+                    04 / YOUR FINISHED COLLECTION
+
+                </p>
+
+                <h2 id="gallery-heading">
+
+                    YOUR GALLERY
+
+                </h2>
+
+                <p class="muted">
+
+                    Your completed photographs, videos,
+                    and creative files are ready.
+
+                    Thank you for trusting Monse Media
+                    with your vision.
+
+                </p>
+
+
+                <!-- DOWNLOAD COMPLETE COLLECTION -->
+
+                <p>
+
+                    <button type="button"
+                            id="downloadAll">
+
+                        DOWNLOAD ALL AS ZIP ↓
+
+                    </button>
+
+                </p>
+
+
+                <!-- DYNAMIC GALLERY FILES -->
+
+                <div id="gallery"
+                     class="gallery"></div>
+
+
+                <!-- CLIENT PRIVACY NOTICE -->
+
+                <p class="muted small">
+
+                    Keep your private booking link
+                    confidential.
+
+                </p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==========================================
+         12 | CLIENT PORTAL FOOTER
+         ========================================== -->
+
+    <footer class="client-footer">
+
+        <p>
+
+            MONSE MEDIA — PHOTOGRAPHY, FILM
+            &amp; CREATIVE DIRECTION
+
+        </p>
+
+        <p>
+
+            A PERSONALIZED CREATIVE EXPERIENCE.
+
+        </p>
+
+
+        <!-- CONTACT AND SOCIAL MEDIA LINKS -->
+
+        <div class="client-contact-links">
+
+            <a href="mailto:mindymonserrath@gmail.com">
+
+                EMAIL
+
+            </a>
+
+            <a href="tel:+18064376009">
+
+                PHONE
+
+            </a>
+
+            <a href="https://www.instagram.com/monses.media/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                INSTAGRAM
+
+            </a>
+
+            <a href="https://www.facebook.com/share/1CYvsiu62C/?mibextid=wwXIfr"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                FACEBOOK
+
+            </a>
+
+            <a href="contact.html">
+
+                CONTACT MONSE ↗
+
+            </a>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <p style="margin-top: 28px;">
+
+            © MONSE MEDIA. ALL RIGHTS RESERVED.
+
+        </p>
+
+    </footer>
+
+
+    <!-- ==========================================
+         13 | BACKEND JAVASCRIPT CONNECTIONS
+
+         Keep these files in this exact order.
+         ========================================== -->
+
+    <script src="supabase.js" defer></script>
+
+    <script src="client.js" defer></script>
+
+    <script src="auth.js" defer></script>
+
+
+</body>
+
+</html>

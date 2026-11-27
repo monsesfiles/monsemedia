@@ -1,0 +1,1089 @@
+/* ==========================================
+   MONSE MEDIA | CLIENT PORTAL
+   Author: Monse Montes
+   Filename: client.css
+   Black / Burgundy / Ivory / Rose
+   ========================================== */
+
+
+/* 01 | BRAND COLORS */
+
+body.client-page {
+    --client-black: #080607;
+    --client-dark: #100607;
+    --client-wine: #3c0008;
+    --client-burgundy: #852a32;
+    --client-red: #a43a48;
+    --client-ivory: #f0eae2;
+    --client-cream: #e5d9ca;
+    --client-rose: #d79ca6;
+    --client-muted: #c5aeaa;
+    --client-border: #493035;
+    --client-gold: #e6c878;
+}
+
+
+/* 02 | GENERAL PAGE SETTINGS */
+
+body.client-page {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--client-dark);
+    color: var(--client-ivory);
+    font-family: "Raleway", sans-serif;
+    overflow-x: clip;
+    color-scheme: dark;
+}
+
+.client-page,
+.client-page *,
+.client-page *::before,
+.client-page *::after {
+    box-sizing: border-box;
+}
+
+.client-page .hidden,
+.client-page [hidden] {
+    display: none !important;
+}
+
+.client-page a {
+    text-decoration: none;
+}
+
+
+/* 03 | WEBSITE HEADER
+   Matches index.html and style.css.
+*/
+
+.client-page .site-header {
+    position: relative;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    width: 100%;
+    min-height: 90px;
+    padding: 20px 5%;
+
+    background: #080607;
+    border-bottom: none;
+}
+
+
+/* 04 | MONSE MEDIA LOGO */
+
+.client-page .header-logo {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    line-height: 1;
+}
+
+.client-page .header-logo-image {
+    display: block;
+    width: 85px;
+    height: 65px;
+    max-width: none;
+
+    object-fit: contain;
+    transition: transform .3s ease;
+}
+
+.client-page .header-logo-image:hover {
+    transform: scale(1.08);
+}
+
+
+/* 05 | MAIN NAVIGATION */
+
+.client-page .main-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 0;
+}
+
+.client-page .main-navigation ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: clamp(12px, 2vw, 35px);
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.client-page .main-navigation li {
+    list-style: none;
+}
+
+.client-page .main-navigation a {
+    color: var(--client-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    transition: color .3s ease;
+}
+
+.client-page .main-navigation a:hover {
+    color: var(--client-rose);
+}
+
+.client-page .main-navigation a[aria-current="page"] {
+    color: var(--client-rose);
+    border-bottom: 1px solid var(--client-rose);
+    padding-bottom: 6px;
+}
+
+
+/* 06 | BOOK A SESSION BUTTON */
+
+.client-page .header-booking {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    padding: 15px 22px;
+
+    border: 1px solid var(--client-ivory);
+    border-radius: 0;
+
+    background: transparent;
+    color: var(--client-ivory);
+
+    font: 600 10px "Raleway", sans-serif;
+    letter-spacing: 2px;
+    white-space: nowrap;
+
+    transition:
+        background .3s ease,
+        color .3s ease;
+}
+
+.client-page .header-booking:hover {
+    background: var(--client-ivory);
+    color: var(--client-black);
+}
+
+
+/* 07 | MAIN CLIENT PAGE CONTAINER */
+
+.client-page main {
+    width: 100%;
+    max-width: 1350px;
+
+    margin: 0 auto;
+    padding: 90px 6% 110px;
+}
+
+
+/* 08 | CLIENT PORTAL INTRODUCTION */
+
+.client-page .client-introduction {
+    position: relative;
+
+    max-width: 1050px;
+    margin-bottom: 55px;
+    padding-bottom: 55px;
+
+    border-bottom: 1px solid var(--client-border);
+}
+
+.client-page .client-introduction h1 {
+    margin: 22px 0 28px;
+
+    color: var(--client-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(46px, 7vw, 100px);
+    font-weight: 300;
+
+    letter-spacing: -2px;
+    line-height: 1.05;
+}
+
+.client-page .client-introduction > p:last-child {
+    max-width: 650px;
+    color: var(--client-muted);
+
+    font-size: 14px;
+    line-height: 2;
+}
+
+
+/* 09 | EDITORIAL HEADINGS */
+
+.client-page .eyebrow {
+    color: var(--client-rose);
+
+    font: 600 10px/1.8 "Raleway", sans-serif;
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.client-page h2 {
+    margin: 15px 0 25px;
+
+    color: var(--client-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(28px, 3.5vw, 45px);
+    font-weight: 400;
+
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.client-page .muted {
+    color: var(--client-muted);
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.client-page .small {
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* 10 | CLIENT DASHBOARD */
+
+.client-page #dashboard {
+    width: 100%;
+}
+
+
+/* 11 | CLIENT CONTENT PANELS */
+
+.client-page .panel {
+    position: relative;
+    min-width: 0;
+
+    margin-bottom: 32px;
+    padding: clamp(25px, 4vw, 50px);
+
+    background: linear-gradient(
+        135deg,
+        #210a10 0%,
+        #16070b 100%
+    );
+
+    border: 1px solid var(--client-border);
+    border-radius: 0;
+}
+
+
+/* BURGUNDY ACCENT LINE */
+
+.client-page .panel::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 80px;
+    height: 2px;
+
+    background: var(--client-burgundy);
+    pointer-events: none;
+}
+
+
+/* 12 | TWO COLUMN CONTENT LAYOUT */
+
+.client-page .grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    align-items: start;
+    gap: 30px;
+}
+
+.client-page .grid > * {
+    min-width: 0;
+}
+
+
+/* 13 | BOOKING STATUS */
+
+.client-page .tag {
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 12px 18px;
+    margin: 5px 0 25px;
+
+    background: rgba(133, 42, 50, .2);
+    border: 1px solid rgba(215, 156, 166, .4);
+
+    color: var(--client-rose);
+
+    font: 600 11px "Raleway", sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.client-page #summary {
+    max-width: 800px;
+    margin-bottom: 30px;
+
+    color: var(--client-muted);
+    line-height: 2;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   14 | RETURNING CLIENT ACCOUNT
+   ========================================== */
+
+.client-page #clientAccountAccess {
+    width: 100%;
+    max-width: 580px;
+
+    margin: 0 auto 36px;
+}
+
+.client-page #clientLoginFields {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+
+    border: none;
+}
+
+.client-page #clientLoginFields > p {
+    margin: 4px 0;
+}
+
+.client-page #clientLoginFields button {
+    width: 100%;
+}
+
+.client-page #accountNotice {
+    margin: 18px 0;
+}
+
+.client-page #clientLoginFields:disabled input {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   15 | ALL CLIENT FORMS
+   ========================================== */
+
+.client-page form {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    gap: 12px;
+}
+
+.client-page form label:not(.checkline) {
+    display: block;
+    margin-top: 15px;
+
+    color: #d0b7b8;
+
+    font: 600 10px/1.8 "Raleway", sans-serif;
+    letter-spacing: 2px;
+}
+
+
+/* 16 | INPUT FIELDS */
+
+.client-page input[type="text"],
+.client-page input[type="email"],
+.client-page input[type="url"],
+.client-page input[type="password"],
+.client-page input[type="tel"],
+.client-page input[type="date"],
+.client-page input[type="time"],
+.client-page textarea,
+.client-page select {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 52px;
+
+    padding: 16px 18px;
+
+    background: transparent;
+    border: 1px solid #65464a;
+    border-radius: 0;
+
+    color: var(--client-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+
+    outline: none;
+
+    transition: border-color .3s ease;
+}
+
+.client-page textarea {
+    min-height: 180px;
+    resize: vertical;
+    line-height: 1.8;
+}
+
+.client-page input::placeholder,
+.client-page textarea::placeholder {
+    color: #a48d90;
+    opacity: 1;
+}
+
+.client-page input:focus,
+.client-page textarea:focus,
+.client-page select:focus {
+    border-color: var(--client-rose);
+}
+
+.client-page select option {
+    background: var(--client-dark);
+    color: var(--client-ivory);
+}
+
+
+/* 17 | REFERENCE IMAGE UPLOAD FIELD */
+
+.client-page input[type="file"] {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+
+    padding: 20px;
+
+    background: rgba(133, 42, 50, .08);
+    border: 1px dashed #65464a;
+    border-radius: 0;
+
+    color: var(--client-muted);
+
+    font: 400 12px "Raleway", sans-serif;
+
+    cursor: pointer;
+}
+
+.client-page input[type="file"]::file-selector-button {
+    margin-right: 15px;
+    padding: 12px 16px;
+
+    background: var(--client-burgundy);
+    border: none;
+    border-radius: 0;
+
+    color: white;
+
+    font: 600 10px "Raleway", sans-serif;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+}
+
+.client-page input[type="file"]::file-selector-button:hover {
+    background: var(--client-red);
+}
+
+
+/* ==========================================
+   18 | CLIENT PORTAL BUTTONS
+   ========================================== */
+
+.client-page main button,
+.client-page main a.secondary {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    max-width: 100%;
+    min-height: 44px;
+
+    padding: 17px 25px;
+
+    background: var(--client-burgundy);
+    border: 1px solid #a64d59;
+    border-radius: 0;
+
+    color: white;
+
+    font: 600 10px/1.5 "Raleway", sans-serif;
+    letter-spacing: 2px;
+
+    text-align: center;
+    overflow-wrap: anywhere;
+
+    cursor: pointer;
+
+    transition:
+        background .3s ease,
+        border-color .3s ease,
+        opacity .3s ease;
+}
+
+.client-page main button:hover:not(:disabled) {
+    background: var(--client-red);
+    border-color: #cc6975;
+}
+
+
+/* SECONDARY BUTTONS */
+
+.client-page main button.secondary,
+.client-page main a.secondary {
+    background: transparent;
+    border: 1px solid var(--client-ivory);
+    color: var(--client-ivory);
+}
+
+.client-page main button.secondary:hover:not(:disabled),
+.client-page main a.secondary:hover {
+    background: var(--client-ivory);
+    color: var(--client-wine);
+}
+
+
+/* DISABLED BUTTONS */
+
+.client-page main button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+
+/* KEYBOARD ACCESSIBILITY */
+
+.client-page button:focus-visible,
+.client-page a:focus-visible,
+.client-page input:focus-visible,
+.client-page textarea:focus-visible,
+.client-page select:focus-visible {
+    outline: 2px solid var(--client-rose);
+    outline-offset: 3px;
+}
+
+
+/* ==========================================
+   19 | PERSONALIZED CONTRACT DISPLAY
+   ========================================== */
+
+.client-page #contractText {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    max-height: 480px;
+
+    overflow: auto;
+
+    padding: 25px;
+    margin: 22px 0;
+
+    background: #0d0507;
+    border: 1px solid var(--client-border);
+
+    color: var(--client-cream);
+
+    font: 400 12px/2 "Raleway", sans-serif;
+
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+
+    scrollbar-color:
+        var(--client-burgundy)
+        var(--client-dark);
+}
+
+.client-page #contractHint {
+    margin-bottom: 25px;
+}
+
+
+/* ==========================================
+   20 | ELECTRONIC SIGNATURE
+   ========================================== */
+
+.client-page .checkline {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+    margin: 18px 0;
+
+    color: var(--client-cream);
+
+    font: 400 12px/1.8 "Raleway", sans-serif;
+
+    cursor: pointer;
+}
+
+.client-page .checkline input[type="checkbox"] {
+    flex-shrink: 0;
+
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+
+    accent-color: var(--client-burgundy);
+
+    cursor: pointer;
+}
+
+.client-page .checkline span {
+    flex: 1;
+}
+
+
+/* ==========================================
+   21 | FUTURE SMS NOTIFICATION CONSENT
+   ========================================== */
+
+.client-page .sms-consent {
+    padding: 18px;
+
+    background: #18090d;
+    border: 1px solid var(--client-border);
+}
+
+.client-page .sms-consent .checkline {
+    margin: 0;
+}
+
+
+/* 22 | FORM CONFIRMATION MESSAGES */
+
+.client-page #accountStatus,
+.client-page #inspirationStatus,
+.client-page #signStatus {
+    margin: 18px 0;
+
+    color: var(--client-gold);
+
+    font: 400 12px/1.8 "Raleway", sans-serif;
+
+    overflow-wrap: anywhere;
+}
+
+.client-page #message:empty,
+.client-page #accountStatus:empty,
+.client-page #inspirationStatus:empty,
+.client-page #signStatus:empty {
+    margin: 0;
+}
+
+
+/* 23 | CLIENT INFORMATION NOTES */
+
+.client-page .client-info-note {
+    margin-top: 30px;
+    padding: 20px 24px;
+
+    background: #1b0a0f;
+    border-left: 2px solid #a64d59;
+
+    color: var(--client-muted);
+
+    font: 400 12px/1.9 "Raleway", sans-serif;
+}
+
+
+/* 24 | SECTION DIVIDERS */
+
+.client-page .client-divider {
+    width: 100%;
+    height: 1px;
+
+    margin: 38px 0;
+
+    border: none;
+    background: var(--client-border);
+}
+
+
+/* ==========================================
+   25 | PRIVATE CLIENT GALLERY
+   ========================================== */
+
+.client-page .gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+    margin-top: 35px;
+}
+
+
+/* INDIVIDUAL PHOTO / FILE CARD */
+
+.client-page .gallery-item {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    padding: 15px;
+
+    background: #18090d;
+    border: 1px solid var(--client-border);
+    border-radius: 0;
+
+    overflow: hidden;
+}
+
+
+/* PHOTO PREVIEW */
+
+.client-page .gallery-item img {
+    display: block;
+
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+
+    transition: transform .4s ease;
+}
+
+.client-page .gallery-item img:hover {
+    transform: scale(1.02);
+}
+
+
+/* NON-IMAGE FILE PLACEHOLDER */
+
+.client-page .gallery-file-placeholder {
+    display: grid;
+    place-items: center;
+
+    min-height: 220px;
+    padding: 20px;
+
+    background: var(--client-dark);
+    color: var(--client-rose);
+
+    font: 600 10px/1.8 "Raleway", sans-serif;
+    letter-spacing: 2px;
+
+    text-align: center;
+}
+
+
+/* FILE NAME AND INFORMATION */
+
+.client-page .gallery-item p {
+    margin: 12px 0;
+
+    color: var(--client-ivory);
+
+    font: 400 12px/1.7 "Raleway", sans-serif;
+
+    overflow-wrap: anywhere;
+}
+
+.client-page .gallery-filename {
+    overflow-wrap: anywhere;
+}
+
+.client-page .gallery-item .muted {
+    color: var(--client-muted);
+    margin-bottom: 15px;
+}
+
+
+/* FILE DOWNLOAD BUTTON */
+
+.client-page .gallery-item button {
+    width: 100%;
+    margin-top: auto;
+}
+
+
+/* ==========================================
+   26 | PORTAL INFORMATION MESSAGES
+   ========================================== */
+
+.client-page #message {
+    margin-bottom: 28px;
+
+    color: var(--client-muted);
+
+    font: 400 13px/1.9 "Raleway", sans-serif;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   27 | CLIENT PAGE FOOTER
+   ========================================== */
+
+.client-page .client-footer {
+    padding: 55px 6%;
+
+    background: var(--client-black);
+    border-top: 1px solid var(--client-border);
+
+    color: var(--client-muted);
+
+    font: 400 11px/2 "Raleway", sans-serif;
+    letter-spacing: 1px;
+
+    text-align: center;
+}
+
+.client-page .client-footer p {
+    margin: 6px 0;
+}
+
+
+/* SOCIAL MEDIA LINKS */
+
+.client-page .client-contact-links {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.client-page .client-contact-links a {
+    color: var(--client-ivory);
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    transition: color .3s ease;
+}
+
+.client-page .client-contact-links a:hover {
+    color: var(--client-rose);
+}
+
+
+/* ==========================================
+   28 | TABLET RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 1050px) {
+
+    .client-page .site-header {
+        gap: 18px;
+        padding: 20px 4%;
+    }
+
+    .client-page .main-navigation ul {
+        gap: 15px;
+    }
+
+    .client-page .main-navigation a {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .client-page .header-booking {
+        padding: 13px 16px;
+        font-size: 9px;
+    }
+
+    .client-page .gallery {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ==========================================
+   29 | MOBILE RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 760px) {
+
+    .client-page .site-header {
+        flex-direction: column;
+        justify-content: center;
+
+        gap: 22px;
+        padding: 22px 5%;
+    }
+
+    .client-page .header-logo {
+        align-self: center;
+    }
+
+    .client-page .main-navigation {
+        width: 100%;
+    }
+
+    .client-page .main-navigation ul {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        gap: 15px 18px;
+    }
+
+    .client-page .header-booking {
+        align-self: center;
+    }
+
+    .client-page main {
+        padding: 65px 6% 85px;
+    }
+
+    .client-page .client-introduction {
+        margin-bottom: 42px;
+    }
+
+    .client-page .client-introduction h1 {
+        font-size: clamp(42px, 9vw, 70px);
+        letter-spacing: -1px;
+    }
+
+    .client-page .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .client-page .panel {
+        padding: 28px 22px;
+    }
+
+    .client-page .gallery {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 14px;
+    }
+
+    .client-page .client-footer {
+        padding: 45px 6%;
+    }
+
+}
+
+
+/* ==========================================
+   30 | SMALL PHONE SCREENS
+   ========================================== */
+
+@media (max-width: 480px) {
+
+    .client-page .main-navigation ul {
+        gap: 12px 14px;
+    }
+
+    .client-page .main-navigation a {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .client-page .client-introduction h1 {
+        font-size: clamp(30px, 9vw, 40px);
+        overflow-wrap: anywhere;
+    }
+
+    .client-page .panel {
+        padding: 25px 18px;
+    }
+
+    .client-page .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .client-page main button,
+    .client-page main a.secondary {
+        width: 100%;
+    }
+
+    .client-page #contractText {
+        padding: 18px;
+    }
+
+    .client-page input:not([type="checkbox"])
+                      :not([type="radio"]) {
+        min-width: 0;
+    }
+
+    .client-page input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="hidden"]),
+    .client-page textarea,
+    .client-page select {
+        font-size: 16px;
+    }
+
+    .client-page input[type="file"] {
+        padding: 12px;
+    }
+
+    .client-page input[type="file"]::file-selector-button {
+        margin-right: 8px;
+        padding: 10px;
+    }
+
+}
+
+
+/* ==========================================
+   31 | REDUCED MOTION ACCESSIBILITY
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .client-page *,
+    .client-page *::before,
+    .client-page *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
+
+
+/* ==========================================
+   END OF MONSE MEDIA CLIENT STYLESHEET
+   ========================================== */
