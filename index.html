@@ -3,7 +3,6 @@
 <html lang="en">
 
 <head>
-
     <!-- =====================================
          MONSE MEDIA | OFFICIAL WEBSITE
          Author: Monse Montes
@@ -11,20 +10,16 @@
          ===================================== -->
 
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
           content="MONSE MEDIA is a photography and videography studio specializing in portraits, events, creative storytelling, and cinematic visuals.">
 
     <title>MONSE MEDIA | Photography & Film</title>
 
-
     <!-- ADOBE FONTS: GUNTER -->
     <link rel="stylesheet"
           href="https://use.typekit.net/njulgsa.css">
-
 
     <!-- GOOGLE FONTS: RALEWAY -->
     <link rel="preconnect"
@@ -37,19 +32,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
           rel="stylesheet">
 
-
     <!-- MAIN STYLESHEET -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 
+<body>
 
 <!-- ==========================================
-     MONSE MEDIA - BACKGROUND MUSIC
+     MONSE MEDIA | BACKGROUND MUSIC
      ========================================== -->
 
 <audio id="background-music" preload="auto" loop>
-    <source src="audio/monse-music.mp3" type="audio/mp3">
+    <source src="audio/monse-music.mp3" type="audio/mpeg">
 </audio>
 
 <!-- MUSIC BUTTON -->
@@ -90,15 +84,12 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-<body>
 
 <!-- =====================================
      MONSE MEDIA | FALLING FLOWER PETALS
-     Appears when the homepage first loads
      ===================================== -->
 
 <div id="petal-container" aria-hidden="true"></div>
-
 
 
 <!-- =====================================
@@ -108,76 +99,48 @@ document.addEventListener("DOMContentLoaded", function() {
 <header class="site-header">
 
     <!-- MONSE MEDIA LOGO -->
-    
-<!-- MONSE MEDIA LOGO - TOP LEFT -->
-<a href="homepage.html" class="header-logo">
+    <a href="homepage.html" class="header-logo">
 
-    <img src="images/monse-logo.jpg.gif"
-         alt="MONSE MEDIA Logo"
-         class="header-logo-image">
+        <img src="images/monse-logo.jpg.gif"
+             alt="MONSE MEDIA Logo"
+             class="header-logo-image">
 
-</a>
+    </a>
 
 
+    <!-- MAIN WEBSITE NAVIGATION -->
+    <nav class="main-navigation"
+         aria-label="Main navigation">
 
-   
-<!-- ==========================================
-     MONSE MEDIA | MAIN WEBSITE NAVIGATION
-     Connects all public pages and client portal
-     ========================================== -->
+        <ul>
 
-<nav class="main-navigation"
-     aria-label="Main navigation">
+            <li>
+                <a href="homepage.html">HOME</a>
+            </li>
 
-    <ul>
+            <li>
+                <a href="about.html">ABOUT</a>
+            </li>
 
-        <!-- HOME -->
-        <li>
-            <a href="homepage.html">
-                HOME
-            </a>
-        </li>
+            <li>
+                <a href="portfolio.html">PORTFOLIO</a>
+            </li>
 
-        <!-- ABOUT -->
-        <li>
-            <a href="about.html">
-                ABOUT
-            </a>
-        </li>
+            <li>
+                <a href="services.html">SERVICES</a>
+            </li>
 
-        <!-- PORTFOLIO -->
-        <li>
-            <a href="portfolio.html">
-                PORTFOLIO
-            </a>
-        </li>
+            <li>
+                <a href="contact.html">CONTACT</a>
+            </li>
 
-        <!-- SERVICES -->
-        <li>
-            <a href="services.html">
-                SERVICES
-            </a>
-        </li>
+            <li>
+                <a href="client.html">CLIENT PORTAL</a>
+            </li>
 
-        <!-- CONTACT -->
-        <li>
-            <a href="contact.html">
-                CONTACT
-            </a>
-        </li>
+        </ul>
 
-        <!-- CLIENT PORTAL -->
-        <li>
-            <a href="client.html">
-                CLIENT PORTAL
-            </a>
-        </li>
-        
-
-    </ul>
-
-</nav>
-
+    </nav>
 
 
     <!-- HEADER BOOKING BUTTON -->
@@ -188,7 +151,6 @@ document.addEventListener("DOMContentLoaded", function() {
 </header>
 
 
-
 <!-- =====================================
      MAIN WEBSITE CONTENT
      ===================================== -->
@@ -196,457 +158,420 @@ document.addEventListener("DOMContentLoaded", function() {
 <main>
 
 
-<!-- =====================================
-     SECTION 1: CINEMATIC HERO
+    <!-- =====================================
+         SECTION 1: CINEMATIC HERO
+         ===================================== -->
 
-     MAIN PHOTOGRAPH:
-     images/hero.jpg
-     ===================================== -->
+    <section class="hero">
 
-<section class="hero">
+        <!-- HERO BACKGROUND PHOTOGRAPH -->
+        <div class="hero-image">
 
-    <!-- HERO BACKGROUND PHOTOGRAPH -->
-    <div class="hero-image">
+            <img src="images/finals.jpg"
+                 alt="Featured MONSE MEDIA photography">
 
-        <img src="images/finals.jpg"
-             alt="Featured MONSE MEDIA photography">
-
-    </div>
+        </div>
 
 
-    <!-- DARK OVERLAY -->
-    <div class="hero-overlay"></div>
+        <!-- DARK OVERLAY -->
+        <div class="hero-overlay"></div>
 
 
-    <!-- TOP HERO DETAILS -->
-    <div class="hero-top-text">
+        <!-- TOP HERO DETAILS -->
+        <div class="hero-top-text">
 
-        
+            <p>AMARILLO, TEXAS</p>
 
-        <p>AMARILLO, TEXAS</p>
-
-    </div>
+        </div>
 
 
-    <!-- MAIN HERO TITLE -->
-    <div class="hero-content">
+        <!-- MAIN HERO TITLE -->
+        <div class="hero-content">
 
-        <p class="hero-eyebrow">
-            PHOTOGRAPHY • FILM • CREATIVE DIRECTION
-        </p>
-
-
-        <h1 class="hero-title">
-
-            <span class="brand-monse">
-                MONSE
-            </span>
-
-            <span class="brand-media">
-                MEDIA
-            </span>
-
-        </h1>
-
-
-        <p class="hero-tagline">
-            STORYTELLING THROUGH IMAGE AND EMOTION.
-        </p>
-
-    </div>
-
-
-    <!-- BOTTOM HERO DETAILS -->
-    <div class="hero-bottom">
-
-
-        <a href="about.html">
-            SCROLL TO EXPLORE ↓
-        </a>
-
-        <span>AVAILABLE FOR BOOKINGS</span>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================
-     SECTION 2: ABOUT MONSE
-
-     PORTRAIT:
-     images/about.jpg
-     ===================================== -->
-
-<section id="about" class="about-section">
-
-    <div class="section-heading">
-
-        <span class="section-number">
-            01 / ABOUT
-        </span>
-
-        <p>THE PERSON BEHIND THE LENS</p>
-
-    </div>
-
-
-    <div class="about-container">
-
-
-        <!-- LEFT SIDE: INTRODUCTION -->
-        <div class="about-text">
-
-            <p class="small-heading">
-                A LITTLE INTRODUCTION
+            <p class="hero-eyebrow">
+                PHOTOGRAPHY • FILM • CREATIVE DIRECTION
             </p>
 
+            <h1 class="hero-title">
 
-            <h2>
-                ART ISN'T JUST
-                WHAT YOU SEE.
-                IT'S WHAT YOU FEEL.
-            </h2>
+                <span class="brand-monse">
+                    MONSE
+                </span>
 
+                <span class="brand-media">
+                    MEDIA
+                </span>
 
-            <p>
-                Hi, I'm Monsé Montes, the creative
-                behind MONSE MEDIA.
+            </h1>
+
+            <p class="hero-tagline">
+                STORYTELLING THROUGH IMAGE AND EMOTION.
             </p>
 
-
-            <p>
-                I'm a photographer, videographer,
-                and designer based in Amarillo,
-                Texas, creating bold, intentional
-                visuals that tell stories.
-            </p>
+        </div>
 
 
-            <p>
-                From intimate portraits to
-                unforgettable events and
-                cinematic productions, my work
-                is rooted in emotion, creativity,
-                and authentic human connection.
-            </p>
+        <!-- BOTTOM HERO DETAILS -->
+        <div class="hero-bottom">
 
-
-            <a href="#contact" class="outline-button">
-                LET'S CREATE SOMETHING ↗
+            <a href="about.html">
+                SCROLL TO EXPLORE ↓
             </a>
 
-        </div>
-
-
-
-        <!-- RIGHT SIDE: PORTRAIT -->
-        <div class="about-image">
-
-            <img src="images/flowers.jpg"
-                 alt="Monsé Montes, photographer and creative director">
-
-            <p class="image-caption">
-                MONSÉ MONTES — FOUNDER & CREATIVE
-            </p>
+            <span>AVAILABLE FOR BOOKINGS</span>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- =====================================
-     SECTION 3: EDITORIAL STATEMENT
-     ===================================== -->
+    <!-- =====================================
+         SECTION 2: ABOUT MONSE
+         ===================================== -->
 
-<section class="statement-section">
+    <section id="about" class="about-section">
 
-    <p>AN INDEPENDENT CREATIVE VISION</p>
+        <div class="section-heading">
 
+            <span class="section-number">
+                01 / ABOUT
+            </span>
 
-    <h2>
-        NOT JUST IMAGES.
-        <br>
-        <em>EXPERIENCES.</em>
-    </h2>
+            <p>THE PERSON BEHIND THE LENS</p>
 
-
-    <p class="statement-description">
-        Every frame holds a feeling.
-        Every moment deserves to be remembered.
-        Every story deserves to be told beautifully.
-    </p>
-
-</section>
+        </div>
 
 
+        <div class="about-container">
 
-<!-- =====================================
-     SECTION 4: SELECTED PORTFOLIO
+            <!-- LEFT SIDE: INTRODUCTION -->
+            <div class="about-text">
 
-     ADD YOUR PHOTOGRAPHS:
+                <p class="small-heading">
+                    A LITTLE INTRODUCTION
+                </p>
 
-     images/work-1.jpg
-     images/work-2.jpg
-     images/work-3.jpg
-     ===================================== -->
+                <h2>
+                    ART ISN'T JUST
+                    WHAT YOU SEE.
+                    IT'S WHAT YOU FEEL.
+                </h2>
 
-<section id="portfolio" class="portfolio-section">
+                <p>
+                    Hi, I'm Monsé Montes, the creative
+                    behind MONSE MEDIA.
+                </p>
 
-    <div class="section-heading">
+                <p>
+                    I'm a photographer, videographer,
+                    and designer based in Amarillo,
+                    Texas, creating bold, intentional
+                    visuals that tell stories.
+                </p>
 
-        <span class="section-number">
-            02 / PORTFOLIO
-        </span>
+                <p>
+                    From intimate portraits to
+                    unforgettable events and
+                    cinematic productions, my work
+                    is rooted in emotion, creativity,
+                    and authentic human connection.
+                </p>
 
-        <p>THE ART OF STORYTELLING</p>
+                <a href="#contact" class="outline-button">
+                    LET'S CREATE SOMETHING ↗
+                </a>
 
-    </div>
+            </div>
 
 
-    <!-- PORTFOLIO INTRODUCTION -->
-    <div class="portfolio-intro">
+            <!-- RIGHT SIDE: PORTRAIT -->
+            <div class="about-image">
+
+                <img src="images/flowers.jpg"
+                     alt="Monsé Montes, photographer and creative director">
+
+                <p class="image-caption">
+                    MONSÉ MONTES — FOUNDER & CREATIVE
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         SECTION 3: EDITORIAL STATEMENT
+         ===================================== -->
+
+    <section class="statement-section">
+
+        <p>AN INDEPENDENT CREATIVE VISION</p>
 
         <h2>
-            SELECTED
-            WORK & CREATIVE PROJECTS
+            NOT JUST IMAGES.
+            <br>
+            <em>EXPERIENCES.</em>
         </h2>
 
-    </div>
+        <p class="statement-description">
+            Every frame holds a feeling.
+            Every moment deserves to be remembered.
+            Every story deserves to be told beautifully.
+        </p>
+
+    </section>
 
 
 
-    <!-- PORTFOLIO GALLERY -->
-    <div class="portfolio-grid">
+    <!-- =====================================
+         SECTION 4: SELECTED PORTFOLIO
+         ===================================== -->
+
+    <section id="portfolio" class="portfolio-section">
+
+        <div class="section-heading">
+
+            <span class="section-number">
+                02 / PORTFOLIO
+            </span>
+
+            <p>THE ART OF STORYTELLING</p>
+
+        </div>
 
 
-        <!-- PORTFOLIO IMAGE 1 -->
-        <article class="portfolio-item portfolio-large">
+        <!-- PORTFOLIO INTRODUCTION -->
+        <div class="portfolio-intro">
 
-            <div class="portfolio-image">
+            <h2>
+                SELECTED
+                WORK & CREATIVE PROJECTS
+            </h2>
 
-                <img src="images/e-2.jpg"
-                     alt="Portrait photography portfolio">
+        </div>
+
+
+        <!-- PORTFOLIO GALLERY -->
+        <div class="portfolio-grid">
+
+
+            <!-- PORTFOLIO IMAGE 1 -->
+            <article class="portfolio-item portfolio-large">
+
+                <div class="portfolio-image">
+
+                    <img src="images/e-2.jpg"
+                         alt="Portrait photography portfolio">
+
+                </div>
+
+                <div class="portfolio-info">
+
+                    <h3>PORTRAITS & EDITORIAL</h3>
+
+                    <span>01 — PHOTOGRAPHY</span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PORTFOLIO IMAGE 2 -->
+            <article class="portfolio-item">
+
+                <div class="portfolio-image">
+
+                    <img src="images/portfolio-21.jpg"
+                         alt="Event photography portfolio">
+
+                </div>
+
+                <div class="portfolio-info">
+
+                    <h3>EVENTS & CELEBRATIONS</h3>
+
+                    <span>02 — PHOTOGRAPHY</span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PORTFOLIO IMAGE 3 -->
+            <article class="portfolio-item">
+
+                <div class="portfolio-image">
+
+                    <img src="images/DSC03270-2.jpg"
+                         alt="Creative commercial portfolio">
+
+                </div>
+
+                <div class="portfolio-info">
+
+                    <h3>COMMERCIAL & CREATIVE</h3>
+
+                    <span>03 — VISUAL STORYTELLING</span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         SECTION 5: SERVICES
+         ===================================== -->
+
+    <section id="services" class="services-section">
+
+        <div class="section-heading">
+
+            <span class="section-number">
+                03 / SERVICES
+            </span>
+
+            <p>WHAT WE CREATE</p>
+
+        </div>
+
+
+        <!-- SERVICES TITLE -->
+        <div class="services-title">
+
+            <h2>
+                YOUR VISION.
+                <em>MY LENS.</em>
+            </h2>
+
+        </div>
+
+
+        <!-- HOMEPAGE PORTFOLIO CATEGORY CARDS -->
+        <section class="home-portfolio-section">
+
+            <div class="home-portfolio-grid">
+
+
+                <!-- PHOTOGRAPHY -->
+                <a href="portfolio.html?category=photography#my-work"
+                   class="home-portfolio-card">
+
+                    <span class="home-portfolio-number">01</span>
+
+                    <h3>PHOTOGRAPHY</h3>
+
+                    <p>
+                        Capturing moments, stories, and
+                        everything worth remembering.
+                    </p>
+
+                    <span class="home-portfolio-cta">
+                        EXPLORE PORTFOLIO
+                        <span class="home-portfolio-arrow">↗</span>
+                    </span>
+
+                </a>
+
+
+                <!-- VIDEOGRAPHY -->
+                <a href="portfolio.html?category=videography#my-work"
+                   class="home-portfolio-card">
+
+                    <span class="home-portfolio-number">02</span>
+
+                    <h3>VIDEOGRAPHY</h3>
+
+                    <p>
+                        Bringing stories to life through
+                        motion, emotion, and film.
+                    </p>
+
+                    <span class="home-portfolio-cta">
+                        EXPLORE PORTFOLIO
+                        <span class="home-portfolio-arrow">↗</span>
+                    </span>
+
+                </a>
+
+
+                <!-- GRAPHIC DESIGN -->
+                <a href="portfolio.html?category=graphic-design#my-work"
+                   class="home-portfolio-card">
+
+                    <span class="home-portfolio-number">03</span>
+
+                    <h3>GRAPHIC DESIGN</h3>
+
+                    <p>
+                        Visual concepts, brand identity,
+                        creative direction, and design.
+                    </p>
+
+                    <span class="home-portfolio-cta">
+                        EXPLORE PORTFOLIO
+                        <span class="home-portfolio-arrow">↗</span>
+                    </span>
+
+                </a>
 
             </div>
 
+        </section>
 
-            <div class="portfolio-info">
-
-                <h3>PORTRAITS & EDITORIAL</h3>
-
-                <span>01 — PHOTOGRAPHY</span>
-
-            </div>
-
-        </article>
+    </section>
 
 
 
-        <!-- PORTFOLIO IMAGE 2 -->
-        <article class="portfolio-item">
+    <!-- =====================================
+         SECTION 6: BOOKING / CONTACT
+         ===================================== -->
 
-            <div class="portfolio-image">
+    <section id="contact" class="booking-section">
 
-                <img src="images/portfolio-21.jpg"
-                     alt="Event photography portfolio">
-
-            </div>
-
-
-            <div class="portfolio-info">
-
-                <h3>EVENTS & CELEBRATIONS</h3>
-
-                <span>02 — PHOTOGRAPHY</span>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PORTFOLIO IMAGE 3 -->
-        <article class="portfolio-item">
-
-            <div class="portfolio-image">
-
-                <img src="images/DSC03270-2.jpg"
-                     alt="Creative commercial portfolio">
-
-            </div>
-
-
-            <div class="portfolio-info">
-
-                <h3>COMMERCIAL & CREATIVE</h3>
-
-                <span>03 — VISUAL STORYTELLING</span>
-
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================
-     SECTION 5: SERVICES
-     ===================================== -->
-
-<section id="services" class="services-section">
-
-    <div class="section-heading">
-
-        <span class="section-number">
-            03 / SERVICES
-        </span>
-
-        <p>WHAT WE CREATE</p>
-
-    </div>
-
-
-    <!-- SERVICES TITLE -->
-    <div class="services-title">
+        <p class="booking-label">
+            NOW ACCEPTING INQUIRIES
+        </p>
 
         <h2>
-            YOUR VISION.
-            <em>MY LENS.</em>
+            LET'S MAKE
+            <br>
+            <em>SOMETHING BEAUTIFUL.</em>
         </h2>
 
-    </div>
+        <p>
+            Have a vision in mind?
+            I'd love to bring it to life.
+        </p>
 
 
+        <!-- BOOKING BUTTON -->
+        <!-- Replace the email below with your actual business email. -->
+        <a href="mailto:you@example.com?subject=MONSE%20MEDIA%20Booking%20Inquiry"
+           class="booking-button">
 
-    
-
-<!-- MY HOMEPAGE PORTFOLIO SECTION -->
-
-<section class="home-portfolio-section">
-
-    <div class="home-portfolio-grid">
-
-        <!-- PHOTOGRAPHY -->
-        <a href="portfolio.html?category=photography#my-work"
-           class="home-portfolio-card">
-
-            <span class="home-portfolio-number">01</span>
-
-            <h3>PHOTOGRAPHY</h3>
-
-            <p>
-                Capturing moments, stories, and
-                everything worth remembering.
-            </p>
-
-            <span class="home-portfolio-cta">
-                EXPLORE PORTFOLIO
-                <span class="home-portfolio-arrow">↗</span>
-            </span>
+            INQUIRE ABOUT A SESSION ↗
 
         </a>
 
+        <p class="booking-location">
+            BASED IN AMARILLO, TEXAS
+        </p>
 
-        <!-- VIDEOGRAPHY -->
-        <a href="portfolio.html?category=videography#my-work"
-           class="home-portfolio-card">
-
-            <span class="home-portfolio-number">02</span>
-
-            <h3>VIDEOGRAPHY</h3>
-
-            <p>
-                Bringing stories to life through
-                motion, emotion, and film.
-            </p>
-
-            <span class="home-portfolio-cta">
-                EXPLORE PORTFOLIO
-                <span class="home-portfolio-arrow">↗</span>
-            </span>
-
-        </a>
-
-
-        <!-- GRAPHIC DESIGN -->
-        <a href="portfolio.html?category=graphic-design#my-work"
-           class="home-portfolio-card">
-
-            <span class="home-portfolio-number">03</span>
-
-            <h3>GRAPHIC DESIGN</h3>
-
-            <p>
-                Visual concepts, brand identity,
-                creative direction, and design.
-            </p>
-
-            <span class="home-portfolio-cta">
-                EXPLORE PORTFOLIO
-                <span class="home-portfolio-arrow">↗</span>
-            </span>
-
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================
-     SECTION 6: BOOKING / CONTACT
-
-     Replace you@example.com with
-     your actual business email.
-     ===================================== -->
-
-<section id="contact" class="booking-section">
-
-    <p class="booking-label">
-        NOW ACCEPTING INQUIRIES
-    </p>
-
-
-    <h2>
-        LET'S MAKE
-        <br>
-        <em>SOMETHING BEAUTIFUL.</em>
-    </h2>
-
-
-    <p>
-        Have a vision in mind?
-        I'd love to bring it to life.
-    </p>
-
-
-    <!-- BOOKING BUTTON -->
-    <a href="mailto:you@example.com?subject=MONSE%20MEDIA%20Booking%20Inquiry"
-       class="booking-button">
-
-        INQUIRE ABOUT A SESSION ↗
-
-    </a>
-
-
-    <p class="booking-location">
-        BASED IN AMARILLO, TEXAS
-    </p>
-
-</section>
+    </section>
 
 
 </main>
-
-
 
 
 
@@ -670,6 +595,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     </video>
 
+
     <!-- DARK OVERLAY -->
     <div class="footer-overlay"></div>
 
@@ -677,10 +603,8 @@ document.addEventListener("DOMContentLoaded", function() {
     <!-- FOOTER CONTENT -->
     <div class="footer-content">
 
-        <!-- ==========================================
-             FOOTER LOGO - MONSE MEDIA
-             ========================================== -->
 
+        <!-- FOOTER LOGO -->
         <div class="footer-brand">
 
             <a href="homepage.html" class="footer-logo-link">
@@ -729,11 +653,11 @@ document.addEventListener("DOMContentLoaded", function() {
 </footer>
 
 
+
 <!-- ==========================================
      MONSE MEDIA | DRAMATIC ROSE PETALS
      85 pink and red textured petals
-     Spread across the upper screen
-     Fall diagonally for 10 seconds
+     Fall diagonally for approximately 10 seconds
      ========================================== -->
 
 <script>
@@ -809,3 +733,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+
+</body>
+</html>
