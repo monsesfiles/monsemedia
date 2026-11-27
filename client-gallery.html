@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================
+         MONSE MEDIA | PRIVATE CLIENT GALLERY
+         Author: Monse Montes
+         Filename: client-gallery.html
+         ========================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="referrer" content="no-referrer">
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>My Galleries | Monse Media</title>
+
+
+    <!-- FAVICON -->
+
+    <link rel="icon"
+          type="image/gif"
+          href="images/monse-logo.jpg.gif">
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;family=Raleway:wght@300;400;500;600;700&amp;display=swap"
+          rel="stylesheet">
+
+
+    <!-- ADOBE FONT | GUNTER -->
+
+    <link rel="stylesheet"
+          href="https://use.typekit.net/njulgsa.css">
+
+
+    <!-- STYLESHEETS -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="client.css">
+
+    <link rel="stylesheet" href="client-gallery.css">
+
+</head>
+
+
+<body class="client-page client-gallery-page">
+
+
+<!-- ==========================================
+     01 | WEBSITE HEADER
+     ========================================== -->
+
+<header class="site-header">
+
+    <a href="index.html"
+       class="header-logo"
+       aria-label="Monse Media Home">
+
+        <img src="images/monse-logo.jpg.gif"
+             alt="Monse Media Logo"
+             class="header-logo-image">
+
+    </a>
+
+
+    <!-- MAIN NAVIGATION -->
+
+    <nav class="main-navigation"
+         aria-label="Main navigation">
+
+        <ul>
+
+            <li><a href="index.html">HOME</a></li>
+
+            <li><a href="about.html">ABOUT</a></li>
+
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
+
+            <li><a href="services.html">SERVICES</a></li>
+
+            <li><a href="contact.html">CONTACT</a></li>
+
+            <li><a href="client.html">CLIENT PORTAL</a></li>
+
+        </ul>
+
+    </nav>
+
+
+    <a href="contact.html#contact"
+       class="header-booking">
+
+        BOOK A SESSION ↗
+
+    </a>
+
+</header>
+
+
+<!-- ==========================================
+     02 | MAIN GALLERY PAGE
+     ========================================== -->
+
+<main class="client-gallery-main"
+      id="main-content">
+
+
+    <!-- ======================================
+         ACCOUNT VERIFICATION
+
+         Visible until the server verifies
+         the client's account.
+         ====================================== -->
+
+    <section id="galleryAccess"
+             class="panel gallery-access"
+             aria-labelledby="galleryAccessHeading">
+
+        <p class="eyebrow">
+
+            MONSE MEDIA / PRIVATE COLLECTIONS
+
+        </p>
+
+        <h1 id="galleryAccessHeading">
+
+            YOUR MEMORIES.
+
+        </h1>
+
+        <p id="galleryAccessStatus"
+           class="muted"
+           role="status">
+
+            Sign in to access your private galleries.
+            Account access is not connected yet.
+
+        </p>
+
+        <a href="client.html"
+           class="secondary">
+
+            RETURN TO CLIENT PORTAL ↗
+
+        </a>
+
+        <noscript>
+
+            <p class="muted">
+
+                Please enable JavaScript to access
+                your private collections.
+
+            </p>
+
+        </noscript>
+
+    </section>
+
+
+    <!-- ======================================
+         03 | PRIVATE GALLERY WORKSPACE
+
+         Only display after verified account
+         authentication.
+
+         Server-side authorization is required
+         for every gallery and download.
+         ====================================== -->
+
+    <div id="galleryWorkspace" hidden>
+
+
+        <!-- GALLERY INTRODUCTION -->
+
+        <section class="client-gallery-hero">
+
+            <div>
+
+                <a href="dashboard.html"
+                   class="gallery-back-link">
+
+                    ← BACK TO MY DASHBOARD
+
+                </a>
+
+                <p class="eyebrow">
+
+                    MONSE MEDIA / MOMENTS WORTH KEEPING
+
+                </p>
+
+                <h1>
+
+                    YOUR <span>MEMORIES.</span>
+
+                </h1>
+
+                <p class="muted">
+
+                    Every moment has a story.
+                    This is where yours lives.
+
+                </p>
+
+                <p id="galleryClientName"
+                   class="muted small">
+
+                </p>
+
+            </div>
+
+
+            <div class="gallery-hero-actions">
+
+                <a href="booking.html"
+                   class="gallery-primary">
+
+                    + CREATE NEW MEMORIES
+
+                </a>
+
+                <button type="button"
+                        id="galleryLogout"
+                        class="secondary">
+
+                    LOG OUT ↗
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================
+             04 | CLIENT ACCOUNT NAVIGATION
+             ================================== -->
+
+        <nav class="gallery-navigation"
+             aria-label="Client account navigation">
+
+            <a href="dashboard.html">
+
+                OVERVIEW
+
+            </a>
+
+            <a href="dashboard.html#upcoming">
+
+                UPCOMING SESSIONS
+
+            </a>
+
+            <a href="dashboard.html#history">
+
+                PAST SESSIONS
+
+            </a>
+
+            <a href="client-gallery.html"
+               aria-current="page">
+
+                MY GALLERIES
+
+            </a>
+
+            <a href="dashboard.html#requests">
+
+                MY REQUESTS
+
+            </a>
+
+            <a href="client-settings.html">
+
+                ACCOUNT SETTINGS
+
+            </a>
+
+        </nav>
+
+
+        <!-- GENERAL GALLERY STATUS -->
+
+        <p id="galleryMessage"
+           class="muted"
+           role="status"
+           aria-live="polite">
+
+        </p>
+
+
+        <!-- ==================================
+             05 | CLIENT COLLECTIONS
+             ================================== -->
+
+        <section id="collectionsSection"
+                 class="panel"
+                 aria-labelledby="collectionsHeading">
+
+            <p class="eyebrow">
+
+                01 / YOUR CREATIVE ARCHIVE
+
+            </p>
+
+            <h2 id="collectionsHeading">
+
+                YOUR COLLECTIONS.
+
+            </h2>
+
+            <p class="muted">
+
+                Select a previous session to view
+                its photographs, films and other
+                creative deliverables.
+
+            </p>
+
+
+            <!-- COLLECTION TOOLBAR -->
+
+            <div class="gallery-collections-toolbar">
+
+                <p id="collectionCount"
+                   class="eyebrow">
+
+                    — COLLECTIONS
+
+                </p>
+
+                <button type="button"
+                        id="refreshGalleries"
+                        class="secondary">
+
+                    REFRESH COLLECTIONS ↻
+
+                </button>
+
+            </div>
+
+
+            <!-- COLLECTION SEARCH -->
+
+            <div class="gallery-search">
+
+                <label for="collectionSearch">
+
+                    FIND A COLLECTION
+
+                </label>
+
+                <input type="search"
+                       id="collectionSearch"
+                       placeholder="Search by session name..."
+                       maxlength="100"
+                       autocomplete="off">
+
+            </div>
+
+
+            <!-- COLLECTION SORTING -->
+
+            <div class="gallery-sort">
+
+                <label for="collectionSort">
+
+                    SORT COLLECTIONS
+
+                </label>
+
+                <select id="collectionSort">
+
+                    <option value="newest">
+
+                        Newest first
+
+                    </option>
+
+                    <option value="oldest">
+
+                        Oldest first
+
+                    </option>
+
+                    <option value="name">
+
+                        Session name
+
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- DYNAMIC COLLECTION CARDS -->
+
+            <div id="collectionList"
+                 class="collection-grid">
+
+            </div>
+
+
+            <!-- EMPTY COLLECTION MESSAGE -->
+
+            <div id="collectionsEmpty"
+                 class="gallery-empty"
+                 hidden>
+
+                <p class="eyebrow">
+
+                    YOUR STORY IS JUST BEGINNING
+
+                </p>
+
+                <h3>
+
+                    NO COLLECTIONS YET.
+
+                </h3>
+
+                <p class="muted">
+
+                    Your finished collections will
+                    appear here once they have
+                    been published by Monse Media.
+
+                </p>
+
+                <a href="booking.html"
+                   class="secondary">
+
+                    REQUEST YOUR NEXT SESSION ↗
+
+                </a>
+
+            </div>
+
+
+            <!-- NO SEARCH RESULTS -->
+
+            <p id="collectionSearchEmpty"
+               class="muted"
+               hidden>
+
+                No collections match your search.
+
+            </p>
+
+        </section>
+
+
+        <!-- ==================================
+             06 | SELECTED SESSION GALLERY
+             ================================== -->
+
+        <section id="selectedGallery"
+                 class="panel selected-gallery"
+                 aria-labelledby="galleryTitle"
+                 hidden>
+
+
+            <!-- RETURN TO COLLECTIONS -->
+
+            <button type="button"
+                    class="secondary"
+                    id="backToCollections">
+
+                ← ALL COLLECTIONS
+
+            </button>
+
+
+            <!-- SELECTED GALLERY INFORMATION -->
+
+            <div class="gallery-title-row">
+
+                <div>
+
+                    <p class="eyebrow">
+
+                        02 / YOUR PRIVATE COLLECTION
+
+                    </p>
+
+                    <h2 id="galleryTitle"></h2>
+
+                    <p id="galleryDate"
+                       class="muted">
+
+                    </p>
+
+                    <p id="galleryLocation"
+                       class="muted">
+
+                    </p>
+
+                </div>
+
+                <span id="galleryPublicationStatus"
+                      class="tag">
+
+                </span>
+
+            </div>
+
+
+            <!-- COLLECTION INFORMATION -->
+
+            <div class="gallery-information-grid">
+
+                <div>
+
+                    <span class="eyebrow">
+
+                        TOTAL FILES
+
+                    </span>
+
+                    <p id="galleryFileCount">
+
+                        —
+
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <span class="eyebrow">
+
+                        PUBLISHED
+
+                    </span>
+
+                    <p id="galleryPublishedDate">
+
+                        —
+
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <span class="eyebrow">
+
+                        COLLECTION SIZE
+
+                    </span>
+
+                    <p id="galleryTotalSize">
+
+                        —
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================
+                 DOWNLOAD ENTIRE COLLECTION
+                 ================================== -->
+
+            <div class="gallery-download-banner">
+
+                <div>
+
+                    <h3>
+
+                        KEEP EVERY MOMENT.
+
+                    </h3>
+
+                    <p class="muted">
+
+                        Download your entire collection
+                        in its delivered quality.
+
+                    </p>
+
+                </div>
+
+                <button type="button"
+                        id="downloadCollection"
+                        disabled>
+
+                    DOWNLOAD ALL AS ZIP ↓
+
+                </button>
+
+            </div>
+
+
+            <!-- DOWNLOAD FEEDBACK -->
+
+            <p id="galleryDownloadStatus"
+               class="muted"
+               role="status"
+               aria-live="polite">
+
+            </p>
+
+
+            <hr class="client-divider">
+
+
+            <!-- ==================================
+                 07 | GALLERY CATEGORY FILTERS
+                 ================================== -->
+
+            <div class="gallery-filters"
+                 role="group"
+                 aria-label="Filter gallery files">
+
+                <button type="button"
+                        class="gallery-filter active"
+                        data-filter="all"
+                        aria-pressed="true">
+
+                    ALL FILES
+
+                </button>
+
+                <button type="button"
+                        class="gallery-filter"
+                        data-filter="image"
+                        aria-pressed="false">
+
+                    PHOTOGRAPHY
+
+                </button>
+
+                <button type="button"
+                        class="gallery-filter"
+                        data-filter="video"
+                        aria-pressed="false">
+
+                    VIDEOGRAPHY
+
+                </button>
+
+                <button type="button"
+                        class="gallery-filter"
+                        data-filter="document"
+                        aria-pressed="false">
+
+                    DOCUMENTS
+
+                </button>
+
+                <button type="button"
+                        class="gallery-filter"
+                        data-filter="other"
+                        aria-pressed="false">
+
+                    OTHER FILES
+
+                </button>
+
+            </div>
+
+
+            <!-- CURRENT FILE COUNT -->
+
+            <p id="visibleFileCount"
+               class="muted small"
+               aria-live="polite">
+
+            </p>
+
+
+            <!-- ==================================
+                 08 | PRIVATE MEDIA GRID
+
+                 Images and files are supplied
+                 by the authorized backend.
+                 ================================== -->
+
+            <div id="galleryFiles"
+                 class="private-gallery-grid">
+
+            </div>
+
+
+            <!-- EMPTY GALLERY -->
+
+            <p id="galleryFilesEmpty"
+               class="muted"
+               hidden>
+
+                No files are available in this category.
+
+            </p>
+
+
+            <!-- PRIVATE FILE INFORMATION -->
+
+            <div class="client-info-note">
+
+                Your collection is private and intended
+                for your authorized access.
+
+                Please follow the usage rights described
+                in your signed agreement.
+
+                We recommend saving a backup of your
+                downloaded files.
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================
+             09 | CLIENT SUPPORT
+             ================================== -->
+
+        <section class="panel gallery-support">
+
+            <p class="eyebrow">
+
+                03 / ALWAYS HERE FOR YOU
+
+            </p>
+
+            <h2>
+
+                NEED A LITTLE HELP?
+
+            </h2>
+
+            <p class="muted">
+
+                Having trouble downloading your files,
+                accessing a collection, or finding
+                a previous session?
+
+                Get in touch with Monse Media.
+
+            </p>
+
+            <a href="contact.html"
+               class="secondary">
+
+                CONTACT MONSE ↗
+
+            </a>
+
+        </section>
+
+
+        <!-- ==================================
+             10 | BOOK YOUR NEXT SESSION
+             ================================== -->
+
+        <section class="gallery-outro">
+
+            <p class="eyebrow">
+
+                THE NEXT CHAPTER
+
+            </p>
+
+            <h2>
+
+                LET'S CREATE MORE MEMORIES.
+
+            </h2>
+
+            <p class="muted">
+
+                Your story doesn't end here.
+
+            </p>
+
+            <a href="booking.html"
+               class="gallery-primary">
+
+                BOOK YOUR NEXT SESSION ↗
+
+            </a>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- ==========================================
+     11 | COLLECTION CARD TEMPLATE
+
+     JavaScript generates one card for each
+     authorized, published collection.
+     ========================================== -->
+
+<template id="collectionCardTemplate">
+
+    <article class="collection-card">
+
+
+        <!-- COLLECTION COVER -->
+
+        <div class="collection-cover">
+
+            <img data-field="cover"
+                 alt=""
+                 loading="lazy"
+                 referrerpolicy="no-referrer"
+                 hidden>
+
+            <div class="collection-placeholder"
+                 data-field="placeholder">
+
+                MONSE MEDIA / COLLECTION
+
+            </div>
+
+        </div>
+
+
+        <!-- COLLECTION INFORMATION -->
+
+        <div class="collection-content">
+
+            <p class="eyebrow"
+               data-field="status">
+
+            </p>
+
+            <h3 data-field="title"></h3>
+
+            <p class="muted"
+               data-field="date">
+
+            </p>
+
+            <p class="muted small"
+               data-field="fileCount">
+
+            </p>
+
+
+            <!-- COLLECTION ACTIONS -->
+
+            <div class="collection-actions">
+
+                <button type="button"
+                        class="secondary"
+                        data-action="open"
+                        disabled>
+
+                    VIEW COLLECTION ↗
+
+                </button>
+
+                <button type="button"
+                        data-action="download"
+                        disabled>
+
+                    DOWNLOAD COLLECTION ↓
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+</template>
+
+
+<!-- ==========================================
+     12 | INDIVIDUAL FILE CARD TEMPLATE
+     ========================================== -->
+
+<template id="galleryFileTemplate">
+
+    <article class="private-file-card">
+
+
+        <!-- CLICKABLE MEDIA PREVIEW -->
+
+        <button type="button"
+                class="private-file-preview"
+                data-action="preview"
+                aria-label="Open file preview"
+                disabled>
+
+            <img data-field="thumbnail"
+                 alt=""
+                 loading="lazy"
+                 referrerpolicy="no-referrer"
+                 hidden>
+
+            <span class="private-file-placeholder"
+                  data-field="placeholder">
+
+                MONSE MEDIA / FILE
+
+            </span>
+
+            <span class="private-preview-overlay">
+
+                VIEW FILE ↗
+
+            </span>
+
+        </button>
+
+
+        <!-- FILE INFORMATION -->
+
+        <div class="private-file-information">
+
+            <p class="eyebrow"
+               data-field="type">
+
+            </p>
+
+            <p class="private-file-name"
+               data-field="filename">
+
+            </p>
+
+            <p class="muted small"
+               data-field="size">
+
+            </p>
+
+
+            <!-- INDIVIDUAL FILE DOWNLOAD -->
+
+            <button type="button"
+                    class="secondary"
+                    data-action="download"
+                    disabled>
+
+                DOWNLOAD FILE ↓
+
+            </button>
+
+        </div>
+
+    </article>
+
+</template>
+
+
+<!-- ==========================================
+     13 | FULL-SIZE MEDIA LIGHTBOX
+
+     Opens in the center of the screen.
+
+     Images retain their original proportions
+     and fit within the available viewport.
+
+     JavaScript will handle Escape, close,
+     previous and next controls.
+     ========================================== -->
+
+<dialog id="galleryLightbox"
+        class="gallery-lightbox"
+        aria-labelledby="lightboxFilename">
+
+    <div class="gallery-lightbox-frame">
+
+
+        <!-- CLOSE BUTTON -->
+
+        <button type="button"
+                id="galleryLightboxClose"
+                class="gallery-lightbox-close"
+                aria-label="Close file preview">
+
+            &times;
+
+        </button>
+
+
+        <!-- PREVIOUS FILE -->
+
+        <button type="button"
+                id="galleryLightboxPrevious"
+                class="gallery-lightbox-arrow previous"
+                aria-label="Previous file">
+
+            &#10094;
+
+        </button>
+
+
+        <!-- MEDIA DISPLAY -->
+
+        <div class="gallery-lightbox-media">
+
+
+            <!-- FULL-SIZE PHOTOGRAPH -->
+
+            <img id="galleryLightboxImage"
+                 alt=""
+                 referrerpolicy="no-referrer"
+                 hidden>
+
+
+            <!-- VIDEO PREVIEW -->
+
+            <video id="galleryLightboxVideo"
+                   controls
+                   playsinline
+                   preload="none"
+                   hidden>
+
+            </video>
+
+
+            <!-- DOCUMENT / UNAVAILABLE PREVIEW -->
+
+            <p id="galleryLightboxFallback"
+               class="muted"
+               hidden>
+
+                Preview unavailable.
+                You can download this file below.
+
+            </p>
+
+        </div>
+
+
+        <!-- NEXT FILE -->
+
+        <button type="button"
+                id="galleryLightboxNext"
+                class="gallery-lightbox-arrow next"
+                aria-label="Next file">
+
+            &#10095;
+
+        </button>
+
+
+        <!-- LIGHTBOX FILE INFORMATION -->
+
+        <div class="gallery-lightbox-details">
+
+            <div>
+
+                <p id="lightboxFilename"></p>
+
+                <p id="galleryLightboxCounter"
+                   class="muted small"
+                   aria-live="polite">
+
+                </p>
+
+            </div>
+
+            <button type="button"
+                    id="galleryLightboxDownload"
+                    class="secondary"
+                    disabled>
+
+                DOWNLOAD FILE ↓
+
+            </button>
+
+        </div>
+
+
+        <!-- LIGHTBOX FEEDBACK -->
+
+        <p id="galleryLightboxStatus"
+           class="muted small"
+           role="status">
+
+        </p>
+
+    </div>
+
+</dialog>
+
+
+<!-- ==========================================
+     14 | CLIENT GALLERY FOOTER
+     ========================================== -->
+
+<footer class="client-footer">
+
+    <p>
+
+        MONSE MEDIA — PHOTOGRAPHY,
+        FILM &amp; CREATIVE DIRECTION
+
+    </p>
+
+    <p>
+
+        MEMORIES PRESERVED WITH INTENTION.
+
+    </p>
+
+    <div class="client-contact-links">
+
+        <a href="index.html">
+
+            RETURN TO WEBSITE ↗
+
+        </a>
+
+        <a href="dashboard.html">
+
+            MY DASHBOARD ↗
+
+        </a>
+
+        <a href="contact.html">
+
+            CONTACT MONSE ↗
+
+        </a>
+
+    </div>
+
+    <p>
+
+        © MONSE MEDIA.
+        ALL RIGHTS RESERVED.
+
+    </p>
+
+</footer>
+
+
+<!-- ==========================================
+     15 | PRIVATE GALLERY JAVASCRIPT
+
+     Account verification
+     Previous session collections
+     Gallery search and sorting
+     Media category filters
+     Image and video lightbox
+     Individual file downloads
+     Complete collection downloads
+     Account logout
+     ========================================== -->
+
+<script src="client-gallery.js" defer></script>
+
+
+<!-- END OF MONSE MEDIA PRIVATE CLIENT GALLERY -->
+
+</body>
+
+</html>

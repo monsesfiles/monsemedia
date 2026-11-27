@@ -1,0 +1,1678 @@
+/* ==========================================
+   MONSE MEDIA | PRIVATE CLIENT GALLERY
+   Author: Monse Montes
+   Filename: client-gallery.css
+
+   Base styles: client.css
+   Navigation: index.html
+   ========================================== */
+
+
+/* 01 | BRAND COLORS */
+
+.client-gallery-page {
+    --gallery-black: #080607;
+    --gallery-dark: #100607;
+    --gallery-wine: #3c0008;
+    --gallery-burgundy: #852a32;
+    --gallery-red: #a43a48;
+    --gallery-ivory: #f0eae2;
+    --gallery-cream: #e5d9ca;
+    --gallery-rose: #d79ca6;
+    --gallery-muted: #c5aeaa;
+    --gallery-border: #493035;
+    --gallery-card: #18090d;
+    --gallery-gold: #e6c878;
+    --gallery-green: #a8d6bd;
+}
+
+
+/* ==========================================
+   02 | GENERAL PAGE SETTINGS
+   ========================================== */
+
+.client-gallery-page {
+    min-height: 100vh;
+    background: var(--gallery-dark);
+    color: var(--gallery-ivory);
+    font-family: "Raleway", sans-serif;
+    color-scheme: dark;
+}
+
+.client-gallery-page [hidden],
+.client-gallery-page .hidden {
+    display: none !important;
+}
+
+.client-gallery-page .client-gallery-main {
+    width: 100%;
+    max-width: 1450px;
+    min-height: 75vh;
+
+    margin: 0 auto;
+    padding: 75px 6% 100px;
+}
+
+
+/* ==========================================
+   03 | ACCOUNT ACCESS SCREEN
+   ========================================== */
+
+.client-gallery-page .gallery-access {
+    max-width: 750px;
+    margin: 40px auto;
+    padding: clamp(25px, 5vw, 65px);
+}
+
+.client-gallery-page .gallery-access h1 {
+    margin: 20px 0 25px;
+
+    color: var(--gallery-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(35px, 6vw, 80px);
+    font-weight: 300;
+
+    line-height: 1.1;
+    letter-spacing: -2px;
+    overflow-wrap: anywhere;
+}
+
+.client-gallery-page .gallery-access a {
+    margin-top: 25px;
+}
+
+.client-gallery-page #galleryWorkspace {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* ==========================================
+   04 | GALLERY INTRODUCTION
+   ========================================== */
+
+.client-gallery-page .client-gallery-hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 35px;
+
+    padding-bottom: 45px;
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid var(--gallery-border);
+}
+
+.client-gallery-page .client-gallery-hero > div {
+    min-width: 0;
+}
+
+.client-gallery-page .client-gallery-hero h1 {
+    margin: 20px 0 25px;
+
+    color: var(--gallery-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(42px, 7vw, 100px);
+    font-weight: 300;
+
+    line-height: 1.05;
+    letter-spacing: -2px;
+
+    overflow-wrap: anywhere;
+}
+
+.client-gallery-page .client-gallery-hero h1 span {
+    color: var(--gallery-rose);
+}
+
+.client-gallery-page .client-gallery-hero .muted {
+    max-width: 650px;
+}
+
+.client-gallery-page #galleryClientName {
+    margin-top: 15px;
+    overflow-wrap: anywhere;
+}
+
+
+/* BACK TO DASHBOARD */
+
+.client-gallery-page .gallery-back-link {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 44px;
+    margin-bottom: 20px;
+
+    color: var(--gallery-rose);
+
+    font: 600 10px/1.8 "Raleway", sans-serif;
+    letter-spacing: 2px;
+
+    transition: color .3s ease;
+}
+
+.client-gallery-page .gallery-back-link:hover {
+    color: var(--gallery-ivory);
+}
+
+
+/* ==========================================
+   05 | PRIMARY ACTION BUTTONS
+   ========================================== */
+
+.client-gallery-page .gallery-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    max-width: 100%;
+    min-height: 44px;
+
+    padding: 17px 25px;
+
+    background: var(--gallery-burgundy);
+    border: 1px solid #a64d59;
+
+    color: white;
+
+    font: 600 10px/1.6 "Raleway", sans-serif;
+    letter-spacing: 2px;
+
+    text-align: center;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+
+    cursor: pointer;
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease;
+}
+
+.client-gallery-page .gallery-primary:hover {
+    background: var(--gallery-red);
+    border-color: var(--gallery-rose);
+}
+
+.client-gallery-page .gallery-hero-actions {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.client-gallery-page .gallery-hero-actions a,
+.client-gallery-page .gallery-hero-actions button {
+    width: 100%;
+}
+
+
+/* ==========================================
+   06 | CLIENT ACCOUNT NAVIGATION
+   ========================================== */
+
+.client-gallery-page .gallery-navigation {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 8px 28px;
+
+    padding: 15px 0;
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid var(--gallery-border);
+}
+
+.client-gallery-page .gallery-navigation a {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 44px;
+    padding: 12px 0;
+
+    color: var(--gallery-muted);
+
+    font: 600 10px/1.6 "Raleway", sans-serif;
+    letter-spacing: 1.5px;
+
+    text-decoration: none;
+
+    transition: color .3s ease;
+}
+
+.client-gallery-page .gallery-navigation a:hover {
+    color: var(--gallery-ivory);
+}
+
+.client-gallery-page
+.gallery-navigation
+a[aria-current="page"] {
+    color: var(--gallery-rose);
+}
+
+.client-gallery-page
+.gallery-navigation
+a[aria-current="page"]::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 2px;
+
+    background: var(--gallery-rose);
+}
+
+
+/* ==========================================
+   07 | COLLECTIONS SECTION
+   ========================================== */
+
+.client-gallery-page #collectionsSection {
+    scroll-margin-top: 25px;
+}
+
+.client-gallery-page #collectionsSection > .muted {
+    max-width: 750px;
+}
+
+.client-gallery-page .gallery-collections-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    margin: 30px 0;
+}
+
+.client-gallery-page #collectionCount {
+    margin: 0;
+}
+
+
+/* ==========================================
+   08 | SEARCH AND SORTING
+   ========================================== */
+
+.client-gallery-page .gallery-search,
+.client-gallery-page .gallery-sort {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: top;
+
+    width: calc(50% - 12px);
+    min-width: 0;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.client-gallery-page .gallery-search {
+    margin-right: 20px;
+}
+
+.client-gallery-page .gallery-search label,
+.client-gallery-page .gallery-sort label {
+    color: var(--gallery-rose);
+
+    font: 600 10px/1.8 "Raleway", sans-serif;
+    letter-spacing: 2px;
+}
+
+.client-gallery-page input[type="search"],
+.client-gallery-page .gallery-sort select {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 52px;
+
+    padding: 15px 18px;
+
+    background: var(--gallery-card);
+    border: 1px solid #65464a;
+    border-radius: 0;
+
+    color: var(--gallery-ivory);
+
+    font: 400 13px "Raleway", sans-serif;
+
+    outline: none;
+
+    transition: border-color .3s ease;
+}
+
+.client-gallery-page input[type="search"]:focus,
+.client-gallery-page .gallery-sort select:focus {
+    border-color: var(--gallery-rose);
+}
+
+.client-gallery-page input[type="search"]::placeholder {
+    color: #a48d90;
+}
+
+.client-gallery-page .gallery-sort select {
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   09 | COLLECTION CARD GRID
+   ========================================== */
+
+.client-gallery-page .collection-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+
+    margin: 25px 0;
+}
+
+.client-gallery-page .collection-grid:empty {
+    margin: 0;
+}
+
+.client-gallery-page .collection-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    background: var(--gallery-card);
+    border: 1px solid var(--gallery-border);
+
+    overflow: hidden;
+
+    transition:
+        border-color .3s ease,
+        transform .3s ease;
+}
+
+.client-gallery-page .collection-card:hover {
+    border-color: var(--gallery-rose);
+}
+
+
+/* ==========================================
+   10 | COLLECTION COVER PHOTOGRAPH
+   ========================================== */
+
+.client-gallery-page .collection-cover {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    background: linear-gradient(
+        135deg,
+        #300e16,
+        #100607
+    );
+
+    overflow: hidden;
+}
+
+.client-gallery-page .collection-cover img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+
+    object-fit: cover;
+
+    transition: transform .5s ease;
+}
+
+.client-gallery-page .collection-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* COLLECTION PLACEHOLDER */
+
+.client-gallery-page .collection-placeholder {
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 25px;
+
+    color: var(--gallery-rose);
+
+    font: 600 11px/2 "Raleway", sans-serif;
+    letter-spacing: 3px;
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   11 | COLLECTION INFORMATION
+   ========================================== */
+
+.client-gallery-page .collection-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    min-width: 0;
+    padding: 22px;
+}
+
+.client-gallery-page .collection-content h3 {
+    margin: 12px 0 18px;
+
+    color: var(--gallery-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(20px, 2.5vw, 28px);
+    font-weight: 400;
+
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.client-gallery-page .collection-content p {
+    margin: 8px 0;
+    overflow-wrap: anywhere;
+}
+
+.client-gallery-page
+.collection-content
+[data-field="status"] {
+    color: var(--gallery-green);
+}
+
+
+/* COLLECTION ACTION BUTTONS */
+
+.client-gallery-page .collection-actions {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: auto;
+    padding-top: 22px;
+}
+
+.client-gallery-page .collection-actions button {
+    width: 100%;
+
+    padding: 15px 12px;
+
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+
+/* ==========================================
+   12 | EMPTY COLLECTION STATE
+   ========================================== */
+
+.client-gallery-page .gallery-empty {
+    padding: 55px 25px;
+    margin-top: 30px;
+
+    background: rgba(133, 42, 50, .06);
+    border: 1px dashed #65464a;
+
+    text-align: center;
+}
+
+.client-gallery-page .gallery-empty h3 {
+    margin: 20px 0;
+
+    color: var(--gallery-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(22px, 4vw, 36px);
+    font-weight: 400;
+
+    overflow-wrap: anywhere;
+}
+
+.client-gallery-page .gallery-empty .muted {
+    max-width: 500px;
+    margin: 0 auto 25px;
+}
+
+.client-gallery-page #collectionSearchEmpty,
+.client-gallery-page #galleryFilesEmpty {
+    padding: 30px 20px;
+
+    border: 1px dashed var(--gallery-border);
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   13 | SELECTED COLLECTION
+   ========================================== */
+
+.client-gallery-page .selected-gallery {
+    scroll-margin-top: 25px;
+}
+
+.client-gallery-page #backToCollections {
+    margin-bottom: 35px;
+}
+
+.client-gallery-page .gallery-title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 25px;
+}
+
+.client-gallery-page .gallery-title-row > div {
+    min-width: 0;
+}
+
+.client-gallery-page #galleryTitle {
+    margin: 15px 0 20px;
+    overflow-wrap: anywhere;
+}
+
+.client-gallery-page #galleryDate,
+.client-gallery-page #galleryLocation {
+    margin: 8px 0;
+    overflow-wrap: anywhere;
+}
+
+.client-gallery-page #galleryPublicationStatus {
+    max-width: 100%;
+
+    color: var(--gallery-green);
+    border-color: #547a67;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   14 | COLLECTION STATISTICS
+   ========================================== */
+
+.client-gallery-page .gallery-information-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+
+    margin: 30px 0;
+}
+
+.client-gallery-page .gallery-information-grid > div {
+    min-width: 0;
+    padding: 22px;
+
+    background: var(--gallery-card);
+    border: 1px solid var(--gallery-border);
+}
+
+.client-gallery-page .gallery-information-grid p {
+    margin: 12px 0 0;
+
+    color: var(--gallery-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   15 | DOWNLOAD COMPLETE COLLECTION
+   ========================================== */
+
+.client-gallery-page .gallery-download-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    padding: 28px;
+
+    background: linear-gradient(
+        135deg,
+        #3c0008,
+        #210a10
+    );
+
+    border: 1px solid #75404a;
+}
+
+.client-gallery-page .gallery-download-banner > div {
+    min-width: 0;
+}
+
+.client-gallery-page .gallery-download-banner h3 {
+    margin: 0 0 12px;
+
+    color: var(--gallery-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(20px, 3vw, 30px);
+    font-weight: 400;
+}
+
+.client-gallery-page .gallery-download-banner p {
+    margin: 0;
+}
+
+
+/* ==========================================
+   16 | GALLERY CATEGORY FILTERS
+   ========================================== */
+
+.client-gallery-page .gallery-filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin: 25px 0;
+}
+
+.client-gallery-page
+main
+.gallery-filters
+.gallery-filter {
+    min-height: 44px;
+    padding: 12px 18px;
+
+    background: transparent;
+    border: 1px solid var(--gallery-border);
+
+    color: var(--gallery-muted);
+
+    font: 600 9px/1.6 "Raleway", sans-serif;
+    letter-spacing: 1.5px;
+
+    transition:
+        color .3s ease,
+        background-color .3s ease,
+        border-color .3s ease;
+}
+
+.client-gallery-page
+main
+.gallery-filters
+.gallery-filter:hover {
+    background: #300e16;
+
+    color: var(--gallery-ivory);
+    border-color: var(--gallery-rose);
+}
+
+.client-gallery-page
+main
+.gallery-filters
+.gallery-filter.active,
+
+.client-gallery-page
+main
+.gallery-filters
+.gallery-filter[aria-pressed="true"] {
+    background: var(--gallery-burgundy);
+
+    color: white;
+    border-color: #a64d59;
+}
+
+.client-gallery-page #visibleFileCount {
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================
+   17 | PRIVATE PHOTOGRAPH AND MEDIA GRID
+   ========================================== */
+
+.client-gallery-page .private-gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    align-items: stretch;
+    gap: 18px;
+
+    margin: 25px 0;
+}
+
+.client-gallery-page .private-gallery-grid:empty {
+    margin: 0;
+}
+
+.client-gallery-page .private-file-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    background: var(--gallery-card);
+    border: 1px solid var(--gallery-border);
+
+    overflow: hidden;
+
+    transition: border-color .3s ease;
+}
+
+.client-gallery-page .private-file-card:hover {
+    border-color: var(--gallery-rose);
+}
+
+
+/* ==========================================
+   18 | CLICKABLE PHOTOGRAPH PREVIEW
+   ========================================== */
+
+.client-gallery-page main .private-file-preview {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+    aspect-ratio: 4 / 5;
+
+    padding: 0;
+
+    background: var(--gallery-dark);
+    border: none;
+    border-radius: 0;
+
+    overflow: hidden;
+
+    cursor: zoom-in;
+}
+
+.client-gallery-page main
+.private-file-preview:hover:not(:disabled) {
+    background: var(--gallery-dark);
+}
+
+.client-gallery-page .private-file-preview img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+
+    object-fit: cover;
+
+    transition: transform .5s ease;
+}
+
+.client-gallery-page
+.private-file-preview:hover:not(:disabled) img {
+    transform: scale(1.05);
+}
+
+
+/* FILE PREVIEW PLACEHOLDER */
+
+.client-gallery-page .private-file-placeholder {
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 20px;
+
+    color: var(--gallery-rose);
+
+    font: 600 10px/2 "Raleway", sans-serif;
+    letter-spacing: 2px;
+
+    text-align: center;
+}
+
+
+/* HOVER PREVIEW LABEL */
+
+.client-gallery-page .private-preview-overlay {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    padding: 18px 12px;
+
+    background: rgba(8, 6, 7, .85);
+
+    color: white;
+
+    font: 600 9px/1.6 "Raleway", sans-serif;
+    letter-spacing: 2px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform: translateY(100%);
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+}
+
+.client-gallery-page
+.private-file-preview:hover:not(:disabled)
+.private-preview-overlay,
+
+.client-gallery-page
+.private-file-preview:focus-visible
+.private-preview-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.client-gallery-page
+.private-file-preview:disabled
+.private-preview-overlay {
+    display: none;
+}
+
+
+/* KEEP UNAVAILABLE FILE PREVIEWS VISIBLE */
+
+.client-gallery-page main .private-file-preview:disabled {
+    opacity: 1;
+    cursor: default;
+}
+
+
+/* ==========================================
+   19 | INDIVIDUAL FILE INFORMATION
+   ========================================== */
+
+.client-gallery-page .private-file-information {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    min-width: 0;
+    padding: 16px;
+}
+
+.client-gallery-page .private-file-information p {
+    margin: 6px 0;
+
+    overflow-wrap: anywhere;
+}
+
+.client-gallery-page .private-file-name {
+    color: var(--gallery-ivory);
+
+    font: 500 12px/1.8 "Raleway", sans-serif;
+}
+
+.client-gallery-page .private-file-information .eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.client-gallery-page .private-file-information .muted {
+    margin-bottom: 18px;
+}
+
+.client-gallery-page .private-file-information button {
+    width: 100%;
+    margin-top: auto;
+
+    padding: 14px 10px;
+
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+
+/* ==========================================
+   20 | CENTERED FULL-SIZE MEDIA LIGHTBOX
+
+   Photographs retain their proportions.
+   No stretching or excessive enlargement.
+   ========================================== */
+
+.client-gallery-page #galleryLightbox {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    max-width: none;
+    max-height: none;
+
+    margin: 0;
+    padding: 24px;
+
+    background: transparent;
+    border: none;
+
+    color: var(--gallery-ivory);
+
+    overflow: auto;
+
+    box-sizing: border-box;
+}
+
+.client-gallery-page #galleryLightbox:not([open]) {
+    display: none !important;
+}
+
+.client-gallery-page #galleryLightbox[open] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-gallery-page #galleryLightbox::backdrop {
+    background: rgba(0, 0, 0, .92);
+    backdrop-filter: blur(6px);
+}
+
+
+/* PREVENT PAGE SCROLLING BEHIND THE LIGHTBOX */
+
+body.client-gallery-page:has(#galleryLightbox[open]),
+body.client-gallery-page.gallery-lightbox-open {
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   21 | LIGHTBOX FRAME
+   ========================================== */
+
+.client-gallery-page .gallery-lightbox-frame {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: fit-content;
+    max-width: 100%;
+    min-width: 0;
+
+    max-height: 100%;
+    margin: auto;
+    padding: 18px;
+
+    background: #100607;
+    border: 1px solid var(--gallery-border);
+
+    box-shadow: 0 25px 100px rgba(0, 0, 0, .6);
+
+    overflow: auto;
+}
+
+.client-gallery-page .gallery-lightbox-media {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    min-width: 0;
+
+    background: #080607;
+}
+
+
+/* ==========================================
+   22 | FULL-SIZE PHOTO AND VIDEO
+
+   Maximum desktop width: 1100px.
+   Maximum desktop height: 70% of viewport.
+   ========================================== */
+
+.client-gallery-page #galleryLightboxImage {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: min(75vw, 1100px);
+    max-height: 70vh;
+    max-height: 70dvh;
+
+    object-fit: contain;
+}
+
+.client-gallery-page #galleryLightboxVideo {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: min(75vw, 1100px);
+    max-height: 70vh;
+    max-height: 70dvh;
+
+    background: black;
+    object-fit: contain;
+}
+
+
+/* NON-PREVIEWABLE FILES */
+
+.client-gallery-page #galleryLightboxFallback {
+    display: grid;
+    place-items: center;
+
+    width: min(65vw, 650px);
+    min-height: 200px;
+
+    margin: 0;
+    padding: 40px;
+
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   23 | LIGHTBOX CLOSE BUTTON
+
+   X positioned in the upper-right corner.
+   ========================================== */
+
+.client-gallery-page #galleryLightboxClose {
+    position: absolute;
+
+    top: 28px;
+    right: 28px;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    background: rgba(8, 6, 7, .85);
+
+    border: 1px solid rgba(240, 234, 226, .5);
+    border-radius: 50%;
+
+    color: white;
+
+    font: 300 30px/1 "Poppins", sans-serif;
+
+    cursor: pointer;
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease;
+}
+
+.client-gallery-page #galleryLightboxClose:hover {
+    background: var(--gallery-burgundy);
+    border-color: var(--gallery-rose);
+}
+
+
+/* ==========================================
+   24 | PREVIOUS AND NEXT PHOTO BUTTONS
+   ========================================== */
+
+.client-gallery-page .gallery-lightbox-arrow {
+    position: absolute;
+
+    top: 42%;
+    z-index: 9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 50px;
+
+    padding: 0;
+
+    background: rgba(8, 6, 7, .8);
+
+    border: 1px solid rgba(240, 234, 226, .35);
+    border-radius: 0;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transform: translateY(-50%);
+
+    transition:
+        background-color .3s ease,
+        opacity .3s ease;
+}
+
+.client-gallery-page .gallery-lightbox-arrow.previous {
+    left: 24px;
+}
+
+.client-gallery-page .gallery-lightbox-arrow.next {
+    right: 24px;
+}
+
+.client-gallery-page .gallery-lightbox-arrow:hover:not(:disabled) {
+    background: var(--gallery-burgundy);
+}
+
+.client-gallery-page .gallery-lightbox-arrow:disabled {
+    opacity: .3;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   25 | LIGHTBOX FILE INFORMATION
+   ========================================== */
+
+.client-gallery-page .gallery-lightbox-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    width: 100%;
+    min-width: 0;
+
+    gap: 18px;
+
+    padding: 20px 0 0;
+}
+
+.client-gallery-page .gallery-lightbox-details > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.client-gallery-page #lightboxFilename {
+    margin: 0 0 8px;
+
+    color: var(--gallery-ivory);
+
+    font: 500 12px/1.8 "Raleway", sans-serif;
+
+    overflow-wrap: anywhere;
+}
+
+.client-gallery-page #galleryLightboxCounter {
+    margin: 0;
+}
+
+
+/* LIGHTBOX DOWNLOAD BUTTON */
+
+.client-gallery-page #galleryLightboxDownload {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+    max-width: 100%;
+
+    padding: 14px 18px;
+
+    background: var(--gallery-burgundy);
+
+    border: 1px solid #a64d59;
+    border-radius: 0;
+
+    color: white;
+
+    font: 600 10px/1.6 "Raleway", sans-serif;
+    letter-spacing: 1.5px;
+
+    text-align: center;
+    overflow-wrap: anywhere;
+
+    cursor: pointer;
+}
+
+.client-gallery-page #galleryLightboxDownload:hover:not(:disabled) {
+    background: var(--gallery-red);
+}
+
+.client-gallery-page #galleryLightboxDownload:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   26 | STATUS AND FEEDBACK MESSAGES
+   ========================================== */
+
+.client-gallery-page #galleryMessage,
+.client-gallery-page #galleryDownloadStatus,
+.client-gallery-page #galleryLightboxStatus,
+.client-gallery-page #galleryAccessStatus {
+    color: var(--gallery-muted);
+
+    font: 400 13px/1.8 "Raleway", sans-serif;
+
+    overflow-wrap: anywhere;
+}
+
+.client-gallery-page #galleryMessage:not(:empty),
+.client-gallery-page #galleryDownloadStatus:not(:empty) {
+    padding: 15px 18px;
+    margin: 20px 0;
+
+    background: var(--gallery-card);
+    border-left: 2px solid var(--gallery-rose);
+}
+
+.client-gallery-page #galleryLightboxStatus {
+    align-self: stretch;
+    margin: 12px 0 0;
+}
+
+.client-gallery-page #galleryMessage:empty,
+.client-gallery-page #galleryDownloadStatus:empty,
+.client-gallery-page #galleryLightboxStatus:empty {
+    margin: 0;
+}
+
+.client-gallery-page .is-error,
+.client-gallery-page .error {
+    color: #ff8888 !important;
+}
+
+.client-gallery-page .success {
+    color: var(--gallery-green) !important;
+}
+
+
+/* ==========================================
+   27 | CLIENT SUPPORT
+   ========================================== */
+
+.client-gallery-page .gallery-support {
+    background: linear-gradient(
+        135deg,
+        #300e16,
+        #16070b
+    );
+}
+
+.client-gallery-page .gallery-support .muted {
+    max-width: 650px;
+}
+
+.client-gallery-page .gallery-support .secondary {
+    margin-top: 20px;
+}
+
+
+/* ==========================================
+   28 | BOOK ANOTHER SESSION
+   ========================================== */
+
+.client-gallery-page .gallery-outro {
+    margin-top: 55px;
+    padding: 60px 25px;
+
+    border-top: 1px solid var(--gallery-border);
+
+    text-align: center;
+}
+
+.client-gallery-page .gallery-outro h2 {
+    max-width: 850px;
+    margin: 20px auto;
+
+    font-size: clamp(30px, 5vw, 65px);
+    font-weight: 300;
+}
+
+.client-gallery-page .gallery-outro .muted {
+    margin-bottom: 25px;
+}
+
+
+/* ==========================================
+   29 | ACCESSIBILITY
+   ========================================== */
+
+.client-gallery-page a:focus-visible,
+.client-gallery-page button:focus-visible,
+.client-gallery-page input:focus-visible,
+.client-gallery-page select:focus-visible {
+    outline: 2px solid var(--gallery-rose);
+    outline-offset: 3px;
+}
+
+.client-gallery-page button:disabled {
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   30 | TABLET RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 1100px) {
+
+    .client-gallery-page .client-gallery-main {
+        padding: 65px 5% 90px;
+    }
+
+    .client-gallery-page .collection-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .client-gallery-page .private-gallery-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+    .client-gallery-page .gallery-navigation {
+        gap: 8px 20px;
+    }
+
+}
+
+
+/* ==========================================
+   31 | MOBILE RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 760px) {
+
+    .client-gallery-page .client-gallery-main {
+        padding: 45px 5% 75px;
+    }
+
+    .client-gallery-page .client-gallery-hero {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 25px;
+    }
+
+    .client-gallery-page .client-gallery-hero h1 {
+        font-size: clamp(35px, 9vw, 65px);
+        letter-spacing: -1px;
+    }
+
+    .client-gallery-page .gallery-hero-actions {
+        width: 100%;
+    }
+
+    .client-gallery-page .gallery-navigation {
+        flex-wrap: nowrap;
+
+        gap: 20px;
+
+        overflow-x: auto;
+
+        scrollbar-width: thin;
+        scrollbar-color:
+            var(--gallery-burgundy)
+            var(--gallery-dark);
+    }
+
+    .client-gallery-page .gallery-navigation a {
+        flex-shrink: 0;
+
+        white-space: nowrap;
+        font-size: 9px;
+    }
+
+    .client-gallery-page .gallery-search,
+    .client-gallery-page .gallery-sort {
+        display: flex;
+
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .client-gallery-page .collection-grid {
+        gap: 14px;
+    }
+
+    .client-gallery-page .collection-content {
+        padding: 18px;
+    }
+
+    .client-gallery-page .private-gallery-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .client-gallery-page .gallery-information-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .client-gallery-page .gallery-download-banner {
+        padding: 22px;
+    }
+
+    .client-gallery-page #downloadCollection {
+        width: 100%;
+    }
+
+    .client-gallery-page #galleryLightbox {
+        padding: 10px;
+    }
+
+    .client-gallery-page .gallery-lightbox-frame {
+        padding: 12px;
+    }
+
+    .client-gallery-page #galleryLightboxImage,
+    .client-gallery-page #galleryLightboxVideo {
+        max-width: min(85vw, 680px);
+        max-height: 65vh;
+        max-height: 65dvh;
+    }
+
+    .client-gallery-page #galleryLightboxClose {
+        top: 20px;
+        right: 20px;
+    }
+
+    .client-gallery-page .gallery-lightbox-arrow.previous {
+        left: 16px;
+    }
+
+    .client-gallery-page .gallery-lightbox-arrow.next {
+        right: 16px;
+    }
+
+}
+
+
+/* ==========================================
+   32 | SMALL PHONE SCREENS
+   ========================================== */
+
+@media (max-width: 480px) {
+
+    .client-gallery-page .gallery-access {
+        margin: 15px auto;
+    }
+
+    .client-gallery-page .client-gallery-hero h1 {
+        font-size: clamp(30px, 9vw, 42px);
+    }
+
+    .client-gallery-page .collection-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .client-gallery-page .gallery-primary {
+        width: 100%;
+    }
+
+    .client-gallery-page .gallery-information-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .client-gallery-page .gallery-information-grid > div {
+        padding: 18px;
+    }
+
+    .client-gallery-page .gallery-filters {
+        gap: 8px;
+    }
+
+    .client-gallery-page
+    main
+    .gallery-filters
+    .gallery-filter {
+        width: auto;
+
+        flex: 1 1 auto;
+
+        padding: 12px;
+
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .client-gallery-page .private-gallery-grid {
+        gap: 10px;
+    }
+
+    .client-gallery-page .private-file-information {
+        padding: 10px;
+    }
+
+    .client-gallery-page .private-file-name {
+        font-size: 11px;
+    }
+
+    .client-gallery-page .private-file-information button {
+        padding: 12px 7px;
+
+        font-size: 8px;
+        letter-spacing: .5px;
+    }
+
+    .client-gallery-page input[type="search"],
+    .client-gallery-page .gallery-sort select {
+        font-size: 16px;
+    }
+
+    .client-gallery-page #galleryLightboxImage,
+    .client-gallery-page #galleryLightboxVideo {
+        max-width: 84vw;
+        max-height: 58vh;
+        max-height: 58dvh;
+    }
+
+    .client-gallery-page .gallery-lightbox-details {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+    .client-gallery-page #galleryLightboxDownload {
+        width: 100%;
+    }
+
+    .client-gallery-page .gallery-outro {
+        margin-top: 30px;
+        padding: 40px 10px;
+    }
+
+}
+
+
+/* ==========================================
+   33 | TOUCHSCREEN DEVICES
+
+   Show preview labels without requiring hover.
+   ========================================== */
+
+@media (hover: none) {
+
+    .client-gallery-page
+    .private-file-preview:not(:disabled)
+    .private-preview-overlay {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==========================================
+   34 | REDUCED MOTION ACCESSIBILITY
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .client-gallery-page *,
+    .client-gallery-page *::before,
+    .client-gallery-page *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+
+
+/* ==========================================
+   END OF MONSE MEDIA PRIVATE GALLERY CSS
+   ========================================== */
