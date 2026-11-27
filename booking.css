@@ -1,0 +1,1253 @@
+/* ==========================================
+   MONSE MEDIA | CLIENT BOOKING PAGE
+   Author: Monse Montes
+   Filename: booking.css
+
+   Base styles: client.css
+   Navigation: index.html
+   ========================================== */
+
+
+/* 01 | BRAND COLORS */
+
+.booking-page {
+    --booking-black: #080607;
+    --booking-dark: #100607;
+    --booking-wine: #3c0008;
+    --booking-burgundy: #852a32;
+    --booking-red: #a43a48;
+    --booking-ivory: #f0eae2;
+    --booking-cream: #e5d9ca;
+    --booking-rose: #d79ca6;
+    --booking-muted: #c5aeaa;
+    --booking-border: #493035;
+    --booking-card: #18090d;
+    --booking-gold: #e6c878;
+    --booking-green: #a8d6bd;
+}
+
+
+/* ==========================================
+   02 | GENERAL PAGE SETTINGS
+   ========================================== */
+
+.booking-page {
+    min-height: 100vh;
+
+    background: var(--booking-dark);
+    color: var(--booking-ivory);
+
+    font-family: "Raleway", sans-serif;
+
+    color-scheme: dark;
+}
+
+.booking-page [hidden],
+.booking-page .hidden {
+    display: none !important;
+}
+
+.booking-page .booking-main {
+    width: 100%;
+    max-width: 1450px;
+    min-height: 75vh;
+
+    margin: 0 auto;
+    padding: 75px 6% 100px;
+}
+
+
+/* ==========================================
+   03 | BOOKING HERO SECTION
+   ========================================== */
+
+.booking-page .booking-hero {
+    max-width: 1100px;
+
+    padding-bottom: 45px;
+    margin-bottom: 35px;
+
+    border-bottom: 1px solid var(--booking-border);
+}
+
+.booking-page .booking-hero h1 {
+    margin: 22px 0 28px;
+
+    color: var(--booking-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(42px, 7.5vw, 110px);
+    font-weight: 300;
+
+    line-height: 1.05;
+    letter-spacing: -3px;
+
+    overflow-wrap: anywhere;
+}
+
+.booking-page .booking-hero h1 span {
+    color: var(--booking-rose);
+}
+
+.booking-page .booking-hero > .muted {
+    max-width: 700px;
+
+    font-size: 14px;
+    line-height: 2;
+}
+
+
+/* BACK TO DASHBOARD */
+
+.booking-page .booking-back-link {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 44px;
+    margin-bottom: 25px;
+
+    color: var(--booking-rose);
+
+    font: 600 10px/1.8 "Raleway", sans-serif;
+    letter-spacing: 2px;
+
+    transition: color .3s ease;
+}
+
+.booking-page .booking-back-link:hover {
+    color: var(--booking-ivory);
+}
+
+
+/* ==========================================
+   04 | ACCOUNT ACCESS SCREEN
+   ========================================== */
+
+.booking-page .booking-access {
+    max-width: 750px;
+
+    margin: 35px auto;
+    padding: clamp(25px, 5vw, 60px);
+}
+
+.booking-page .booking-access .secondary {
+    margin: 20px 0;
+}
+
+.booking-page .booking-text-link {
+    color: var(--booking-rose);
+
+    text-decoration: underline;
+    text-underline-offset: 4px;
+
+    transition: color .3s ease;
+}
+
+.booking-page .booking-text-link:hover {
+    color: var(--booking-ivory);
+}
+
+
+/* VERIFIED CLIENT WORKSPACE */
+
+.booking-page #bookingWorkspace {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* ==========================================
+   05 | CLIENT ACCOUNT NAVIGATION
+   ========================================== */
+
+.booking-page .booking-navigation {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 8px 28px;
+
+    padding: 12px 0;
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid var(--booking-border);
+}
+
+.booking-page .booking-navigation a {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 44px;
+
+    padding: 12px 0;
+
+    color: var(--booking-muted);
+
+    font: 600 10px/1.6 "Raleway", sans-serif;
+    letter-spacing: 1.5px;
+
+    transition: color .3s ease;
+}
+
+.booking-page .booking-navigation a:hover {
+    color: var(--booking-ivory);
+}
+
+.booking-page
+.booking-navigation
+a[aria-current="page"] {
+    color: var(--booking-rose);
+}
+
+.booking-page
+.booking-navigation
+a[aria-current="page"]::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 2px;
+
+    background: var(--booking-rose);
+}
+
+
+/* ==========================================
+   06 | VERIFIED CLIENT ACCOUNT SUMMARY
+   ========================================== */
+
+.booking-page .booking-account-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+    padding: 25px 30px;
+
+    background: var(--booking-card);
+
+    border: 1px solid var(--booking-border);
+    border-left: 3px solid var(--booking-burgundy);
+}
+
+.booking-page .booking-account-summary > div {
+    min-width: 0;
+}
+
+.booking-page .booking-account-summary .eyebrow {
+    margin: 0 0 8px;
+}
+
+.booking-page #bookingClientName {
+    margin: 8px 0;
+
+    color: var(--booking-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 400;
+
+    overflow-wrap: anywhere;
+}
+
+.booking-page #bookingClientEmail {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   07 | TWO COLUMN BOOKING LAYOUT
+
+   Left: Booking request form
+   Right: Booking process and support
+   ========================================== */
+
+.booking-page .booking-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.8fr)
+        minmax(280px, 1fr);
+
+    align-items: start;
+    gap: 30px;
+}
+
+.booking-page .booking-layout > * {
+    min-width: 0;
+}
+
+.booking-page .booking-form-panel {
+    min-width: 0;
+
+    padding: clamp(25px, 4vw, 45px);
+}
+
+.booking-page .booking-form-panel > h2 {
+    margin-bottom: 15px;
+}
+
+.booking-page .booking-form-panel > .muted {
+    margin-bottom: 30px;
+}
+
+
+/* ==========================================
+   08 | BOOKING FORM SETTINGS
+   ========================================== */
+
+.booking-page #booking-form {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+}
+
+.booking-page #bookingFields {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+}
+
+.booking-page #bookingFields:disabled {
+    opacity: .65;
+}
+
+.booking-page #bookingFields:disabled input,
+.booking-page #bookingFields:disabled select,
+.booking-page #bookingFields:disabled textarea,
+.booking-page #bookingFields:disabled button {
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   09 | INDIVIDUAL FORM SECTIONS
+   ========================================== */
+
+.booking-page .booking-form-section {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    gap: 12px;
+}
+
+.booking-page .booking-form-section > .eyebrow {
+    margin: 0;
+}
+
+.booking-page .booking-form-section h3 {
+    margin: 8px 0 12px;
+
+    color: var(--booking-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 400;
+
+    letter-spacing: -.5px;
+    line-height: 1.3;
+
+    overflow-wrap: anywhere;
+}
+
+.booking-page .booking-form-section > .muted {
+    margin: 0 0 10px;
+}
+
+.booking-page .booking-form-section label:not(.checkline) {
+    display: block;
+
+    margin: 15px 0 2px;
+
+    color: var(--booking-rose);
+
+    font: 600 10px/1.8 "Raleway", sans-serif;
+    letter-spacing: 2px;
+}
+
+
+/* ==========================================
+   10 | FORM INPUTS AND DROPDOWNS
+   ========================================== */
+
+.booking-page #booking-form input:not([type="checkbox"]),
+.booking-page #booking-form select,
+.booking-page #booking-form textarea {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 54px;
+
+    padding: 16px 18px;
+
+    background: rgba(8, 6, 7, .35);
+
+    border: 1px solid #65464a;
+    border-radius: 0;
+
+    color: var(--booking-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    outline: none;
+
+    transition:
+        border-color .3s ease,
+        background-color .3s ease;
+}
+
+.booking-page #booking-form input:focus,
+.booking-page #booking-form textarea:focus,
+.booking-page #booking-form select:focus {
+    background: var(--booking-card);
+    border-color: var(--booking-rose);
+}
+
+.booking-page #booking-form input::placeholder,
+.booking-page #booking-form textarea::placeholder {
+    color: #a48d90;
+    opacity: 1;
+}
+
+.booking-page #booking-form select {
+    cursor: pointer;
+    color-scheme: dark;
+}
+
+.booking-page #booking-form select option {
+    background: var(--booking-dark);
+    color: var(--booking-ivory);
+}
+
+
+/* ==========================================
+   11 | DATE AND TIME FIELDS
+   ========================================== */
+
+.booking-page .booking-field-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.booking-page .booking-field {
+    min-width: 0;
+}
+
+.booking-page .booking-field label {
+    margin-bottom: 12px;
+}
+
+.booking-page input[type="date"],
+.booking-page input[type="time"] {
+    color-scheme: dark;
+}
+
+.booking-page
+input[type="date"]::-webkit-calendar-picker-indicator,
+
+.booking-page
+input[type="time"]::-webkit-calendar-picker-indicator {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.booking-page
+input[type="date"]::-webkit-calendar-picker-indicator:hover,
+
+.booking-page
+input[type="time"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+
+/* ==========================================
+   12 | CREATIVE VISION TEXTAREA
+   ========================================== */
+
+.booking-page #booking-message {
+    min-height: 250px;
+
+    resize: vertical;
+
+    line-height: 1.9;
+}
+
+
+/* ==========================================
+   13 | FORM INFORMATION NOTES
+   ========================================== */
+
+.booking-page .booking-form-section .client-info-note {
+    margin: 18px 0 0;
+
+    padding: 20px;
+
+    background: var(--booking-card);
+
+    border-left: 2px solid var(--booking-burgundy);
+
+    color: var(--booking-muted);
+
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.booking-page #booking-form .client-divider {
+    margin: 38px 0;
+}
+
+
+/* ==========================================
+   14 | OPTIONAL SMS CONSENT
+   ========================================== */
+
+.booking-page .booking-sms-consent {
+    margin-top: 10px;
+    padding: 25px;
+
+    background: var(--booking-card);
+
+    border: 1px solid var(--booking-border);
+    border-left: 3px solid var(--booking-burgundy);
+}
+
+.booking-page .booking-sms-consent .checkline {
+    margin: 0 0 25px;
+}
+
+.booking-page .checkline {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+
+    color: var(--booking-cream);
+
+    font: 400 13px/1.9 "Raleway", sans-serif;
+
+    cursor: pointer;
+}
+
+.booking-page .checkline input[type="checkbox"] {
+    flex: 0 0 20px;
+
+    width: 20px;
+    height: 20px;
+
+    margin: 3px 0 0;
+
+    accent-color: var(--booking-burgundy);
+
+    cursor: pointer;
+}
+
+.booking-page .checkline span {
+    flex: 1;
+    min-width: 0;
+}
+
+.booking-page .booking-sms-consent:has(
+    #booking-sms-consent:checked
+) {
+    border-color: var(--booking-rose);
+
+    background: linear-gradient(
+        135deg,
+        #260c13,
+        #18090d
+    );
+}
+
+
+/* ==========================================
+   15 | AUTOMATED REMINDER TIMELINE
+   ========================================== */
+
+.booking-page .booking-reminder-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+
+    margin: 20px 0 25px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.booking-page .booking-reminder-list li {
+    position: relative;
+
+    margin-left: 8px;
+    padding: 5px 0 25px 25px;
+
+    border-left: 1px solid var(--booking-border);
+}
+
+.booking-page .booking-reminder-list li:last-child {
+    border-left-color: transparent;
+    padding-bottom: 5px;
+}
+
+
+/* TIMELINE DOT */
+
+.booking-page .booking-reminder-list li::before {
+    content: "";
+
+    position: absolute;
+
+    top: 9px;
+    left: -6px;
+
+    width: 11px;
+    height: 11px;
+
+    background: var(--booking-burgundy);
+
+    border: 2px solid var(--booking-rose);
+    border-radius: 50%;
+}
+
+.booking-page .booking-reminder-list strong {
+    display: block;
+
+    color: var(--booking-rose);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+    line-height: 1.8;
+}
+
+.booking-page .booking-reminder-list p {
+    margin: 6px 0 0;
+}
+
+
+/* SMS CONSENT TERMS */
+
+.booking-page #smsTerms {
+    margin: 20px 0 0;
+    padding-top: 20px;
+
+    border-top: 1px solid var(--booking-border);
+
+    color: var(--booking-muted);
+
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+
+/* ==========================================
+   16 | BOOKING ACKNOWLEDGMENT
+   ========================================== */
+
+.booking-page .booking-form-section
+.checkline:has(#bookingAcknowledgment) {
+    padding: 18px;
+
+    background: var(--booking-card);
+    border: 1px solid var(--booking-border);
+}
+
+.booking-page .booking-form-section
+.checkline:has(#bookingAcknowledgment:checked) {
+    border-color: var(--booking-rose);
+}
+
+
+/* ==========================================
+   17 | BOOKING SUBMISSION BUTTON
+   ========================================== */
+
+.booking-page main #submitBooking {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 58px;
+
+    margin-top: 15px;
+    padding: 20px 25px;
+
+    background: var(--booking-burgundy);
+
+    border: 1px solid #a64d59;
+    border-radius: 0;
+
+    color: white;
+
+    font: 600 11px/1.8 "Raleway", sans-serif;
+    letter-spacing: 2px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease,
+        opacity .3s ease;
+}
+
+.booking-page main #submitBooking:hover:not(:disabled) {
+    background: var(--booking-red);
+    border-color: var(--booking-rose);
+}
+
+.booking-page main #submitBooking:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   18 | BOOKING SUBMISSION FEEDBACK
+   ========================================== */
+
+.booking-page #booking-status {
+    color: var(--booking-muted);
+
+    font: 400 13px/1.9 "Raleway", sans-serif;
+
+    overflow-wrap: anywhere;
+}
+
+.booking-page #booking-status:empty {
+    margin: 0;
+    padding: 0;
+}
+
+.booking-page #booking-status:not(:empty) {
+    margin-top: 25px;
+    padding: 20px;
+
+    background: var(--booking-card);
+
+    border: 1px solid var(--booking-border);
+    border-left: 3px solid var(--booking-rose);
+}
+
+
+/* SUCCESS MESSAGE */
+
+.booking-page #booking-status.success {
+    color: var(--booking-green);
+
+    background: rgba(60, 95, 75, .12);
+
+    border-color: #547a67;
+}
+
+
+/* ERROR MESSAGE */
+
+.booking-page #booking-status.error {
+    color: #ffaaaa;
+
+    background: rgba(133, 42, 50, .15);
+
+    border-color: var(--booking-burgundy);
+}
+
+.booking-page #bookingAccessStatus.is-error {
+    color: #ffaaaa;
+}
+
+.booking-page #booking-status a {
+    display: inline-block;
+
+    color: inherit;
+
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+
+/* ==========================================
+   19 | BOOKING INFORMATION SIDEBAR
+   ========================================== */
+
+.booking-page .booking-sidebar {
+    position: sticky;
+    top: 25px;
+
+    min-width: 0;
+}
+
+.booking-page .booking-sidebar .panel {
+    padding: 28px;
+
+    margin-bottom: 25px;
+}
+
+.booking-page .booking-sidebar h2 {
+    margin: 15px 0 30px;
+
+    font-size: clamp(25px, 3vw, 35px);
+    font-weight: 400;
+
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.booking-page .booking-sidebar h3 {
+    color: var(--booking-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   20 | BOOKING PROCESS TIMELINE
+   ========================================== */
+
+.booking-page .booking-process-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.booking-page .booking-process-list li {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        38px minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 15px;
+
+    padding-bottom: 28px;
+}
+
+.booking-page .booking-process-list li:last-child {
+    padding-bottom: 0;
+}
+
+
+/* CONNECTING TIMELINE LINE */
+
+.booking-page
+.booking-process-list
+li:not(:last-child)::before {
+    content: "";
+
+    position: absolute;
+
+    top: 38px;
+    bottom: 0;
+    left: 18px;
+
+    width: 1px;
+
+    background: var(--booking-border);
+}
+
+
+/* STEP NUMBER */
+
+.booking-page .booking-step-number {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    background: var(--booking-card);
+
+    border: 1px solid var(--booking-burgundy);
+
+    color: var(--booking-rose);
+
+    font: 500 12px "Raleway", sans-serif;
+
+    letter-spacing: 1px;
+}
+
+.booking-page .booking-process-list h3 {
+    margin: 4px 0 8px;
+
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.booking-page .booking-process-list p {
+    margin: 0;
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   21 | PREVIOUS CLIENT GALLERIES
+   ========================================== */
+
+.booking-page .booking-past-work {
+    background: linear-gradient(
+        135deg,
+        #300e16,
+        #18090d
+    );
+}
+
+.booking-page .booking-past-work h3 {
+    margin: 15px 0;
+}
+
+.booking-page .booking-past-work .secondary {
+    width: 100%;
+    margin-top: 20px;
+
+    padding: 15px 12px;
+
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+
+/* ==========================================
+   22 | CLIENT SUPPORT PANEL
+   ========================================== */
+
+.booking-page .booking-support h3 {
+    margin: 15px 0;
+}
+
+.booking-page .booking-support .secondary {
+    width: 100%;
+    margin-top: 20px;
+
+    padding: 15px 12px;
+
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+
+/* ==========================================
+   23 | BOOKING PAGE OUTRO
+   ========================================== */
+
+.booking-page .booking-outro {
+    margin-top: 55px;
+    padding: 70px 25px 30px;
+
+    border-top: 1px solid var(--booking-border);
+
+    text-align: center;
+}
+
+.booking-page .booking-outro h2 {
+    max-width: 1000px;
+
+    margin: 25px auto;
+
+    color: var(--booking-ivory);
+
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(30px, 5.5vw, 70px);
+    font-weight: 300;
+
+    letter-spacing: -1.5px;
+    line-height: 1.15;
+
+    overflow-wrap: anywhere;
+}
+
+.booking-page .booking-outro .muted {
+    max-width: 550px;
+    margin: 20px auto;
+
+    font-size: 14px;
+    line-height: 2;
+}
+
+
+/* ==========================================
+   24 | KEYBOARD ACCESSIBILITY
+   ========================================== */
+
+.booking-page a:focus-visible,
+.booking-page button:focus-visible,
+.booking-page input:focus-visible,
+.booking-page textarea:focus-visible,
+.booking-page select:focus-visible {
+    outline: 2px solid var(--booking-rose);
+    outline-offset: 3px;
+}
+
+.booking-page button:disabled {
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   25 | TABLET RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 1100px) {
+
+    .booking-page .booking-main {
+        padding: 65px 5% 90px;
+    }
+
+    .booking-page .booking-layout {
+        grid-template-columns:
+            minmax(0, 1.5fr)
+            minmax(260px, 1fr);
+
+        gap: 22px;
+    }
+
+    .booking-page .booking-sidebar .panel {
+        padding: 22px;
+    }
+
+    .booking-page .booking-navigation {
+        gap: 8px 20px;
+    }
+
+    .booking-page .booking-field-grid {
+        gap: 14px;
+    }
+
+}
+
+
+/* ==========================================
+   26 | SMALL TABLET RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .booking-page .booking-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .booking-page .booking-sidebar {
+        position: static;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
+    }
+
+    .booking-page .booking-process {
+        grid-column: 1 / -1;
+    }
+
+    .booking-page .booking-sidebar .panel {
+        margin: 0;
+    }
+
+}
+
+
+/* ==========================================
+   27 | MOBILE RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 760px) {
+
+    .booking-page .booking-main {
+        padding: 45px 5% 75px;
+    }
+
+    .booking-page .booking-hero {
+        padding-bottom: 30px;
+    }
+
+    .booking-page .booking-hero h1 {
+        font-size: clamp(38px, 9vw, 70px);
+        letter-spacing: -1px;
+    }
+
+    .booking-page .booking-navigation {
+        flex-wrap: nowrap;
+
+        gap: 20px;
+        padding-bottom: 15px;
+
+        overflow-x: auto;
+
+        scrollbar-width: thin;
+        scrollbar-color:
+            var(--booking-burgundy)
+            var(--booking-dark);
+    }
+
+    .booking-page .booking-navigation a {
+        flex-shrink: 0;
+
+        font-size: 9px;
+        white-space: nowrap;
+    }
+
+    .booking-page .booking-form-panel {
+        padding: 28px 22px;
+    }
+
+    .booking-page .booking-account-summary {
+        padding: 22px;
+    }
+
+    .booking-page .booking-sms-consent {
+        padding: 20px;
+    }
+
+    .booking-page #booking-message {
+        min-height: 220px;
+    }
+
+    .booking-page #booking-form .client-divider {
+        margin: 30px 0;
+    }
+
+    .booking-page .booking-outro {
+        padding: 45px 15px 20px;
+    }
+
+}
+
+
+/* ==========================================
+   28 | SMALL PHONE SCREENS
+   ========================================== */
+
+@media (max-width: 480px) {
+
+    .booking-page .booking-hero h1 {
+        font-size: clamp(30px, 9vw, 44px);
+    }
+
+    .booking-page .booking-access {
+        margin: 15px auto;
+    }
+
+    .booking-page .booking-form-panel {
+        padding: 25px 18px;
+    }
+
+    .booking-page .booking-field-grid {
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 10px;
+    }
+
+    .booking-page .booking-sidebar {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .booking-page .booking-process {
+        grid-column: auto;
+    }
+
+    .booking-page #booking-form
+    input:not([type="checkbox"]),
+
+    .booking-page #booking-form select,
+    .booking-page #booking-form textarea {
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .booking-page .booking-form-section h3 {
+        font-size: 23px;
+    }
+
+    .booking-page .booking-sms-consent {
+        padding: 16px;
+    }
+
+    .booking-page .checkline {
+        font-size: 12px;
+    }
+
+    .booking-page main #submitBooking {
+        padding: 18px 12px;
+
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .booking-page .booking-account-summary .secondary {
+        width: 100%;
+    }
+
+    .booking-page .booking-outro {
+        margin-top: 35px;
+        padding: 35px 10px 15px;
+    }
+
+}
+
+
+/* ==========================================
+   29 | REDUCED MOTION ACCESSIBILITY
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .booking-page *,
+    .booking-page *::before,
+    .booking-page *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+
+
+/* ==========================================
+   END OF MONSE MEDIA BOOKING STYLESHEET
+   ========================================== */
