@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- MONSE MEDIA | ADMIN DASHBOARD -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Studio Dashboard | Monse Media</title>
+
+    <link rel="icon" type="image/gif" href="images/monse-logo.jpg.gif">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&amp;family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.typekit.net/njulgsa.css">
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+
+<body class="admin-page">
+
+    <!-- 01 | WEBSITE HEADER -->
+
+    <header class="site-header">
+
+        <a href="index.html" class="header-logo"
+           aria-label="Monse Media Home">
+
+            <img src="images/monse-logo.jpg.gif"
+                 alt="Monse Media Logo"
+                 class="header-logo-image">
+
+        </a>
+
+        <nav class="main-navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="client.html">CLIENT PORTAL</a></li>
+            </ul>
+        </nav>
+
+        <a href="contact.html" class="header-booking">
+            BOOK A SESSION ↗
+        </a>
+
+    </header>
+
+
+    <main class="admin-main">
+
+        <!-- 02 | STUDIO INTRODUCTION -->
+
+        <section class="admin-hero">
+
+            <p class="admin-eyebrow">
+                MONSE MEDIA / PRIVATE STUDIO ACCESS
+            </p>
+
+            <h1>STUDIO <span>DASHBOARD.</span></h1>
+
+            <p class="admin-muted">
+                Manage inquiries, review client information,
+                prepare contracts, coordinate sessions,
+                and deliver finished work.
+            </p>
+
+        </section>
+
+        <noscript>
+            <p class="admin-feedback">
+                Please enable JavaScript to use the studio dashboard.
+            </p>
+        </noscript>
+
+
+        <!-- 03 | OWNER LOGIN -->
+
+        <section id="loginView"
+                 class="admin-panel admin-login"
+                 aria-labelledby="loginHeading">
+
+            <p class="admin-eyebrow">OWNER ACCESS</p>
+
+            <h2 id="loginHeading">WELCOME BACK.</h2>
+
+            <p class="admin-muted">
+                Sign in to manage your Monse Media studio.
+            </p>
+
+            <form id="loginForm"
+                  method="post"
+                  action="/api/admin/login">
+
+                <label for="adminEmail">
+                    EMAIL ADDRESS
+                </label>
+
+                <input type="email"
+                       id="adminEmail"
+                       name="email"
+                       autocomplete="username"
+                       placeholder="Your admin email"
+                       required>
+
+                <label for="adminPassword">
+                    PASSWORD
+                </label>
+
+                <input type="password"
+                       id="adminPassword"
+                       name="password"
+                       autocomplete="current-password"
+                       placeholder="Your private password"
+                       required>
+
+                <button type="submit"
+                        id="loginButton"
+                        class="admin-button">
+
+                    ENTER MY STUDIO ↗
+
+                </button>
+
+            </form>
+
+            <p id="loginStatus"
+               class="admin-feedback"
+               role="status"
+               aria-live="polite"></p>
+
+        </section>
+
+
+        <!-- 04 | PRIVATE WORKSPACE -->
+
+        <section id="workspace"
+                 hidden
+                 aria-labelledby="workspaceHeading">
+
+            <div class="admin-toolbar">
+
+                <div>
+
+                    <p class="admin-eyebrow">
+                        STUDIO MANAGEMENT
+                    </p>
+
+                    <h2 id="workspaceHeading">
+                        YOUR PROJECTS
+                    </h2>
+
+                </div>
+
+                <div class="admin-toolbar-buttons">
+
+                    <button type="button"
+                            id="refreshProjects"
+                            class="admin-button-outline">
+
+                        REFRESH ↻
+
+                    </button>
+
+                    <button type="button"
+                            id="logoutButton"
+                            class="admin-button-outline">
+
+                        LOG OUT ↗
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <p id="adminMessage"
+               class="admin-feedback"
+               role="status"
+               aria-live="polite"></p>
+
+
+            <div class="admin-layout">
+
+                <!-- 05 | CLIENT INQUIRIES -->
+
+                <aside class="admin-panel admin-sidebar"
+                       aria-labelledby="inquiriesHeading">
+
+                    <p class="admin-eyebrow">
+                        01 / INCOMING REQUESTS
+                    </p>
+
+                    <h2 id="inquiriesHeading">
+                        INQUIRIES
+                    </h2>
+
+                    <p class="admin-muted">
+                        Select a client project to review its information.
+                    </p>
+
+                    <p id="projectCount"
+                       class="admin-project-count">
+
+                        0 PROJECTS
+
+                    </p>
+
+                    <div id="projectList"
+                         class="admin-project-list"></div>
+
+                    <p id="listEmpty"
+                       class="admin-muted"
+                       hidden>
+
+                        No inquiries received yet.
+
+                    </p>
+
+                </aside>
+
+
+                <div class="admin-details-column">
+
+                    <section id="emptySelection"
+                             class="admin-panel">
+
+                        <p class="admin-eyebrow">
+                            PROJECT REVIEW
+                        </p>
+
+                        <h2>SELECT A PROJECT.</h2>
+
+                        <p class="admin-muted">
+                            Choose an inquiry on the left to view
+                            client details, contracts, and delivery options.
+                        </p>
+
+                    </section>
+
+
+                    <div id="projectPanel" hidden>
+
+                        <!-- 06 | CLIENT AND PROJECT DETAILS -->
+
+                        <section class="admin-panel"
+                                 aria-labelledby="projectTitle">
+
+                            <p class="admin-eyebrow">
+                                02 / PROJECT DETAILS
+                            </p>
+
+                            <div class="admin-title-row">
+
+                                <h2 id="projectTitle">
+                                    PROJECT REVIEW
+                                </h2>
+
+                                <span id="projectStatus"
+                                      class="admin-status"></span>
+
+                            </div>
+
+                            <div class="admin-info-grid">
+
+                                <div>
+                                    <span class="admin-field-label">
+                                        CLIENT
+                                    </span>
+                                    <p id="detailName"></p>
+                                </div>
+
+                                <div>
+                                    <span class="admin-field-label">
+                                        EMAIL
+                                    </span>
+                                    <p>
+                                        <a id="detailEmail" href="#"></a>
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <span class="admin-field-label">
+                                        SERVICE
+                                    </span>
+                                    <p id="detailService"></p>
+                                </div>
+
+                                <div>
+                                    <span class="admin-field-label">
+                                        EVENT TYPE
+                                    </span>
+                                    <p id="detailEvent"></p>
+                                </div>
+
+                                <div>
+                                    <span class="admin-field-label">
+                                        EVENT DATE
+                                    </span>
+                                    <p id="detailDate"></p>
+                                </div>
+
+                                <div>
+                                    <span class="admin-field-label">
+                                        LOCATION
+                                    </span>
+                                    <p id="detailLocation"></p>
+                                </div>
+
+                            </div>
+
+                            <hr class="admin-divider">
+
+                            <span class="admin-field-label">
+                                PROJECT DESCRIPTION
+                            </span>
+
+                            <p id="detailMessage"
+                               class="admin-description"></p>
+
+                            <hr class="admin-divider">
+
+                            <span class="admin-field-label">
+                                CLIENT INSPIRATION
+                            </span>
+
+                            <p id="detailInspiration"
+                               class="admin-description"></p>
+
+                            <p>
+                                <a id="detailPinterest"
+                                   class="admin-text-link"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   href="#"
+                                   hidden>
+
+                                    VIEW INSPIRATION BOARD ↗
+
+                                </a>
+                            </p>
+
+                        </section>
+
+
+                        <!-- 07 | APPOINTMENT SCHEDULING -->
+
+                        <section class="admin-panel"
+                                 id="appointmentSection"
+                                 aria-labelledby="appointmentHeading">
+
+                            <p class="admin-eyebrow">
+                                03 / SESSION MANAGEMENT
+                            </p>
+
+                            <h2 id="appointmentHeading">
+                                SESSION DETAILS.
+                            </h2>
+
+                            <p class="admin-muted">
+                                Confirm or reschedule the appointment.
+                                Optional email reminders follow
+                                the client's account preferences.
+                            </p>
+
+                            <p class="admin-muted admin-small">
+                                Scheduling and automatic email delivery
+                                require a connected backend.
+                            </p>
+
+                            <form id="appointmentForm" method="post">
+
+                                <fieldset id="appointmentFields" disabled>
+
+                                    <label for="sessionDate">
+                                        CONFIRMED SESSION DATE
+                                    </label>
+
+                                    <input type="date"
+                                           id="sessionDate"
+                                           name="sessionDate"
+                                           required>
+
+                                    <label for="sessionTime">
+                                        CONFIRMED START TIME
+                                    </label>
+
+                                    <input type="time"
+                                           id="sessionTime"
+                                           name="sessionTime"
+                                           required>
+
+                                    <label for="sessionTimezone">
+                                        TIME ZONE (IANA)
+                                    </label>
+
+                                    <input type="text"
+                                           id="sessionTimezone"
+                                           name="sessionTimezone"
+                                           value="America/Chicago"
+                                           required>
+
+                                    <label for="sessionLocation">
+                                        CONFIRMED LOCATION
+                                    </label>
+
+                                    <input type="text"
+                                           id="sessionLocation"
+                                           name="sessionLocation"
+                                           required>
+
+                                    <button type="submit"
+                                            id="saveAppointment"
+                                            class="admin-button">
+
+                                        SAVE SESSION DETAILS ↗
+
+                                    </button>
+
+                                    <button type="button"
+                                            id="cancelAppointment"
+                                            class="admin-button-outline admin-danger">
+
+                                        CANCEL SESSION
+
+                                    </button>
+
+                                </fieldset>
+
+                            </form>
+
+                            <p id="appointmentStatus"
+                               class="admin-feedback"
+                               role="status"></p>
+
+                            <hr class="admin-divider">
+
+
+                            <!-- AUTOMATIC EMAIL REMINDERS -->
+
+                            <h3>EMAIL REMINDERS</h3>
+
+                            <div class="admin-info-grid">
+
+                                <div>
+
+                                    <span class="admin-field-label">
+                                        VERIFIED REMINDER EMAIL
+                                    </span>
+
+                                    <p id="detailReminderEmail"
+                                       class="admin-muted">
+
+                                        Not available
+
+                                    </p>
+
+                                </div>
+
+                                <div>
+
+                                    <span class="admin-field-label">
+                                        CLIENT EMAIL PREFERENCES
+                                    </span>
+
+                                    <p id="emailConsentStatus"
+                                       class="admin-muted">
+
+                                        Preferences unavailable
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <p id="emailServiceStatus"
+                               class="admin-muted admin-small"
+                               role="status"></p>
+
+                            <div class="admin-info-grid">
+
+                                <div>
+
+                                    <span class="admin-field-label">
+                                        ONE WEEK BEFORE
+                                    </span>
+
+                                    <p id="emailWeekStatus"
+                                       class="admin-muted">
+
+                                        Not available
+
+                                    </p>
+
+                                </div>
+
+                                <div>
+
+                                    <span class="admin-field-label">
+                                        ONE DAY BEFORE
+                                    </span>
+
+                                    <p id="emailDayStatus"
+                                       class="admin-muted">
+
+                                        Not available
+
+                                    </p>
+
+                                </div>
+
+                                <div>
+
+                                    <span class="admin-field-label">
+                                        MORNING OF SESSION
+                                    </span>
+
+                                    <p id="emailMorningStatus"
+                                       class="admin-muted">
+
+                                        Not available
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <p class="admin-muted admin-small">
+                                Optional reminders follow the client's
+                                verified account email and preferences.
+                                Morning reminders depend on the confirmed
+                                start time. An email accepted by the mail
+                                server is not proof of inbox delivery.
+                            </p>
+
+                        </section>
+
+
+                        <!-- 08 | APPROVAL AND CONTRACT CREATION -->
+
+                        <section class="admin-panel"
+                                 aria-labelledby="approvalHeading">
+
+                            <p class="admin-eyebrow">
+                                04 / YOUR DECISION
+                            </p>
+
+                            <h2 id="approvalHeading">
+                                ACCEPT PROJECT?
+                            </h2>
+
+                            <p class="admin-muted">
+                                Complete the agreement details before
+                                accepting the project. Your client can
+                                review their personalized contract
+                                through their private portal.
+                            </p>
+
+                            <form id="approvalForm" method="post">
+
+                                <label for="quote">
+                                    TOTAL PRICE &amp; PAYMENT TERMS *
+                                </label>
+
+                                <textarea id="quote"
+                                          name="quote"
+                                          rows="3"
+                                          placeholder="Example: $900 total, with a $200 retainer due at booking."
+                                          required></textarea>
+
+                                <label for="duration">
+                                    COVERAGE DURATION *
+                                </label>
+
+                                <input type="text"
+                                       id="duration"
+                                       name="duration"
+                                       placeholder="Example: 6 hours"
+                                       required>
+
+                                <label for="deliverables">
+                                    INCLUDED DELIVERABLES *
+                                </label>
+
+                                <textarea id="deliverables"
+                                          name="deliverables"
+                                          rows="4"
+                                          placeholder="Example: 150 professionally edited photographs delivered in a private gallery."
+                                          required></textarea>
+
+                                <label for="turnaround">
+                                    DELIVERY TIMELINE *
+                                </label>
+
+                                <textarea id="turnaround"
+                                          name="turnaround"
+                                          rows="3"
+                                          placeholder="Example: Final gallery delivered within 4–6 weeks."
+                                          required></textarea>
+
+                                <label for="cancellation">
+                                    CANCELLATION &amp; RESCHEDULING *
+                                </label>
+
+                                <textarea id="cancellation"
+                                          name="cancellation"
+                                          rows="4"
+                                          placeholder="Enter your cancellation, rescheduling, and refund terms."
+                                          required></textarea>
+
+                                <label for="usage_rights">
+                                    COPYRIGHT &amp; USAGE RIGHTS *
+                                </label>
+
+                                <textarea id="usage_rights"
+                                          name="usage_rights"
+                                          rows="4"
+                                          placeholder="Describe copyright ownership and how the client may use the finished work."
+                                          required></textarea>
+
+                                <button type="submit"
+                                        id="approveButton"
+                                        class="admin-button">
+
+                                    ACCEPT &amp; PREPARE CONTRACT ↗
+
+                                </button>
+
+                            </form>
+
+                            <div class="admin-decision-row">
+
+                                <button type="button"
+                                        id="requestInfoButton"
+                                        class="admin-button-outline">
+
+                                    REQUEST MORE INFO
+
+                                </button>
+
+                                <button type="button"
+                                        id="declineButton"
+                                        class="admin-button-outline admin-danger">
+
+                                    DECLINE PROJECT
+
+                                </button>
+
+                            </div>
+
+                            <p class="admin-muted admin-small">
+                                Once signed, the original agreement
+                                should remain unchanged. Any amendments
+                                require a new agreement or amendment record.
+                            </p>
+
+                            <a id="contractLink"
+                               class="admin-button-outline admin-contract-link"
+                               href="#"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               hidden>
+
+                                DOWNLOAD CONTRACT PDF ↓
+
+                            </a>
+
+                        </section>
+
+
+                        <!-- 09 | PRIVATE CLIENT FILES AND DELIVERY -->
+
+                        <section class="admin-panel"
+                                 aria-labelledby="deliveryHeading">
+
+                            <p class="admin-eyebrow">
+                                05 / CREATIVE DELIVERY
+                            </p>
+
+                            <h2 id="deliveryHeading">
+                                CLIENT FILES.
+                            </h2>
+
+                            <p class="admin-muted">
+                                Review client references,
+                                upload finished work,
+                                and manage gallery delivery.
+                            </p>
+
+                            <div class="admin-delivery-status">
+
+                                <span class="admin-field-label">
+                                    CONTRACT
+                                </span>
+
+                                <p id="signatureStatus">
+                                    Awaiting signature
+                                </p>
+
+                                <span class="admin-field-label">
+                                    GALLERY
+                                </span>
+
+                                <p id="galleryStatus">
+                                    Not published
+                                </p>
+
+                            </div>
+
+                            <hr class="admin-divider">
+
+                            <h3>UPLOADED FILES</h3>
+
+                            <div id="projectFiles"
+                                 class="admin-file-list"></div>
+
+                            <hr class="admin-divider">
+
+                            <h3>UPLOAD FINAL COLLECTION</h3>
+
+                            <form id="uploadForm"
+                                  method="post"
+                                  enctype="multipart/form-data">
+
+                                <label for="deliveryFiles">
+                                    CHOOSE CLIENT DELIVERABLES
+                                </label>
+
+                                <input type="file"
+                                       id="deliveryFiles"
+                                       name="files"
+                                       accept="image/jpeg,image/png,image/webp,video/mp4,video/quicktime,application/pdf,application/zip"
+                                       multiple
+                                       required
+                                       aria-describedby="deliveryHelp">
+
+                                <p id="deliveryHelp"
+                                   class="admin-muted admin-small">
+
+                                    Supported files: JPG, PNG, WebP,
+                                    MP4, MOV, PDF, ZIP.
+                                    Maximum 12 files per upload.
+
+                                </p>
+
+                                <button type="submit"
+                                        id="uploadButton"
+                                        class="admin-button">
+
+                                    UPLOAD FILES ↗
+
+                                </button>
+
+                            </form>
+
+                            <hr class="admin-divider">
+
+                            <h3>PUBLISH GALLERY</h3>
+
+                            <p class="admin-muted">
+                                Once the client has signed their
+                                agreement and the finished files
+                                are uploaded, publish the collection
+                                to their private client portal.
+                            </p>
+
+                            <button type="button"
+                                    id="publishButton"
+                                    class="admin-button">
+
+                                PUBLISH CLIENT GALLERY ↗
+
+                            </button>
+
+                        </section>
+
+
+                        <!-- 10 | RETURNING CLIENT HISTORY -->
+
+                        <section class="admin-panel"
+                                 id="clientHistorySection"
+                                 aria-labelledby="historyHeading">
+
+                            <p class="admin-eyebrow">
+                                06 / CLIENT RELATIONSHIP
+                            </p>
+
+                            <h2 id="historyHeading">
+                                CLIENT HISTORY.
+                            </h2>
+
+                            <p class="admin-muted">
+                                Previous sessions, completed galleries
+                                and repeat booking requests will appear
+                                here after account records are connected.
+                            </p>
+
+                            <div id="clientHistoryList"
+                                 class="admin-project-list"></div>
+
+                            <p id="clientHistoryStatus"
+                               class="admin-muted admin-small"
+                               role="status">
+
+                                Client history is not connected yet.
+
+                            </p>
+
+                        </section>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- 11 | FOOTER -->
+
+    <footer class="admin-footer">
+
+        <p>MONSE MEDIA — PRIVATE STUDIO DASHBOARD</p>
+
+        <a href="index.html">
+            RETURN TO WEBSITE ↗
+        </a>
+
+    </footer>
+
+
+    <!-- 12 | ADMIN JAVASCRIPT -->
+
+    <script src="admin.js" defer></script>
+
+</body>
+</html>
