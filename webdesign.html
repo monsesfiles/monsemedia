@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>I Made This Website | Monse Media</title>
+
+    <!-- I load my Gunter font from my main stylesheet. -->
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+
+        /* MY VERY COMPLICATED WEB DESIGN PAGE.
+           Just kidding. It's one sentence. */
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            background-color: #3c0008 !important;
+            color: #f0eae2;
+        }
+
+        /* MAIN PAGE */
+
+        .webdesign-page {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 100vh;
+            min-height: 100dvh;
+
+            padding: 60px 25px;
+            box-sizing: border-box;
+
+            background: #3c0008;
+        }
+
+        /* I MADE THIS WEBSITE */
+
+        .webdesign-title {
+            margin: 0;
+
+            font-family: "Gunter", "gunter", sans-serif;
+            font-size: clamp(38px, 7vw, 115px);
+            font-weight: 400;
+
+            text-align: center;
+            line-height: 1.15;
+            letter-spacing: 2px;
+
+            color: #f0eae2;
+        }
+
+        /* BACK ARROW */
+
+        .back-arrow {
+            position: absolute;
+
+            top: 35px;
+            left: 40px;
+
+            color: #f0eae2;
+            font-family: Arial, sans-serif;
+            font-size: 38px;
+
+            text-decoration: none;
+            line-height: 1;
+
+            transition: transform 0.3s ease;
+        }
+
+        /* The arrow moves left on hover. */
+
+        .back-arrow:hover {
+            transform: translateX(-8px);
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .back-arrow {
+                top: 25px;
+                left: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <main class="webdesign-page">
+
+        <!-- Back to my About page. -->
+        
+<!-- BACK TO MY EXPERIENCE + SKILLS SECTION -->
+
+
+<!-- ==========================================
+     BACK TO MY PREVIOUS POSITION
+
+     I return to where I was on the About page.
+     No dramatic scrolling necessary.
+     ========================================== -->
+
+<a href="about.html#my-experience"
+   class="back-arrow"
+   id="back-to-about"
+   aria-label="Back to About page">
+    ←
+</a>
+
+
+
+        <!-- I built this. Obviously. -->
+        <h1 class="webdesign-title">
+            I MADE THIS WEBSITE
+        </h1>
+
+    </main>
+
+<script>
+document.getElementById("back-to-about")
+    .addEventListener("click", function(event) {
+
+        // If I came from the About page,
+        // go back to my exact previous position.
+
+        if (document.referrer.includes("about.html")) {
+
+            event.preventDefault();
+
+            window.history.back();
+
+        }
+
+        // Otherwise, the regular link takes me
+        // directly to my experience section.
+    });
+</script>
+
+
+</body>
+
+</html>
